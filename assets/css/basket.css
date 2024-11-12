@@ -1,0 +1,46 @@
+/* one header for many products */
+
+.basket-header {
+}
+
+.basket-header strong {
+  /*color: black;*/
+  font-size: 1.5rem;
+}
+
+.basket-item-container-outer {
+  /*border: 1px solid #EDEDED;*/
+}
+
+.basket-item-container-inner {
+}
+
+.basket-item-header {
+}
+
+.img-basket-item-container {
+  height: 120px;
+  width: 120px;
+}
+
+.img-basket-item {
+  height: 90px;
+  width: 90px;
+}
+
+.basket-item-body {
+}
+
+.basket-item-button {
+}
+
+a {
+  text-decoration: none;
+}
+
+input:focus {
+  outline: 0 none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
