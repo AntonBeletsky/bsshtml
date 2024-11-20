@@ -7,7 +7,6 @@
     <title>boostrap-lux-shop-master</title>
     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&amp;display=swap">
-    <link rel="stylesheet" href="../../assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="../../assets/css/basket.css">
     <link rel="stylesheet" href="../../assets/css/circle-icons-ui-out-in-it.css">
     <link rel="stylesheet" href="../../assets/css/compare-page.css">
@@ -35,21 +34,45 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 </head>
 
-<body><div class="ui-circle-icons-container-outer">
-    <div class="ui-circle-icons-container-inner">
-        <div class="ui-circle-icon-item">
-            <div class="ui-circle-icon"><a href="#"><i class="fas fa-eye" aria-hidden="true"></i></a></div>
+<body><div class="container mt-5">
+    <fieldset class="mb-4">
+        <legend>Size</legend>
+        <div class="d-flex justify-content-between">
+            <div><span>Size:</span></div>
+            <div><span>8 GB</span></div>
         </div>
-        <div class="ui-circle-icon-item">
-            <div class="ui-circle-icon"><a href="#"><i class="fas fa-heart" aria-hidden="true"></i></a></div>
+        <div class="d-flex flex-wrap btn-group" role="group" aria-label="Size">
+            <input id="size4" class="btn-check" type="radio" name="prodszie" value="4" />
+            <label class="form-label form-label btn btn-outline-primary" for="size4">4 GB</label>
+            <input id="size8" class="btn-check" type="radio" checked name="prodszie" value="8" />
+            <label class="form-label form-label btn btn-outline-primary" for="size8">8 GB</label>
+            <input id="size16" class="btn-check" type="radio" name="prodszie" value="16" /><label
+                class="form-label form-label btn btn-outline-primary" for="size16">16 GB</label><input id="size32"
+                class="btn-check" type="radio" name="prodszie" value="32" disabled /><label
+                class="form-label form-label btn btn-outline-primary disabled" for="size32">32 GB</label><input
+                id="size64" class="btn-check" type="radio" name="prodszie" value="64" disabled /><label
+                class="form-label form-label btn btn-outline-primary disabled" for="size64">64 GB</label>
         </div>
-        <div class="ui-circle-icon-item">
-            <div class="ui-circle-icon"><a href="#"><i class="fas fa-balance-scale" aria-hidden="true"></i></a></div>
+    </fieldset>
+    <fieldset>
+        <legend>Frequency</legend>
+        <div class="d-flex justify-content-between">
+            <div><span>Frequency:</span></div>
+            <div><span>1800 MHz</span></div>
         </div>
-        <div class="ui-circle-icon-item">
-            <div class="ui-circle-icon"><a href="#"><i class="fas fa-shopping-cart" aria-hidden="true"></i></a></div>
+        <div class="d-flex flex-wrap btn-group" role="group" aria-label="Frequency">
+            <input id="freq1800" class="btn-check" type="radio" checked name="prodmhz" value="1800" /><label
+                class="form-label form-label btn btn-outline-primary" for="freq1800">1800 MHz</label><input
+                id="freq2600" class="btn-check" type="radio" name="prodmhz" value="2600" /><label
+                class="form-label form-label btn btn-outline-primary" for="freq2600">2600 MHz</label><input
+                id="freq3200" class="btn-check" type="radio" name="prodmhz" value="3200" /><label
+                class="form-label form-label btn btn-outline-primary" for="freq3200">3200 MHz</label><input
+                id="freq4800" class="btn-check" type="radio" name="prodmhz" value="4800" disabled /><label
+                class="form-label form-label btn btn-outline-primary disabled" for="freq4800">4800 MHz</label><input
+                id="freq5200" class="btn-check" type="radio" name="prodmhz" value="5200" disabled /><label
+                class="form-label form-label btn btn-outline-primary disabled" for="freq5200">5200 MHz</label>
         </div>
-    </div>
+    </fieldset>
 </div>
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
