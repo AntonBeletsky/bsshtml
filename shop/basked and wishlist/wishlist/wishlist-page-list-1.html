@@ -44,14 +44,14 @@
             <div class="col-sm-12 col-md-8">
                 <div class="row">
                     <div class="col-md-12"><label class="form-label form-label form-label form-label form-label form-label form-label form-label mt-4" for="exampleSelect1">Wishlist Select</label>
-                        <div class="input-group"><select class="form-select form-select form-select form-select" id="exampleSelect1">
+                        <div class="input-group"><select class="form-select form-select" id="exampleSelect1">
                                 <option value="">My WIshlist</option>
                                 <option value="">My WIshlist 1</option>
                                 <option value="">My WIshlist 2</option>
                                 <option value="">My WIshlist 3</option>
                                 <option value="">My WIshlist 4</option>
                             </select><button class="btn btn-primary dropdown-toggle" id="btnGroupDrop1" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                            <div class="input-group-text input-group-text input-group-text dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" href="#">Rename List</a><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@newlistname">Rename List Modal</button><a class="dropdown-item" href="#">Delete List</a><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal2"> Delete List Modal</button></div>
+                            <div class="input-group-text dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" href="#">Rename List</a><a class="dropdown-item" href="#">Delete List</a></div>
                         </div>
                     </div>
                 </div>
@@ -88,30 +88,16 @@
             <div class="col-12 col-md-4"><button class="btn btn-primary w-100" type="button">Buy All</button></div>
         </div>
     </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal" role="dialog" tabindex="-1">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="fs-5 modal-title" id="exampleModalLabel-1">New WishList Name</h1><button class="btn-close" aria-label="Close" data-bs-dismiss="modal" type="button"></button>
+                    <h5 class="modal-title">Modal title</h5><button class="btn-close" aria-label="Close" data-bs-dismiss="modal" type="button"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="mb-3"><label class="form-label form-label form-label col-form-label" for="recipient-name">Title:</label><input class="form-control form-control form-control form-control" type="text" id="recipient-name-1"></div>
-                        <div class="mb-3"><label class="form-label form-label form-label col-form-label" for="message-text">Comment:</label><textarea class="form-control form-control form-control form-control" id="message-text-1"></textarea></div>
-                    </form>
+                    <p>Modal body text goes here.</p>
                 </div>
-                <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button><button class="btn btn-primary" type="button">Save</button></div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal2" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Delete WishList</h5><button class="btn-close" aria-label="Close" data-bs-dismiss="modal" type="button"></button>
-                </div>
-                <div class="modal-body"><span>Confirm deletion</span></div>
-                <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button><button class="btn btn-primary" type="button">Delete this WishList</button></div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button">Save changes</button><button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button></div>
             </div>
         </div>
     </div>
