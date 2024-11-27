@@ -43,16 +43,20 @@
         <div class="row d-flex shadow-sm wishlist-header">
             <div class="col-sm-12 col-md-8">
                 <div class="row">
-                    <div class="col-12"><label class="form-label form-label form-label mt-4" for="exampleSelect1">Wishlist Select</label><select class="form-select" id="exampleSelect1">
-                            <option value="">My WIshlist</option>
-                            <option value="">My WIshlist 1</option>
-                            <option value="">My WIshlist 2</option>
-                            <option value="">My WIshlist 3</option>
-                            <option value="">My WIshlist 4</option>
-                        </select></div>
+                    <div class="col-md-12"><label class="form-label form-label form-label form-label form-label form-label form-label form-label mt-4" for="exampleSelect1">Wishlist Select</label>
+                        <div class="input-group"><select class="form-select form-select" id="exampleSelect1">
+                                <option value="">My WIshlist</option>
+                                <option value="">My WIshlist 1</option>
+                                <option value="">My WIshlist 2</option>
+                                <option value="">My WIshlist 3</option>
+                                <option value="">My WIshlist 4</option>
+                            </select><button class="btn btn-primary dropdown-toggle" id="btnGroupDrop1" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                            <div class="input-group-text dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" href="#">Rename List</a><a class="dropdown-item" href="#">Delete List</a></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-12"><button class="btn btn-link" type="button">Select All</button><button class="btn btn-link" type="button">Move to other Wishlist </button><button class="btn btn-link" type="button">Delete from Wishlist </button></div>
+                    <div class="col-12 d-flex"><button class="btn btn-link" type="button">Select All</button><button class="btn btn-link" type="button">Move to other Wishlist</button><button class="btn btn-link" type="button">Delete from Wishlist </button></div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-2 offset-md-2 d-flex justify-content-center align-items-end"><span><a class="btn" role="button" href="#"><span class="material-icons"> grid_view </span></a><a class="btn" role="button" href="#"><span class="material-icons">view_list</span></a></span></div>
@@ -109,13 +113,13 @@
             <div class="col-6 col-md-1 d-flex justify-content-center align-items-center"><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></div>
         </div>
         <div class="row d-flex align-items-end mt-5">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="row">
                     <div class="col-6"><strong>Total amount:</strong></div>
                     <div class="col-6"><strong>€1054.97</strong></div>
                 </div>
             </div>
-            <div class="col-md-4 offset-md-2"><button class="btn btn-primary w-75" type="button">Buy All</button></div>
+            <div class="col-md-4"><button class="btn btn-primary w-75" type="button">Buy All</button></div>
         </div>
     </div>
     <script src="../../../assets/js/jquery.min.js"></script>
