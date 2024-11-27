@@ -1,42 +1,30 @@
-/* one header for many products */
-
-.basket-header {
-}
-
-.basket-header strong {
-  /*color: black;*/
-  font-size: 1.5rem;
-}
-
-.basket-item-container-outer {
-  /*border: 1px solid #EDEDED;*/
-}
-
-.basket-item-container-inner {
-}
-
-.basket-item-header {
-}
+/* IMG Basket */
 
 .img-basket-item-container {
   height: 120px;
   width: 120px;
+  aspect-ratio: 1;
 }
+
+/* IMG Basket */
 
 .img-basket-item {
   height: 90px;
   width: 90px;
+  aspect-ratio: 1;
 }
 
-.basket-item-body {
+.basket-header strong {
+  font-size: 1.5rem;
 }
 
-.basket-item-button {
-}
+/* for colors */
 
 a {
   text-decoration: none;
 }
+
+/* for checkbox */
 
 input:focus {
   outline: 0 none !important;
