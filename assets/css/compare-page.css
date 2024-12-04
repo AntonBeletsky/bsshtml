@@ -1,13 +1,19 @@
-.products_compare_table {
+/* rewrite boostrap value for compare table */
+
+.table.products_compare_table td, .table.products_compare_table th {
+  padding: 0px;
+}
+
+.table tbody tr td {
+  border-left: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  border-right: 1px solid #ececec;
 }
 
 .products_compare_table tr {
 }
 
 .products_compare_table th {
-}
-
-.products_compare_table td {
 }
 
 .img-product-card-compare-item-container {
@@ -18,9 +24,16 @@
 .img-product-card-compare-item {
   min-width: 90px;
   min-height: 90px;
-  max-width: 220px;
-  max-height: 220px;
+  /*max-width: 220px;*/
+  /*max-height: 220px;*/
   aspect-ratio: 1;
+}
+
+.only-differences-container {
+  min-height: 300px;
+}
+
+.product-img-container {
 }
 
 .only-differences-chbx label, .only-differences-chbx input {
