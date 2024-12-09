@@ -28,7 +28,133 @@
 /* scaling on mouse click */
 
 .ui-circle-icon:active i, .ui-circle-icon-active a:active i {
-  font-size: 0.9rem;
+  /*font-size: 0.9rem;*/
+  transform: scale(1.1);
+}
+
+/* width-height-rem params */
+
+/* rem sizes */
+
+.ui-circle-icon-size-width-height-0_5rem {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.ui-circle-icon-size-width-height-0_5rem i {
+  font-size: 0.25rem;
+}
+
+.ui-circle-icon-size-width-height-1rem {
+  width: 1rem;
+  height: 1rem;
+}
+
+.ui-circle-icon-size-width-height-1rem i {
+  font-size: 0.5rem;
+}
+
+.ui-circle-icon-size-width-height-1_5rem {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.ui-circle-icon-size-width-height-1_5rem i {
+  font-size: 0.75rem;
+}
+
+.ui-circle-icon-size-width-height-2rem {
+  width: 2rem;
+  height: 2rem;
+}
+
+.ui-circle-icon-size-width-height-2rem i {
+  font-size: 1rem;
+}
+
+.ui-circle-icon-size-width-height-2_5rem {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.ui-circle-icon-size-width-height-2_5rem i {
+  font-size: 1.25rem;
+}
+
+.ui-circle-icon-size-width-height-3rem {
+  width: 3rem;
+  height: 3rem;
+}
+
+.ui-circle-icon-size-width-height-3rem i {
+  font-size: 1.5rem;
+}
+
+/* Pixel sizes */
+
+/* 18 24 32 36 42 52 64 */
+
+.ui-circle-icon-size-width-height-18px {
+  width: 18px;
+  height: 18px;
+}
+
+.ui-circle-icon-size-width-height-18px i {
+  font-size: 9px;
+}
+
+.ui-circle-icon-size-width-height-24px {
+  width: 24px;
+  height: 24px;
+}
+
+.ui-circle-icon-size-width-height-24px i {
+  font-size: 12px;
+}
+
+.ui-circle-icon-size-width-height-32px {
+  width: 32px;
+  height: 32px;
+}
+
+.ui-circle-icon-size-width-height-32px i {
+  font-size: 16px;
+}
+
+.ui-circle-icon-size-width-height-36px {
+  width: 36px;
+  height: 36px;
+}
+
+.ui-circle-icon-size-width-height-36px i {
+  font-size: 18px;
+}
+
+.ui-circle-icon-size-width-height-42px {
+  width: 42px;
+  height: 42px;
+}
+
+.ui-circle-icon-size-width-height-42px i {
+  font-size: 21px;
+}
+
+.ui-circle-icon-size-width-height-52px {
+  width: 52px;
+  height: 52px;
+}
+
+.ui-circle-icon-size-width-height-52px i {
+  font-size: 26px;
+}
+
+.ui-circle-icon-size-width-height-64px {
+  width: 64px;
+  height: 64px;
+}
+
+.ui-circle-icon-size-width-height-64px i {
+  font-size: 32px;
 }
 
 /* scaling icons */
