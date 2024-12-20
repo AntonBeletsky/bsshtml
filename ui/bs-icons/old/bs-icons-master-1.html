@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>boostrap-lux-shop-master</title>
+    <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+    <link rel="stylesheet" href="../../../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../../assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="../../../assets/css/basket.css">
+    <link rel="stylesheet" href="../../../assets/css/compare-page.css">
+    <link rel="stylesheet" href="../../../assets/css/Data-Table-styles.css">
+    <link rel="stylesheet" href="../../../assets/css/Data-Table.css">
+    <link rel="stylesheet" href="../../../assets/css/featured-Itemn.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/css/img.css">
+    <link rel="stylesheet" href="../../../assets/css/order-item.css">
+    <link rel="stylesheet" href="../../../assets/css/popover-content.css">
+    <link rel="stylesheet" href="../../../assets/css/product-card-grid.css">
+    <link rel="stylesheet" href="../../../assets/css/product-card-list.css">
+    <link rel="stylesheet" href="../../../assets/css/product-page.css">
+    <link rel="stylesheet" href="../../../assets/css/shadow-box.css">
+    <link rel="stylesheet" href="../../../assets/css/slider-price.css">
+    <link rel="stylesheet" href="../../../assets/css/stars-rating.css">
+    <link rel="stylesheet" href="../../../assets/css/tech-shadow-box.css">
+    <link rel="stylesheet" href="../../../assets/css/timeline.css">
+    <link rel="stylesheet" href="../../../assets/css/ui-collapsible-panel.css">
+    <link rel="stylesheet" href="../../../assets/css/ui-icons-circle.css">
+    <link rel="stylesheet" href="../../../assets/css/wishlist.css">
+<!-- Подключение стилей Font Awesome для иконок -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Подключение стилей Material Icons от Google для использования иконок -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Подключение библиотеки jQuery для облегчения манипуляций с DOM и работы с событиями -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Подключение стилей Fotorama для создания галерей изображений -->
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+<!-- Подключение библиотеки Fotorama для создания галерей изображений -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+<!-- Подключение Bootstrap JavaScript для поддержки интерактивных компонентов Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+<!-- Подключение библиотеки Popper.js для управления всплывающими элементами (такими как тултипы и выпадающие меню) -->
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+</head>
+
+<body><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<style>
+    .ui-icons-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .ui-circle-icon {
+        --bs-primary: #1a1a1a;
+        --bs-secondary: #ffffff;
+        --bs-success: #4bbf73;
+        --bs-info: #1f9bcf;
+        --bs-warning: #f0ad4e;
+        --bs-danger: #d9534f;
+        --bs-light: #ffffff;
+        --bs-dark: #343a40;
+        --ui-icon-active-background: #fbfcf8;
+
+        --primary: var(--bs-primary);
+        --secondary: var(--bs-secondary);
+        --success: var(--bs-success);
+        --info: var(--bs-info);
+        --warning: var(--bs-warning);
+        --danger: var(--bs-danger);
+        --light: var(--bs-light);
+        --dark: var(--bs-dark);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        color: #343a40;
+        text-decoration: none;
+        border: 2px solid #dcdcdc;
+        animation: 2s show ease;
+        text-decoration: none !important;
+        /* overflow: hidden; */
+        transition: border-color 0.3s, transform 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+
+
+    .ui-circle-icon i {
+        font-size: 25px;
+    }
+
+    /* mouse click */
+    .ui-circle-icon:active i {
+        font-size: 23px;
+    }
+
+    .ui-circle-icon:hover {
+        border-color: var(--bs-info) !important;
+        transform: scale(1.1);
+    }
+
+    .ui-circle-icon.ui-circle-icon-active {
+        background-color: #fbfcf8;
+        color: var(--bs-success);
+        border-color: var(--bs-success);
+    }
+
+    @keyframes show {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* colors start */
+
+    /* Primary */
+    .ui-circle-icon.ui-circle-icon-primary {
+        color: var(--bs-primary);
+    }
+
+    .ui-circle-icon.ui-circle-icon-primary-outline {
+        border: 2px solid var(--bs-primary);
+    }
+
+    /* Secondary */
+    .ui-circle-icon.ui-circle-icon-secondary {
+        color: var(--bs-secondary);
+    }
+
+    .ui-circle-icon.ui-circle-icon-secondary-outline {
+        border: 2px solid var(--bs-secondary);
+    }
+
+    /* Success */
+    .ui-circle-icon.ui-circle-icon-success {
+        color: var(--bs-success);
+    }
+
+    .ui-circle-icon.ui-circle-icon-success-outline {
+        border: 2px solid var(--bs-success);
+    }
+
+    /* Info */
+    .ui-circle-icon.ui-circle-icon-info {
+        color: var(--bs-info);
+    }
+
+    .ui-circle-icon.ui-circle-icon-info-outline {
+        border: 2px solid var(--bs-info);
+    }
+
+    /* Warning */
+    .ui-circle-icon.ui-circle-icon-warning {
+        color: var(--bs-warning);
+    }
+
+    .ui-circle-icon.ui-circle-icon-warning-outline {
+        border: 2px solid var(--bs-warning);
+    }
+
+    /* Danger */
+    .ui-circle-icon.ui-circle-icon-danger {
+        color: var(--bs-danger);
+    }
+
+    .ui-circle-icon.ui-circle-icon-danger-outline {
+        border: 2px solid var(--bs-danger);
+    }
+
+    /* Light */
+    .ui-circle-icon.ui-circle-icon-light {
+        color: var(--bs-light);
+    }
+
+    .ui-circle-icon.ui-circle-icon-light-outline {
+        border: 2px solid var(--bs-light);
+    }
+
+    /* Dark */
+    .ui-circle-icon.ui-circle-icon-dark {
+        color: var(--bs-dark);
+    }
+
+    .ui-circle-icon.ui-circle-icon-dark-outline {
+        border: 2px solid var(--bs-dark);
+    }
+
+    /* colors end */
+
+
+    /* icon sizes start */
+
+
+    /* 47-32 size start */
+    .ui-circle-icon.ui-circle-icon-size-47px {
+        width: 47px;
+        height: 47px;
+    }
+
+    .ui-circle-icon.ui-circle-icon-size-47px i {
+        font-size: 29px;
+    }
+
+    .ui-circle-icon.ui-circle-icon-size-47px:active i {
+        font-size: 27px;
+    }
+
+
+    /* 40-25 size start */
+    .ui-circle-icon.ui-circle-icon-size-40px {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ui-circle-icon.ui-circle-icon-size-40px i {
+        font-size: 22px;
+    }
+
+    .ui-circle-icon.ui-circle-icon-size-40px:active i {
+        font-size: 19px;
+    }
+
+
+
+    /* 32-16 size start */
+    .ui-circle-icon.ui-circle-icon-size-32px {
+        width: 32px;
+        height: 32px;
+    }
+
+    .ui-circle-icon.ui-circle-icon-size-32px i {
+        font-size: 17px;
+    }
+
+    .ui-circle-icon.ui-circle-icon-size-32px:active i {
+        font-size: 16px;
+    }
+
+
+    /* 28-16 size start */
+    .ui-circle-icon.ui-circle-icon-size-28px {
+        width: 28px;
+        height: 28px;
+    }
+
+    .ui-circle-icon.ui-circle-icon-size-28px i {
+        font-size: 15px;
+    }
+
+    .ui-circle-icon.ui-circle-icon-size-28px:active i {
+        font-size: 14px;
+    }
+
+
+    /* 24-16 size start */
+    .ui-circle-icon.ui-circle-icon-size-24px {
+        width: 24px;
+        height: 24px;
+    }
+
+    .ui-circle-icon.ui-circle-icon-size-24px i {
+        font-size: 12px;
+    }
+
+    .ui-circle-icon.ui-circle-icon-size-24px:active i {
+        font-size: 11px;
+    }
+
+
+
+    /* icon sizes end */
+</style>
+
+
+<div class="ui-icons-container">
+    <a href="#" class="ui-circle-icon ui-circle-icon-active"><i class="fas fa-eye" aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon"><i class="fas fa-eye" aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon"><i class="fas fa-eye" aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon"><i class="fas fa-heart" aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon"><i class="fas fa-balance-scale" aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon"><i class="fas fa-shopping-cart" aria-hidden="true"></i></a>
+</div>
+
+<br>
+
+<div class="ui-icons-container">
+    <a href="#" class="ui-circle-icon ui-circle-icon-primary-outline"><i class="fas fa-heart"
+            aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon ui-circle-icon-success-outline"><i class="fas fa-heart"
+            aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon ui-circle-icon-info-outline"><i class="fas fa-heart" aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon ui-circle-icon-warning-outline"><i class="fas fa-heart"
+            aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon ui-circle-icon-danger-outline"><i class="fas fa-heart" aria-hidden="true"></i></a>
+
+    <a href="#" class="ui-circle-icon ui-circle-icon-dark-outline"><i class="fas fa-heart" aria-hidden="true"></i></a>
+</div>
+
+<br>
+
+<div class="ui-icons-container">
+    <a href="#" class="ui-circle-icon ui-circle-icon-primary ui-circle-icon-primary-outline"><i class="fas fa-heart"
+            aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon ui-circle-icon-success ui-circle-icon-success-outline"><i class="fas fa-heart"
+            aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon ui-circle-icon-info ui-circle-icon-info-outline"><i class="fas fa-heart"
+            aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon ui-circle-icon-warning ui-circle-icon-warning-outline"><i class="fas fa-heart"
+            aria-hidden="true"></i></a>
+    <a href="#" class="ui-circle-icon ui-circle-icon-danger ui-circle-icon-danger-outline"><i class="fas fa-heart"
+            aria-hidden="true"></i></a>
+
+    <a href="#" class="ui-circle-icon ui-circle-icon-dark ui-circle-icon-dark-outline"><i class="fas fa-heart"
+            aria-hidden="true"></i></a>
+
+</div>
+
+<br>
+
+<div class="ui-icons-container">
+    <br>
+    def(40)
+    <a href="#" class="ui-circle-icon"><i class="fas fa-heart" aria-hidden="true"></i></a>
+
+
+    <br>
+    47
+    <a href="#" class="ui-circle-icon ui-circle-icon-size-47px">
+        <i class="fas fa-heart" aria-hidden="true"></i>
+    </a>
+
+    <br>
+    40
+    <a href="#" class="ui-circle-icon ui-circle-icon-size-40px">
+        <i class="fas fa-heart" aria-hidden="true"></i>
+    </a>
+
+    <br>
+    32
+    <a href="#" class="ui-circle-icon ui-circle-icon-size-32px">
+        <i class="fas fa-heart" aria-hidden="true"></i>
+    </a>
+    <br>
+    28
+    <a href="#" class="ui-circle-icon ui-circle-icon-size-28px">
+        <i class="fas fa-heart" aria-hidden="true"></i>
+    </a>
+    <br>
+    24
+    <a href="#" class="ui-circle-icon ui-circle-icon-size-24px">
+        <i class="fas fa-heart" aria-hidden="true"></i>
+    </a>
+
+
+</div>
+    <script src="../../../assets/js/jquery.min.js"></script>
+    <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../assets/js/bs-init.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="../../../assets/js/popovers.js"></script>
+    <script src="../../../assets/js/slider-price.js"></script>
+</body>
+
+</html>
