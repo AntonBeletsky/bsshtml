@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>boostrap-lux-shop-master</title>
+    <link rel="stylesheet" href="../../../../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+    <link rel="stylesheet" href="../../../../../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../../../../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../../assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="../../../../../assets/css/basket.css">
+    <link rel="stylesheet" href="../../../../../assets/css/compare-page.css">
+    <link rel="stylesheet" href="../../../../../assets/css/Data-Table-styles.css">
+    <link rel="stylesheet" href="../../../../../assets/css/Data-Table.css">
+    <link rel="stylesheet" href="../../../../../assets/css/featured-Itemn.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../assets/css/img.css">
+    <link rel="stylesheet" href="../../../../../assets/css/order-item.css">
+    <link rel="stylesheet" href="../../../../../assets/css/popover-content.css">
+    <link rel="stylesheet" href="../../../../../assets/css/product-card-grid.css">
+    <link rel="stylesheet" href="../../../../../assets/css/product-card-list.css">
+    <link rel="stylesheet" href="../../../../../assets/css/product-page.css">
+    <link rel="stylesheet" href="../../../../../assets/css/shadow-box.css">
+    <link rel="stylesheet" href="../../../../../assets/css/slider-price.css">
+    <link rel="stylesheet" href="../../../../../assets/css/stars-rating.css">
+    <link rel="stylesheet" href="../../../../../assets/css/tech-shadow-box.css">
+    <link rel="stylesheet" href="../../../../../assets/css/timeline.css">
+    <link rel="stylesheet" href="../../../../../assets/css/ui-collapsible-panel.css">
+    <link rel="stylesheet" href="../../../../../assets/css/ui-icons-circle.css">
+    <link rel="stylesheet" href="../../../../../assets/css/wishlist.css">
+<!-- Подключение стилей Font Awesome для иконок -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Подключение стилей Material Icons от Google для использования иконок -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Подключение библиотеки jQuery для облегчения манипуляций с DOM и работы с событиями -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Подключение стилей Fotorama для создания галерей изображений -->
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+<!-- Подключение библиотеки Fotorama для создания галерей изображений -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+<!-- Подключение Bootstrap JavaScript для поддержки интерактивных компонентов Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+<!-- Подключение библиотеки Popper.js для управления всплывающими элементами (такими как тултипы и выпадающие меню) -->
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+</head>
+
+<body style="background-color: #e6f1f8;"><nav class="navbar navbar-expand-lg fixed-top bg-primary navbar-dark ">
+    <div class="container-fluid"><a class="navbar-brand" href="#">Shopname</a><button class="navbar-toggler"
+            data-bs-toggle="collapse" data-bs-target="#navbarColor01" type="button" aria-controls="navbarColor01"
+            aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div id="navbarColor01" class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item dropdown dropdown-mega position-static">
+                    <div class="shadow dropdown-menu">
+                        <div class="mega-content px-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                                        <h5>Pages</h5>
+                                        <div class="list-group"><a class="list-group-item" href="#">Accomodations</a><a
+                                                class="list-group-item" href="#">Terms &amp; Conditions</a><a
+                                                class="list-group-item" href="#">Privacy</a></div>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                                        <h5>Card</h5>
+                                        <div class="card"><img
+                                                class="img-fluid card-img-top w-100 d-block card-img-top w-100 card-img-top w-100 card-img-top w-100 card-img-top w-100"
+                                                alt="image" src="img/banner-image.jpg" />
+                                            <div class="card-body">
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and make up the bulk of the card&#39;s content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                                        <h5>About CodeHim</h5>
+                                        <p><b>CodeHim</b> is one of the BEST developer websites that provide web
+                                            designers and developers with a simple way to preview and download a variety
+                                            of free code &amp; scripts.</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-3 py-4">
+                                        <h5>Damn, so many</h5>
+                                        <div class="list-group"><a class="list-group-item" href="#">Accomodations</a><a
+                                                class="list-group-item" href="#">Terms &amp; Conditions</a><a
+                                                class="list-group-item" href="#">Privacy</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown dropdown-mega position-static"><a class="nav-link dropdown-toggle"
+                        aria-expanded="false" data-bs-auto-close="outside" data-bs-toggle="dropdown"
+                        href="#">Megamenu</a>
+                    <div class="shadow dropdown-menu">
+                        <div class="mega-content px-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                                        <h5>Pages</h5>
+                                        <div class="list-group"><a class="list-group-item" href="#">Accomodations</a><a
+                                                class="list-group-item" href="#">Terms &amp; Conditions</a><a
+                                                class="list-group-item" href="#">Privacy</a></div>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                                        <h5>Card</h5>
+                                        <div class="card"><img
+                                                class="img-fluid card-img-top w-100 d-block card-img-top w-100 card-img-top w-100 card-img-top w-100 card-img-top w-100"
+                                                alt="image" src="img/banner-image.jpg" />
+                                            <div class="card-body">
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and make up the bulk of the card&#39;s content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-4 col-md-3 py-4">
+                                        <h5>About CodeHim</h5>
+                                        <p><b>CodeHim</b> is one of the BEST developer websites that provide web
+                                            designers and developers with a simple way to preview and download a variety
+                                            of free code &amp; scripts.</p>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-3 py-4">
+                                        <h5>Damn, so many</h5>
+                                        <div class="list-group"><a class="list-group-item" href="#">Accomodations</a><a
+                                                class="list-group-item" href="#">Terms &amp; Conditions</a><a
+                                                class="list-group-item" href="#">Privacy</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div role="search">
+                <form class="d-flex flex-row align-items-center"><input class="form-control me-sm-2" type="search"
+                        placeholder="Search" /><button class="btn btn-secondary my-2 my-sm-0"
+                        type="submit">Search</button></form>
+            </div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" aria-expanded="false"
+                        aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button"><i
+                            class="fas fa-user"></i> User</a>
+                    <div class="dropdown-menu"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item"
+                            href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user"></i> User</a></li>
+                <li class="nav-item"><a class="nav-link position-relative" href="#"><i class="fas fa-heart"></i><span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">15</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link position-relative" href="#"><i class="fas fa-heart"></i><span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">15</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link position-relative" href="#"><i class="fa fa-shopping-cart"
+                            aria-hidden="true"></i><span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <script src="../../../../../assets/js/jquery.min.js"></script>
+    <script src="../../../../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../../assets/js/bs-init.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="../../../../../assets/js/popovers.js"></script>
+    <script src="../../../../../assets/js/slider-price.js"></script>
+</body>
+
+</html>

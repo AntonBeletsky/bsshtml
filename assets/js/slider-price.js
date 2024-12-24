@@ -1,16 +1,35 @@
-const minPrice = 0;
-const maxPrice = 1000;
+function getMaxPrice() {
+  /* you request to API here */
+  const maxPrice = 1000;
+  return maxPrice;
+}
+
+function getMinPrice() {
+  /* you request to API here */
+  const minPrice = 0;
+  return minPrice;
+}
+
+const minPrice = getMinPrice();
+const maxPrice = getMaxPrice();
+
 const range = maxPrice - minPrice;
 
 const sliderThumbLeft = document.getElementById("slider-thumb-left");
 const sliderThumbRight = document.getElementById("slider-thumb-right");
 const sliderTrack = document.getElementById("slider-track");
 const sliderRange = document.getElementById("slider-range");
+
 const priceMin = document.getElementById("price-min");
 const priceMax = document.getElementById("price-max");
 
+const inputMin = document.getElementById("input-min");
+const inputMax = document.getElementById("input-max");
+
+/*
 const left_output = document.querySelector("#slider-thumb-left output");
 const rigth_output = document.querySelector("#slider-thumb-right output");
+*/
 
 function updateSlider() {
   const leftValue = parseFloat(sliderThumbLeft.style.left);
@@ -24,8 +43,13 @@ function updateSlider() {
   priceMin.textContent = `$${minValue}`;
   priceMax.textContent = `$${maxValue}`;
 
+  inputMin.value = `${minValue}`;
+  inputMax.value = `${maxValue}`;
+
+  /*
   left_output.textContent = `$${minValue}`;
   rigth_output.textContent = `$${maxValue}`;
+  */
 }
 
 function mouseMoveHandler(event, thumb, direction) {
@@ -67,3 +91,43 @@ sliderThumbRight.onmousedown = function (event) {
 };
 
 updateSlider(); // Initial update
+
+inputMin.addEventListener("input", (event) => {
+  priceMin.textContent = event.target.value;
+  /* здесь нужно добавить такой код который переместит ползунки наоборот */
+});
+
+inputMax.addEventListener("input", (event) => {
+  priceMax.textContent = event.target.value;
+  /* здесь нужно добавить такой код который переместит ползунки наоборот */
+});
+
+inputMin.addEventListener("input", (event) => {
+  let value = parseInt(event.target.value, 10);
+
+  // if (isNaN(value) || value < minPrice) value = minPrice;
+
+  // if (value > maxPrice) value = maxPrice;
+
+  const newLeft = ((value - minPrice) / range) * 100;
+
+  if (newLeft < parseFloat(sliderThumbRight.style.left)) {
+    sliderThumbLeft.style.left = `${newLeft}%`;
+    updateSlider();
+  }
+});
+
+inputMax.addEventListener("input", (event) => {
+  let value = parseInt(event.target.value, 10);
+
+  // if (isNaN(value) || value < minPrice) value = minPrice;
+
+  // if (value > maxPrice) value = maxPrice;
+
+  const newRight = ((value - minPrice) / range) * 100;
+
+  if (newRight > parseFloat(sliderThumbLeft.style.left)) {
+    sliderThumbRight.style.left = `${newRight}%`;
+    updateSlider();
+  }
+});
