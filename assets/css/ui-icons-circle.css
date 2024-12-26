@@ -31,7 +31,7 @@
   color: #343a40;
   border-radius: 50%;
   /*border: 0.1rem solid #dcdcdc;*/
-  /*border: 2px solid #dcdcdc;*/
+  /*border: 1px solid #dcdcdc;*/
   text-decoration: none !important;
   animation: 2s show ease;
   text-decoration: none !important;
@@ -42,7 +42,7 @@
 /* icons with border */
 
 .ui-circle-icon.ui-circle-icon-border {
-  border: 2px solid #dcdcdc;
+  border: 1px solid #dcdcdc;
 }
 
 /* icons with shadow */
@@ -151,7 +151,7 @@
 }
 
 .ui-circle-icon.ui-circle-icon-border.ui-circle-icon-primary-outline {
-  border: 2px solid var(--bs-primary);
+  border: 1px solid var(--bs-primary);
 }
 
 /* Secondary */
@@ -161,7 +161,7 @@
 }
 
 .ui-circle-icon.ui-circle-icon-border.ui-circle-icon-secondary-outline {
-  border: 2px solid var(--bs-secondary);
+  border: 1px solid var(--bs-secondary);
 }
 
 /* Success */
@@ -171,7 +171,7 @@
 }
 
 .ui-circle-icon.ui-circle-icon-border.ui-circle-icon-success-outline {
-  border: 2px solid var(--bs-success);
+  border: 1px solid var(--bs-success);
 }
 
 /* Info */
@@ -181,7 +181,7 @@
 }
 
 .ui-circle-icon.ui-circle-icon-border.ui-circle-icon-info-outline {
-  border: 2px solid var(--bs-info);
+  border: 1px solid var(--bs-info);
 }
 
 /* Warning */
@@ -191,7 +191,7 @@
 }
 
 .ui-circle-icon.ui-circle-icon-border.ui-circle-icon-warning-outline {
-  border: 2px solid var(--bs-warning);
+  border: 1px solid var(--bs-warning);
 }
 
 /* Danger */
@@ -201,7 +201,7 @@
 }
 
 .ui-circle-icon.ui-circle-icon-border.ui-circle-icon-danger-outline {
-  border: 2px solid var(--bs-danger);
+  border: 1px solid var(--bs-danger);
 }
 
 /* Light */
@@ -211,7 +211,7 @@
 }
 
 .ui-circle-icon.ui-circle-icon-border.ui-circle-icon-light-outline {
-  border: 2px solid var(--bs-light);
+  border: 1px solid var(--bs-light);
 }
 
 /* Dark */
@@ -221,10 +221,155 @@
 }
 
 .ui-circle-icon.ui-circle-icon-border.ui-circle-icon-dark-outline {
-  border: 2px solid var(--bs-dark);
+  border: 1px solid var(--bs-dark);
 }
 
 /* colors end */
+
+/* color shadow hover */
+
+/* icons with shadow */
+
+.ui-circle-icon.ui-circle-icon-shadow-hover:hover {
+  border: none !important;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08), 0px 2px 5px rgba(0, 0, 0, 0.09), 0px 0px 2px 0.00144px rgba(0, 0, 0, 0.07);
+}
+
+/* Primary Shadow */
+
+.ui-circle-icon.ui-circle-icon-shadow-primary-hover:hover {
+  border: none !important;
+  box-shadow: 0px 1px 4px rgba(var(--bs-primary-rgb), 0.08), 0px 2px 5px rgba(var(--bs-primary-rgb), 0.09), 0px 0px 2px 0.00144px rgba(var(--bs-primary-rgb), 0.07);
+}
+
+/* Secondary Shadow */
+
+.ui-circle-icon.ui-circle-icon-shadow-secondary-hover:hover {
+  border: none !important;
+  box-shadow: 0px 1px 4px rgba(var(--bs-secondary-rgb), 0.08), 0px 2px 5px rgba(var(--bs-secondary-rgb), 0.09), 0px 0px 2px 0.00144px rgba(var(--bs-secondary-rgb), 0.07);
+}
+
+/* Success Shadow */
+
+.ui-circle-icon.ui-circle-icon-shadow-success-hover:hover {
+  border: none !important;
+  box-shadow: 0px 1px 4px rgba(var(--bs-success-rgb), 0.08), 0px 2px 5px rgba(var(--bs-success-rgb), 0.09), 0px 0px 2px 0.00144px rgba(var(--bs-success-rgb), 0.07);
+}
+
+/* Info Shadow */
+
+.ui-circle-icon.ui-circle-icon-shadow-info-hover:hover {
+  border: none !important;
+  box-shadow: 0px 1px 4px rgba(var(--bs-info-rgb), 0.08), 0px 2px 5px rgba(var(--bs-info-rgb), 0.09), 0px 0px 2px 0.00144px rgba(var(--bs-info-rgb), 0.07);
+}
+
+/* Warning Shadow */
+
+.ui-circle-icon.ui-circle-icon-shadow-warning-hover:hover {
+  border: none !important;
+  box-shadow: 0px 1px 4px rgba(var(--bs-warning-rgb), 0.08), 0px 2px 5px rgba(var(--bs-warning-rgb), 0.09), 0px 0px 2px 0.00144px rgba(var(--bs-warning-rgb), 0.07);
+}
+
+/* Danger Shadow */
+
+.ui-circle-icon.ui-circle-icon-shadow-danger-hover:hover {
+  border: none !important;
+  box-shadow: 0px 1px 4px rgba(var(--bs-danger-rgb), 0.08), 0px 2px 5px rgba(var(--bs-danger-rgb), 0.09), 0px 0px 2px 0.00144px rgba(var(--bs-danger-rgb), 0.07);
+}
+
+/* Light Shadow */
+
+.ui-circle-icon.ui-circle-icon-shadow-light-hover:hover {
+  border: none !important;
+  box-shadow: 0px 1px 4px rgba(var(--bs-light-rgb), 0.08), 0px 2px 5px rgba(var(--bs-light-rgb), 0.09), 0px 0px 2px 0.00144px rgba(var(--bs-light-rgb), 0.07);
+}
+
+/* Dark Shadow */
+
+.ui-circle-icon.ui-circle-icon-shadow-dark-hover:hover {
+  border: none !important;
+  box-shadow: 0px 1px 4px rgba(var(--bs-dark-rgb), 0.08), 0px 2px 5px rgba(var(--bs-dark-rgb), 0.09), 0px 0px 2px 0.00144px rgba(var(--bs-dark-rgb), 0.07);
+}
+
+/* color shadow hover end */
+
+.ui-circle-icon.ui-circle-icon-color-hover:hover i {
+  color: var(--bs-primary);
+}
+
+.ui-circle-icon.ui-circle-icon-color-primary-hover:hover i {
+  color: var(--bs-primary);
+}
+
+.ui-circle-icon.ui-circle-icon-color-secondary-hover:hover i {
+  color: var(--bs-secondary);
+}
+
+.ui-circle-icon.ui-circle-icon-color-success-hover:hover i {
+  color: var(--bs-success);
+}
+
+.ui-circle-icon.ui-circle-icon-color-info-hover:hover i {
+  color: var(--bs-info);
+}
+
+.ui-circle-icon.ui-circle-icon-color-warning-hover:hover i {
+  color: var(--bs-warning);
+}
+
+.ui-circle-icon.ui-circle-icon-color-danger-hover:hover i {
+  color: var(--bs-danger);
+}
+
+.ui-circle-icon.ui-circle-icon-color-light-hover:hover i {
+  color: var(--bs-light);
+}
+
+.ui-circle-icon.ui-circle-icon-color-dark-hover:hover i {
+  color: var(--bs-dark);
+}
+
+/* color shadow hover end */
+
+/* color borders hover start */
+
+.ui-circle-icon.ui-circle-icon-outline:hover {
+  border: 1px solid #dcdcdc !important;
+}
+
+.ui-circle-icon.ui-circle-icon-outline-primary:hover {
+  border: 1px solid var(--bs-primary) !important;
+}
+
+.ui-circle-icon.ui-circle-icon-outline-secondary:hover {
+  border: 1px solid var(--bs-secondary) !important;
+}
+
+.ui-circle-icon.ui-circle-icon-outline-success:hover {
+  border: 1px solid var(--bs-success) !important;
+}
+
+.ui-circle-icon.ui-circle-icon-outline-info:hover {
+  border: 1px solid var(--bs-info) !important;
+}
+
+.ui-circle-icon.ui-circle-icon-outline-warning:hover {
+  border: 1px solid var(--bs-warning) !important;
+}
+
+.ui-circle-icon.ui-circle-icon-outline-danger:hover {
+  border: 1px solid var(--bs-danger) !important;
+}
+
+.ui-circle-icon.ui-circle-icon-outline-light:hover {
+  border: 1px solid var(--bs-light) !important;
+}
+
+.ui-circle-icon.ui-circle-icon-outline-dark:hover {
+  border: 1px solid var(--bs-dark) !important;
+}
+
+/* color borders hover end */
 
 /* icon sizes start */
 

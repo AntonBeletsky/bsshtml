@@ -36,3 +36,7 @@
   left: 100%;
 }
 
+.error {
+  border-color: red;
+}
+

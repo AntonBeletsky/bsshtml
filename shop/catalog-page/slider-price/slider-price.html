@@ -48,47 +48,220 @@
 </head>
 
 <body><div class="slider-container-old container-fluid">
-
     <div class="row mt-2">
         <div class="col">
             <h5>Filter By Price</h5>
         </div>
     </div>
-
     <div class="row mt-2 px-2">
         <div class="col">
             <div class="slider-track" id="slider-track">
                 <div class="slider-range" id="slider-range"></div>
-
                 <div class="slider-thumb slider-thumb-left" id="slider-thumb-left" style="left: 0%;">
-
                 </div>
-
                 <div class="slider-thumb slider-thumb-right" id="slider-thumb-right" style="left: 100%;">
-
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row mt-2">
-        <div class="col">
-            <span id="price-min">$0</span> - <span id="price-max">$1000</span>
-        </div>
-    </div>
-
-    <div class="row mt-2">
+    <div class="row mt-4">
         <div class="col">
             <div class="d-flex align-items-center gap-2">
-                <input type="text" id="input-min" placeholder="Min price" class="form-control">
-                <input type="text" id="input-max" placeholder="Max price" class="form-control">
+                <input type="text" id="input-left" placeholder="Min price" class="form-control">
+                <input type="text" id="input-right" placeholder="Max price" class="form-control">
                 <button class="btn btn-primary" id="btn-apply">Apply</button>
             </div>
-
         </div>
     </div>
-
 </div>
+
+
+<code style="display: none;">
+    // API using simulation
+function getMaxPrice() {
+  /* you request to API here */
+  const maxPrice = 1000;
+  return maxPrice;
+}
+
+// API using simulation
+function getMinPrice() {
+  /* you request to API here */
+  const minPrice = 0;
+  return minPrice;
+}
+
+// API using simulation
+const minPrice = getMinPrice();
+const maxPrice = getMaxPrice();
+
+/* price range */
+const priceRange = maxPrice - minPrice;
+
+/* get html elements - btns */
+const sliderThumbLeft = document.getElementById("slider-thumb-left");
+const sliderThumbRight = document.getElementById("slider-thumb-right");
+
+/* get html elements - range & track  */
+const sliderTrack = document.getElementById("slider-track");
+const sliderRange = document.getElementById("slider-range");
+
+/* text inputs for price input */
+const inputLeft = document.getElementById("input-left");
+const inputRight = document.getElementById("input-right");
+
+/* drow Slider */
+function updateSlider() {
+  /* get values from btns  */
+  let leftValue = parseFloat(sliderThumbLeft.style.left);
+  let rightValue = parseFloat(sliderThumbRight.style.left);
+
+  /* проверка на выход за диапазон */
+  if (leftValue < 0) {
+    sliderThumbLeft.style.left = "0%";
+  }
+
+  if (rightValue > 100) {
+    sliderThumbRight.style.left = "100%";
+  }
+
+  /* calculate price track to price */
+  const minValue = minPrice + Math.round((priceRange * leftValue) / 100);
+  const maxValue = minPrice + Math.round((priceRange * rightValue) / 100);
+
+  /* data */
+  inputLeft.value = `${minValue}`;
+  inputRight.value = `${maxValue}`;
+
+  /* checkrange */
+  if (leftValue < 0) {
+    leftValue = 0;
+  }
+
+  if (rightValue > 100) {
+    rightValue = 100;
+  }
+
+  /* draws a range */
+  sliderRange.style.left = leftValue + "%";
+  sliderRange.style.width = rightValue - leftValue + "%";
+}
+
+/* mouse movement handling - обработка движения мыши */
+function mouseMoveHandler(event, thumb, direction) {
+  const sliderTrackRect = sliderTrack.getBoundingClientRect();
+  let newPos =
+    ((event.clientX - sliderTrackRect.left) / sliderTrackRect.width) * 100;
+
+  if (newPos < 0) newPos = 0;
+  if (newPos > 100) newPos = 100;
+  if (direction === "left" && newPos >= parseFloat(sliderThumbRight.style.left))
+    return;
+  if (direction === "right" && newPos <= parseFloat(sliderThumbLeft.style.left))
+    return;
+
+  thumb.style.left = newPos + "%";
+  updateSlider();
+}
+
+/* mouse click handling for left price btn */
+sliderThumbLeft.onmousedown = function (event) {
+  event.preventDefault();
+  document.onmousemove = function (event) {
+    mouseMoveHandler(event, sliderThumbLeft, "left");
+  };
+  document.onmouseup = function () {
+    document.onmousemove = null;
+    document.onmouseup = null;
+  };
+};
+
+/* mouse click handling for right price btn */
+sliderThumbRight.onmousedown = function (event) {
+  event.preventDefault();
+  document.onmousemove = function (event) {
+    mouseMoveHandler(event, sliderThumbRight, "right");
+  };
+  document.onmouseup = function () {
+    document.onmousemove = null;
+    document.onmouseup = null;
+  };
+};
+
+/* update drow slider */
+updateSlider(); // Initial update
+
+/* проверка на диапазон и выход за него */
+function checkingMinMaxRange(whatCheck = "", variable_value, control_value) {
+  if (isNaN(variable_value)) {
+    console.log(" variable_value is not a number");
+    return false;
+  }
+
+  if (variable_value < minPrice) {
+    console.log("variable_value is less than minPrice");
+    return false;
+  }
+
+  if (variable_value > maxPrice) {
+    console.log("variable_value is more than maxPrice");
+    return false;
+  }
+
+  /* передали левое значение, оно не должно быть больше или равно парвому*/
+  if (whatCheck === "min") {
+    if (variable_value >= control_value) {
+      console.log("variable_value is more than control_value");
+      return false;
+    }
+  }
+
+  /* передали правое значение, оно не должно быть меньше или равно левому*/
+  if (whatCheck === "max") {
+    if (variable_value <= control_value) {
+      console.log("variable_value is less than control_value");
+      return false;
+    }
+  }
+
+  console.log("checkingMinMaxRange is true");
+  return true;
+}
+
+/* ввод инпута меняет ползунок */
+inputLeft.addEventListener("input", (event) => {
+  let value = parseInt(event.target.value, 10);
+
+  if (!checkingMinMaxRange("min", value, parseInt(inputRight.value, 10))) {
+    // value = minPrice;
+  }
+
+  const newLeft = ((value - minPrice) / priceRange) * 100;
+
+  if (newLeft < parseFloat(sliderThumbRight.style.left)) {
+    sliderThumbLeft.style.left = `${newLeft}%`;
+    updateSlider();
+  }
+});
+
+/* ввод инпута меняет ползунок */
+inputRight.addEventListener("input", (event) => {
+  let value = parseInt(event.target.value, 10);
+
+  if (!checkingMinMaxRange("max", value, parseInt(inputLeft.value, 10))) {
+    // value = maxPrice;
+  }
+
+  const newRight = ((value - minPrice) / priceRange) * 100;
+
+  if (newRight > parseFloat(sliderThumbLeft.style.left)) {
+    sliderThumbRight.style.left = `${newRight}%`;
+    updateSlider();
+  }
+});
+
+</code>
     <script src="../../../assets/js/jquery.min.js"></script>
     <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../../assets/js/bs-init.js"></script>

@@ -1,133 +1,118 @@
+// API simulation functions
 function getMaxPrice() {
-  /* you request to API here */
-  const maxPrice = 1000;
-  return maxPrice;
+  // Simulated API request
+  return 1000;
 }
 
 function getMinPrice() {
-  /* you request to API here */
-  const minPrice = 0;
-  return minPrice;
+  // Simulated API request
+  return 0;
 }
 
+// Constants
 const minPrice = getMinPrice();
 const maxPrice = getMaxPrice();
+const priceRange = maxPrice - minPrice;
 
-const range = maxPrice - minPrice;
-
+// DOM Elements
 const sliderThumbLeft = document.getElementById("slider-thumb-left");
 const sliderThumbRight = document.getElementById("slider-thumb-right");
 const sliderTrack = document.getElementById("slider-track");
 const sliderRange = document.getElementById("slider-range");
+const inputLeft = document.getElementById("input-left");
+const inputRight = document.getElementById("input-right");
 
-const priceMin = document.getElementById("price-min");
-const priceMax = document.getElementById("price-max");
-
-const inputMin = document.getElementById("input-min");
-const inputMax = document.getElementById("input-max");
-
-/*
-const left_output = document.querySelector("#slider-thumb-left output");
-const rigth_output = document.querySelector("#slider-thumb-right output");
-*/
-
+// Update slider visuals and inputs
 function updateSlider() {
-  const leftValue = parseFloat(sliderThumbLeft.style.left);
-  const rightValue = parseFloat(sliderThumbRight.style.left);
-  const minValue = minPrice + Math.round((range * leftValue) / 100);
-  const maxValue = minPrice + Math.round((range * rightValue) / 100);
+  const leftValue = parseFloat(sliderThumbLeft.style.left) || 0;
+  const rightValue = parseFloat(sliderThumbRight.style.left) || 100;
 
-  sliderRange.style.left = leftValue + "%";
-  sliderRange.style.width = rightValue - leftValue + "%";
+  const minValue = minPrice + Math.round((priceRange * leftValue) / 100);
+  const maxValue = minPrice + Math.round((priceRange * rightValue) / 100);
 
-  priceMin.textContent = `$${minValue}`;
-  priceMax.textContent = `$${maxValue}`;
+  inputLeft.value = minValue;
+  inputRight.value = maxValue;
 
-  inputMin.value = `${minValue}`;
-  inputMax.value = `${maxValue}`;
-
-  /*
-  left_output.textContent = `$${minValue}`;
-  rigth_output.textContent = `$${maxValue}`;
-  */
+  sliderRange.style.left = `${leftValue}%`;
+  sliderRange.style.width = `${rightValue - leftValue}%`;
 }
 
+// Handle mouse movement for slider thumbs
 function mouseMoveHandler(event, thumb, direction) {
   const sliderTrackRect = sliderTrack.getBoundingClientRect();
-  let newPos =
+  let newPosition =
     ((event.clientX - sliderTrackRect.left) / sliderTrackRect.width) * 100;
 
-  if (newPos < 0) newPos = 0;
-  if (newPos > 100) newPos = 100;
-  if (direction === "left" && newPos >= parseFloat(sliderThumbRight.style.left))
+  newPosition = Math.max(0, Math.min(100, newPosition));
+
+  if (
+    direction === "left" &&
+    newPosition >= parseFloat(sliderThumbRight.style.left)
+  )
     return;
-  if (direction === "right" && newPos <= parseFloat(sliderThumbLeft.style.left))
+  if (
+    direction === "right" &&
+    newPosition <= parseFloat(sliderThumbLeft.style.left)
+  )
     return;
 
-  thumb.style.left = newPos + "%";
+  thumb.style.left = `${newPosition}%`;
   updateSlider();
 }
 
-sliderThumbLeft.onmousedown = function (event) {
-  event.preventDefault();
-  document.onmousemove = function (event) {
-    mouseMoveHandler(event, sliderThumbLeft, "left");
+// Attach mouse events to slider thumbs
+function attachMouseHandlers(thumb, direction) {
+  thumb.onmousedown = (event) => {
+    event.preventDefault();
+    document.onmousemove = (e) => mouseMoveHandler(e, thumb, direction);
+    document.onmouseup = () => {
+      document.onmousemove = null;
+      document.onmouseup = null;
+    };
   };
-  document.onmouseup = function () {
-    document.onmousemove = null;
-    document.onmouseup = null;
-  };
-};
+}
 
-sliderThumbRight.onmousedown = function (event) {
-  event.preventDefault();
-  document.onmousemove = function (event) {
-    mouseMoveHandler(event, sliderThumbRight, "right");
-  };
-  document.onmouseup = function () {
-    document.onmousemove = null;
-    document.onmouseup = null;
-  };
-};
+attachMouseHandlers(sliderThumbLeft, "left");
+attachMouseHandlers(sliderThumbRight, "right");
 
-updateSlider(); // Initial update
+// Validate input values
+function isValidRange(type, value, comparisonValue) {
+  if (isNaN(value) || value < minPrice || value > maxPrice) return false;
 
-inputMin.addEventListener("input", (event) => {
-  priceMin.textContent = event.target.value;
-  /* здесь нужно добавить такой код который переместит ползунки наоборот */
-});
+  if (type === "min" && value >= comparisonValue) return false;
+  if (type === "max" && value <= comparisonValue) return false;
 
-inputMax.addEventListener("input", (event) => {
-  priceMax.textContent = event.target.value;
-  /* здесь нужно добавить такой код который переместит ползунки наоборот */
-});
+  return true;
+}
 
-inputMin.addEventListener("input", (event) => {
-  let value = parseInt(event.target.value, 10);
+// Handle input events for manual value changes
+function handleInput(input, thumb, type) {
+  input.addEventListener("input", (event) => {
+    const value = parseInt(event.target.value, 10);
+    const comparisonValue =
+      type === "min"
+        ? parseInt(inputRight.value, 10)
+        : parseInt(inputLeft.value, 10);
 
-  // if (isNaN(value) || value < minPrice) value = minPrice;
+    if (!isValidRange(type, value, comparisonValue)) return;
 
-  // if (value > maxPrice) value = maxPrice;
+    const newPosition = ((value - minPrice) / priceRange) * 100;
+    const otherThumbPosition = parseFloat(
+      type === "min" ? sliderThumbRight.style.left : sliderThumbLeft.style.left
+    );
 
-  const newLeft = ((value - minPrice) / range) * 100;
+    if (
+      (type === "min" && newPosition < otherThumbPosition) ||
+      (type === "max" && newPosition > otherThumbPosition)
+    ) {
+      thumb.style.left = `${newPosition}%`;
+      updateSlider();
+    }
+  });
+}
 
-  if (newLeft < parseFloat(sliderThumbRight.style.left)) {
-    sliderThumbLeft.style.left = `${newLeft}%`;
-    updateSlider();
-  }
-});
+handleInput(inputLeft, sliderThumbLeft, "min");
+handleInput(inputRight, sliderThumbRight, "max");
 
-inputMax.addEventListener("input", (event) => {
-  let value = parseInt(event.target.value, 10);
-
-  // if (isNaN(value) || value < minPrice) value = minPrice;
-
-  // if (value > maxPrice) value = maxPrice;
-
-  const newRight = ((value - minPrice) / range) * 100;
-
-  if (newRight > parseFloat(sliderThumbLeft.style.left)) {
-    sliderThumbRight.style.left = `${newRight}%`;
-    updateSlider();
-  }
-});
+// Initialize slider
+updateSlider();
