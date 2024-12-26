@@ -1,11 +1,9 @@
 // API simulation functions
 function getMaxPrice() {
-  // Simulated API request
   return 1000;
 }
 
 function getMinPrice() {
-  // Simulated API request
   return 0;
 }
 
@@ -94,7 +92,12 @@ function handleInput(input, thumb, type) {
         ? parseInt(inputRight.value, 10)
         : parseInt(inputLeft.value, 10);
 
-    if (!isValidRange(type, value, comparisonValue)) return;
+    // Allow independent input but show visual feedback for invalid input
+    if (!isValidRange(type, value, comparisonValue)) {
+      input.classList.add("error"); // Add error styling
+      return;
+    }
+    input.classList.remove("error"); // Remove error styling
 
     const newPosition = ((value - minPrice) / priceRange) * 100;
     const otherThumbPosition = parseFloat(
@@ -107,6 +110,16 @@ function handleInput(input, thumb, type) {
     ) {
       thumb.style.left = `${newPosition}%`;
       updateSlider();
+    }
+  });
+
+  input.addEventListener("blur", () => {
+    if (input.classList.contains("error")) {
+      // Reset to current thumb value on invalid input
+      const thumbPosition =
+        parseFloat(thumb.style.left) || (type === "min" ? 0 : 100);
+      input.value = minPrice + Math.round((priceRange * thumbPosition) / 100);
+      input.classList.remove("error");
     }
   });
 }
