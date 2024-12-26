@@ -35,11 +35,12 @@ function updateSlider() {
   sliderRange.style.width = `${rightValue - leftValue}%`;
 }
 
-// Handle mouse movement for slider thumbs
-function mouseMoveHandler(event, thumb, direction) {
+// Handle movement for slider thumbs (mouse or touch)
+function moveHandler(event, thumb, direction) {
+  const clientX = event.touches ? event.touches[0].clientX : event.clientX;
   const sliderTrackRect = sliderTrack.getBoundingClientRect();
   let newPosition =
-    ((event.clientX - sliderTrackRect.left) / sliderTrackRect.width) * 100;
+    ((clientX - sliderTrackRect.left) / sliderTrackRect.width) * 100;
 
   newPosition = Math.max(0, Math.min(100, newPosition));
 
@@ -58,20 +59,31 @@ function mouseMoveHandler(event, thumb, direction) {
   updateSlider();
 }
 
-// Attach mouse events to slider thumbs
-function attachMouseHandlers(thumb, direction) {
+// Attach mouse and touch events to slider thumbs
+function attachHandlers(thumb, direction) {
+  // Mouse events
   thumb.onmousedown = (event) => {
     event.preventDefault();
-    document.onmousemove = (e) => mouseMoveHandler(e, thumb, direction);
+    document.onmousemove = (e) => moveHandler(e, thumb, direction);
     document.onmouseup = () => {
       document.onmousemove = null;
       document.onmouseup = null;
     };
   };
+
+  // Touch events
+  thumb.ontouchstart = (event) => {
+    event.preventDefault();
+    document.ontouchmove = (e) => moveHandler(e, thumb, direction);
+    document.ontouchend = () => {
+      document.ontouchmove = null;
+      document.ontouchend = null;
+    };
+  };
 }
 
-attachMouseHandlers(sliderThumbLeft, "left");
-attachMouseHandlers(sliderThumbRight, "right");
+attachHandlers(sliderThumbLeft, "left");
+attachHandlers(sliderThumbRight, "right");
 
 // Validate input values
 function isValidRange(type, value, comparisonValue) {
