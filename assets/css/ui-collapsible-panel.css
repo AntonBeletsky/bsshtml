@@ -1,0 +1,18 @@
+.collapsible-container-outer {
+}
+
+.collapsible-container-inner {
+}
+
+.collapsible-header {
+  /*display: flex;*/
+  /*cursor: pointer;*/
+  /*overflow: hidden;*/
+  /*justify-content: space-between;*/
+  /*align-items: center;*/
+  cursor: pointer;
+}
+
+.collapsible-content {
+}
+

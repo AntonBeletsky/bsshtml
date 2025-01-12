@@ -1,0 +1,121 @@
+/* product card start */
+
+.product-card-grid-container-outer {
+  max-width: 280px;
+  transition: box-shadow 0.2s;
+  border: solid 1px #00000000;
+}
+
+.product-card-grid-container-outer a {
+  text-decoration: none;
+}
+
+.product-card-grid-header {
+}
+
+.product-card-grid-body {
+}
+
+.product-card-grid-container-inner {
+  position: relative;
+}
+
+.product-card-grid-container-outer:hover {
+  z-index: 10;
+  border: solid 1px #e5e5e5;
+}
+
+.product-card-grid-on-img-content-top {
+  position: absolute;
+  display: none;
+}
+
+.product-card-grid-on-img-content-buttom {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}
+
+.product-card-grid-on-img-content-left {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 20px;
+}
+
+.product-card-grid-on-img-content-right {
+  position: absolute;
+  bottom: 20px;
+  /*left: 300px;*/
+  left: 220px;
+  width: 20px;
+  transition: left 0.5s;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-product-product-card-grid-container-outer {
+  max-width: 240px;
+  max-height: 240px;
+}
+
+.img-product-card-grid {
+  max-width: 220px;
+  max-height: 220px;
+}
+
+/* show icons start */
+
+.circle-icon-grid-container {
+  /*display: none;*/
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+}
+
+.circle-icon-grid-container.active {
+  visibility: visible;
+}
+
+.product-card-grid-container-inner:hover .circle-icon-grid-container:not(.active) {
+  display: flex;
+  visibility: visible;
+  animation: 0.5s show ease;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* show icons end */
+
+.product-card-grid-container-inner:hover .product-card-grid-on-img-content-right {
+  /*left: 220px !important;*/
+}
+
+/* use badge */
+
+.little-circle {
+  width: 16px;
+  height: 30px;
+  padding: 1px 8px;
+  overflow: visible;
+  background: #fff;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -khtml-border-radius: 50px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.17);
+  -khtml-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.17);
+}
+
