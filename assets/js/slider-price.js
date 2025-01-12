@@ -1,143 +1,63 @@
-// API simulation functions
-function getMaxPrice() {
-  return 1000;
-}
+const minPrice = 0;
+const maxPrice = 1000;
+const range = maxPrice - minPrice;
 
-function getMinPrice() {
-  return 0;
-}
-
-// Constants
-const minPrice = getMinPrice();
-const maxPrice = getMaxPrice();
-const priceRange = maxPrice - minPrice;
-
-// DOM Elements
 const sliderThumbLeft = document.getElementById("slider-thumb-left");
 const sliderThumbRight = document.getElementById("slider-thumb-right");
 const sliderTrack = document.getElementById("slider-track");
 const sliderRange = document.getElementById("slider-range");
-const inputLeft = document.getElementById("input-left");
-const inputRight = document.getElementById("input-right");
+const priceMin = document.getElementById("price-min");
+const priceMax = document.getElementById("price-max");
 
-// Update slider visuals and inputs
 function updateSlider() {
-  const leftValue = parseFloat(sliderThumbLeft.style.left) || 0;
-  const rightValue = parseFloat(sliderThumbRight.style.left) || 100;
+  const leftValue = parseFloat(sliderThumbLeft.style.left);
+  const rightValue = parseFloat(sliderThumbRight.style.left);
+  const minValue = minPrice + Math.round((range * leftValue) / 100);
+  const maxValue = minPrice + Math.round((range * rightValue) / 100);
 
-  const minValue = minPrice + Math.round((priceRange * leftValue) / 100);
-  const maxValue = minPrice + Math.round((priceRange * rightValue) / 100);
+  sliderRange.style.left = leftValue + "%";
+  sliderRange.style.width = rightValue - leftValue + "%";
 
-  inputLeft.value = minValue;
-  inputRight.value = maxValue;
-
-  sliderRange.style.left = `${leftValue}%`;
-  sliderRange.style.width = `${rightValue - leftValue}%`;
+  priceMin.textContent = `$${minValue}`;
+  priceMax.textContent = `$${maxValue}`;
 }
 
-// Handle movement for slider thumbs (mouse or touch)
-function moveHandler(event, thumb, direction) {
-  const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+function mouseMoveHandler(event, thumb, direction) {
   const sliderTrackRect = sliderTrack.getBoundingClientRect();
-  let newPosition =
-    ((clientX - sliderTrackRect.left) / sliderTrackRect.width) * 100;
+  let newPos =
+    ((event.clientX - sliderTrackRect.left) / sliderTrackRect.width) * 100;
 
-  newPosition = Math.max(0, Math.min(100, newPosition));
-
-  if (
-    direction === "left" &&
-    newPosition >= parseFloat(sliderThumbRight.style.left)
-  )
+  if (newPos < 0) newPos = 0;
+  if (newPos > 100) newPos = 100;
+  if (direction === "left" && newPos >= parseFloat(sliderThumbRight.style.left))
     return;
-  if (
-    direction === "right" &&
-    newPosition <= parseFloat(sliderThumbLeft.style.left)
-  )
+  if (direction === "right" && newPos <= parseFloat(sliderThumbLeft.style.left))
     return;
 
-  thumb.style.left = `${newPosition}%`;
+  thumb.style.left = newPos + "%";
   updateSlider();
 }
 
-// Attach mouse and touch events to slider thumbs
-function attachHandlers(thumb, direction) {
-  // Mouse events
-  thumb.onmousedown = (event) => {
-    event.preventDefault();
-    document.onmousemove = (e) => moveHandler(e, thumb, direction);
-    document.onmouseup = () => {
-      document.onmousemove = null;
-      document.onmouseup = null;
-    };
+sliderThumbLeft.onmousedown = function (event) {
+  event.preventDefault();
+  document.onmousemove = function (event) {
+    mouseMoveHandler(event, sliderThumbLeft, "left");
   };
-
-  // Touch events
-  thumb.ontouchstart = (event) => {
-    event.preventDefault();
-    document.ontouchmove = (e) => moveHandler(e, thumb, direction);
-    document.ontouchend = () => {
-      document.ontouchmove = null;
-      document.ontouchend = null;
-    };
+  document.onmouseup = function () {
+    document.onmousemove = null;
+    document.onmouseup = null;
   };
-}
+};
 
-attachHandlers(sliderThumbLeft, "left");
-attachHandlers(sliderThumbRight, "right");
+sliderThumbRight.onmousedown = function (event) {
+  event.preventDefault();
+  document.onmousemove = function (event) {
+    mouseMoveHandler(event, sliderThumbRight, "right");
+  };
+  document.onmouseup = function () {
+    document.onmousemove = null;
+    document.onmouseup = null;
+  };
+};
 
-// Validate input values
-function isValidRange(type, value, comparisonValue) {
-  if (isNaN(value) || value < minPrice || value > maxPrice) return false;
-
-  if (type === "min" && value >= comparisonValue) return false;
-  if (type === "max" && value <= comparisonValue) return false;
-
-  return true;
-}
-
-// Handle input events for manual value changes
-function handleInput(input, thumb, type) {
-  input.addEventListener("input", (event) => {
-    const value = parseInt(event.target.value, 10);
-    const comparisonValue =
-      type === "min"
-        ? parseInt(inputRight.value, 10)
-        : parseInt(inputLeft.value, 10);
-
-    // Allow independent input but show visual feedback for invalid input
-    if (!isValidRange(type, value, comparisonValue)) {
-      input.classList.add("error"); // Add error styling
-      return;
-    }
-    input.classList.remove("error"); // Remove error styling
-
-    const newPosition = ((value - minPrice) / priceRange) * 100;
-    const otherThumbPosition = parseFloat(
-      type === "min" ? sliderThumbRight.style.left : sliderThumbLeft.style.left
-    );
-
-    if (
-      (type === "min" && newPosition < otherThumbPosition) ||
-      (type === "max" && newPosition > otherThumbPosition)
-    ) {
-      thumb.style.left = `${newPosition}%`;
-      updateSlider();
-    }
-  });
-
-  input.addEventListener("blur", () => {
-    if (input.classList.contains("error")) {
-      // Reset to current thumb value on invalid input
-      const thumbPosition =
-        parseFloat(thumb.style.left) || (type === "min" ? 0 : 100);
-      input.value = minPrice + Math.round((priceRange * thumbPosition) / 100);
-      input.classList.remove("error");
-    }
-  });
-}
-
-handleInput(inputLeft, sliderThumbLeft, "min");
-handleInput(inputRight, sliderThumbRight, "max");
-
-// Initialize slider
-updateSlider();
+updateSlider(); // Initial update
