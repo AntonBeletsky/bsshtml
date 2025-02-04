@@ -1,0 +1,249 @@
+/* tab optimizer */
+
+.customer-account-tabs .tab-pane {
+  overflow: hidden;
+  min-height: 100vh !important;
+}
+
+/* Overview tab */
+
+.account-card-item {
+  min-width: 300px;
+  min-height: 90px;
+  max-width: 300px;
+  max-height: 90px;
+  cursor: pointer;
+  border: solid 1px #ffffffff;
+}
+
+.account-card-item:hover {
+  border: solid 1px #e5e5e5;
+}
+
+.img-overview-logo {
+}
+
+.img-overview-logo img {
+  width: 65px;
+  height: 65px;
+  aspect-ratio: 1;
+}
+
+/* Overview tab end */
+
+/* Wishlist tab */
+
+/* Wishlist tab end */
+
+/* Viewed items */
+
+.product-view-item {
+  max-width: 255px;
+  min-width: 240px;
+}
+
+.product-view-container-img {
+}
+
+.product-view-item img {
+  max-width: 130px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Viewed items end */
+
+/* My Orders */
+
+/* details.order-details {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+summary.order-summary {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+details[open] summary.order-summary {
+  background-color: #d1e7dd;
+}
+
+summary.order-summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] .order-content {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+/* My Orders end */
+
+/* My Wallet start */
+
+.my-wallet-container .pay-card-container-outer {
+}
+
+.my-wallet-container .card-base-container {
+  display: flex;
+  width: 350px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.my-wallet-container .pay-card-container-outer .card-container {
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  padding: 20px;
+  color: white;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.my-wallet-container .pay-card-container-outer .chip {
+  width: 50px;
+  height: 35px;
+  background-color: gold;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-wallet-container .pay-card-container-outer .chip svg {
+  transform: scale(1.6);
+  width: 40px;
+  height: 30px;
+  fill: black;
+}
+
+.my-wallet-container .pay-card-container-outer .card-number {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 450px) {
+  .pay-card-container-outer {
+    transform: scale(0.7);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card-col {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+  }
+}
+
+/* add card */
+
+.my-wallet-container .add-card-container {
+  background: #f8f9fa;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px dashed #007bff;
+}
+
+.my-wallet-container .add-card-container svg {
+  width: 50px;
+  height: 50px;
+  fill: #007bff;
+}
+
+.my-wallet-container dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+}
+
+.my-wallet-container .pay-card-container-outer .remove-card-btn {
+  top: 74px;
+  right: 23px;
+}
+
+/* add card end */
+
+/* card gradients start */
+
+:root {
+  --gradient-blue-purple: linear-gradient(135deg, #007bff, #6610f2);
+  --gradient-red-orange: linear-gradient(135deg, #ff0000, #ff7f00);
+  --gradient-orange-yellow: linear-gradient(135deg, #ff7f00, #ffff00);
+  --gradient-yellow-green: linear-gradient(135deg, #ffff00, #00ff00);
+  --gradient-green-cyan: linear-gradient(135deg, #00ff00, #00ffff);
+  --gradient-cyan-blue: linear-gradient(135deg, #00ffff, #007bff);
+  --gradient-purple-pink: linear-gradient(135deg, #6610f2, #ff00ff);
+  --gradient-black-white: linear-gradient(135deg, #000000, #ffffff);
+  --gradient-gray-white: linear-gradient(135deg, #333333, #cccccc);
+  --gradient-blue-purple: linear-gradient(135deg, #0056b3, #4b0082);
+  --gradient-red-orange: linear-gradient(135deg, #cc0000, #cc6600);
+  --gradient-orange-yellow: linear-gradient(135deg, #cc6600, #cca300);
+  --gradient-yellow-green: linear-gradient(135deg, #cca300, #009900);
+  --gradient-green-cyan: linear-gradient(135deg, #009900, #009999);
+  --gradient-cyan-blue: linear-gradient(135deg, #009999, #0044cc);
+  --gradient-purple-pink: linear-gradient(135deg, #4b0082, #cc00cc);
+  --gradient-black-white: linear-gradient(135deg, #111111, #bbbbbb);
+  --gradient-gray-white: linear-gradient(135deg, #222222, #999999);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-blue-purple {
+  background: var(--gradient-blue-purple);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-red-orange {
+  background: var(--gradient-red-orange);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-orange-yellow {
+  background: var(--gradient-orange-yellow);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-yellow-green {
+  background: var(--gradient-yellow-green);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-green-cyan {
+  background: var(--gradient-green-cyan);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-cyan-blue {
+  background: var(--gradient-cyan-blue);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-purple-pink {
+  background: var(--gradient-purple-pink);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-black-white {
+  background: var(--gradient-black-white);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-gray-white {
+  background: var(--gradient-gray-white);
+}
+
+/* card gradients end */
+
+/* My Wallet end */
+
