@@ -1,3 +1,20 @@
+/* get cardID for remove-btn 3points btn */
+$(document).ready(function () {
+  $("button[remove-card-btn]").click(function () {
+    const removeCardBtnValue = $(this).attr("remove-card-btn");
+    toggleMenu(removeCardBtnValue);
+  });
+});
+
+/* get cardID for remove-a on Remove-btn */
+$(document).ready(function () {
+  $("a[remove-card-id]").click(function () {
+    const removeCardAIdValue = $(this).attr("remove-card-id");
+    removeCard(removeCardAIdValue);
+  });
+});
+
+/* toggleM class remove-btn */
 function toggleMenu(cardId) {
   /*alert(cardId);*/
   if (cardId == null) {
@@ -11,11 +28,13 @@ function toggleMenu(cardId) {
   menu.classList.toggle("d-none");
 }
 
+/* remove card */
 function removeCard(cardId) {
   /*alert(`Card ${cardId} removed!`);*/
   openRemoveDialog(cardId);
 }
 
+/* remove card dialog */
 function openRemoveDialog(cardId) {
   const modal = document.getElementById("removeCardModal");
   modal.querySelector(
@@ -24,6 +43,7 @@ function openRemoveDialog(cardId) {
   modal.showModal();
 }
 
+/* close remove card dialog */
 function closeRemoveDialog() {
   document.getElementById("removeCardModal").close();
 }
