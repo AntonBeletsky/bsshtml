@@ -31,6 +31,50 @@
 
 /* Overview tab end */
 
+/* Account tab */
+
+.accordion-item {
+}
+
+.address-card {
+  transition: all 0.3s ease;
+  position: relative;
+  margin: 15px;
+}
+
+.address-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-control[readonly] {
+  background-color: #e9ecef;
+}
+
+/* Styles for the native <dialog> modal */
+
+dialog[open] {
+  display: block;
+  /*position: fixed;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  /*top: 100px;*/
+  /*left: 50%;*/
+  width: 300px;
+  height: 250px;
+  z-index: 1050;
+  border: none;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Account tab end */
+
 /* Wishlist tab */
 
 /* Wishlist tab end */
