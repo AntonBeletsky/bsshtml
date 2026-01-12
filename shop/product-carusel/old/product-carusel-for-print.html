@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- -----------------------CSS----------------------- -->
+<!--  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Boostrap icons  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Fotorama Gallery -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Material UI icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Material Symbols Outlined -->
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=grid_view" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>boostrap-lux-shop-master</title>
+    <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="../../../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../../assets/css/articles-badges-images.css">
+    <link rel="stylesheet" href="../../../assets/css/basket.css">
+    <link rel="stylesheet" href="../../../assets/css/body.css">
+    <link rel="stylesheet" href="../../../assets/css/bootstrap-extension.css">
+    <link rel="stylesheet" href="../../../assets/css/catalog-page.css">
+    <link rel="stylesheet" href="../../../assets/css/checkout.css">
+    <link rel="stylesheet" href="../../../assets/css/compare-page.css">
+    <link rel="stylesheet" href="../../../assets/css/customer-account.css">
+    <link rel="stylesheet" href="../../../assets/css/dialog.css">
+    <link rel="stylesheet" href="../../../assets/css/featured-Itemn.css">
+    <link rel="stylesheet" href="../../../assets/css/fotorama.css">
+    <link rel="stylesheet" href="../../../assets/css/header-1.css">
+    <link rel="stylesheet" href="../../../assets/css/header-navbar-black.css">
+    <link rel="stylesheet" href="../../../assets/css/home-page.css">
+    <link rel="stylesheet" href="../../../assets/css/img.css">
+    <link rel="stylesheet" href="../../../assets/css/index-page.css">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link rel="stylesheet" href="../../../assets/css/order-item.css">
+    <link rel="stylesheet" href="../../../assets/css/popover-content.css">
+    <link rel="stylesheet" href="../../../assets/css/product-card-grid.css">
+    <link rel="stylesheet" href="../../../assets/css/product-card-list.css">
+    <link rel="stylesheet" href="../../../assets/css/product-page.css">
+    <link rel="stylesheet" href="../../../assets/css/products-carousel.css">
+    <link rel="stylesheet" href="../../../assets/css/scroll-normalizer-master.css">
+    <link rel="stylesheet" href="../../../assets/css/shadow-box.css">
+    <link rel="stylesheet" href="../../../assets/css/shopping-cart.css">
+    <link rel="stylesheet" href="../../../assets/css/slider-price.css">
+    <link rel="stylesheet" href="../../../assets/css/stars-rating.css">
+    <link rel="stylesheet" href="../../../assets/css/tech-shadow-box.css">
+    <link rel="stylesheet" href="../../../assets/css/timeline.css">
+    <link rel="stylesheet" href="../../../assets/css/ui-collapsible-panel.css">
+    <link rel="stylesheet" href="../../../assets/css/ui-icons-circle.css">
+    <link rel="stylesheet" href="../../../assets/css/wishlist.css">
+</head>
+
+<body><style>
+    /* Container for the carousel track, handles overflow and positioning */
+    .carousel-track-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* The actual track holding the product cards */
+    .carousel-track {
+        display: flex;
+        flex-wrap: nowrap;
+        /* Prevent cards from wrapping to the next line */
+        overflow-x: hidden;
+        /* Hide default browser scrollbar */
+        scroll-behavior: smooth;
+        /* Enable smooth scrolling when navigating */
+        padding-bottom: 1rem;
+        /* Space for pagination dots at the bottom */
+        -webkit-overflow-scrolling: touch;
+        /* Improve touch scrolling performance on iOS devices */
+    }
+
+    /* Hide scrollbar for aesthetic purposes across different browsers */
+    .carousel-track::-webkit-scrollbar {
+        display: none;
+        /* Webkit browsers (Chrome, Safari) */
+    }
+
+    .carousel-track {
+        -ms-overflow-style: none;
+        /* Internet Explorer and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    /* Styling for navigation buttons, ensuring they are above the track */
+    .carousel-nav-btn {
+        z-index: 1;
+    }
+
+    /* Pagination dots styling */
+    .carousel-pagination {
+        display: flex;
+        justify-content: center;
+        /* Center the dots horizontally */
+        margin-top: 1rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        /* Ensure dots are above the track */
+    }
+
+    .pagination-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        /* Make them circular */
+        background-color: #ccc;
+        /* Default inactive color */
+        margin: 0 5px;
+        /* Spacing between dots */
+        cursor: pointer;
+        /* Indicate interactivity */
+        transition: background-color 0.3s ease;
+        /* Smooth color transition on hover/active */
+        border: 1px solid #ccc;
+        /* Border for better visibility */
+    }
+
+    /* Active and hover states for pagination dots */
+    .pagination-dot.active,
+    .pagination-dot:hover {
+        background-color: #007bff;
+        /* Active/hover color */
+        border-color: #007bff;
+        /* Active/hover border color */
+    }
+
+    /* Styles for disabled navigation buttons */
+    .carousel-nav-btn:disabled {
+        opacity: 0.5;
+        /* Reduce opacity to indicate disabled state */
+        cursor: not-allowed;
+        /* Change cursor to 'not-allowed' */
+    }
+</style>
+
+<div class="container py-5">
+    <h2 class="text-center mb-5" id="carouselTitle">Recommended Products</h2>
+
+    <div class="carousel-track-container">
+        <button
+            class="btn btn-dark position-absolute top-50 start-0 translate-middle-y ms-2 carousel-nav-btn carousel-nav-prev"
+            aria-label="Previous product">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="carousel-track d-flex" role="group" aria-labelledby="carouselTitle">
+
+            <div class="card-item mx-2 shadow-sm product-card-grid-container-outer py-1 position-relative">
+                <div class="row row-cols-1 product-card-grid-container-inner row-gap-2 m-0">
+                    <div class="col-12 product-card-grid-header position-relative">
+                        <div class="product-card-grid-on-img-content-container">
+                            <div
+                                class="d-flex justify-content-around flex-nowrap product-card-grid-on-img-content-top gap-2 p-2">
+                                <a class="text-decoration-none" href="#"><span
+                                        class="badge rounded-pill bg-danger">-70%</span></a>
+                                <a class="text-decoration-none" href="#"><span
+                                        class="badge rounded-pill bg-success">New</span></a>
+                                <a class="text-decoration-none" href="#"><span
+                                        class="badge rounded-pill bg-secondary">Hot</span></a>
+                            </div>
+                            <div class="product-card-grid-on-img-content-right">
+                                <div class="circle-icon-grid-container"><a class="ui-circle-icon" href="#"><i
+                                            class="fas fa-eye"></i></a></div>
+                                <div class="circle-icon-grid-container"><a class="ui-circle-icon" href="#"><i
+                                            class="fas fa-heart"></i></a></div>
+                                <div class="circle-icon-grid-container"><a class="ui-circle-icon" href="#"><i
+                                            class="fas fa-shopping-cart"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="img-product-card-grid-container py-2 text-center">
+                            <a href="#"><img class="img-fluid img-product-card-grid"
+                                    src="https://picsum.photos/id/1/600/600" alt="Product 1"></a>
+                        </div>
+                    </div>
+                    <div class="col-12 product-card-grid-body">
+                        <div class="container py-2">
+                            <div class="row gap-2">
+                                <div class="col-12"><a href="#" class="text-decoration-none text-dark">
+                                        <h5 class="fw-bold">Product Name 1</h5>
+                                    </a></div>
+                                <div class="col-12 product-card-grid-text-container">
+                                    <p class="small text-muted mb-0">High-quality device with premium features.</p>
+                                </div>
+                                <div class="col-12">
+                                    <h4 class="text-primary">$150.00</h4>
+                                    <div class="stars-container-outer mb-3">
+                                        <div class="text-warning small" title="4/5 rating">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row row-cols-2 g-2">
+                                        <div class="col"><button class="btn btn-outline-dark btn-sm w-100"
+                                                type="button">Buy</button></div>
+                                        <div class="col"><button class="btn btn-outline-secondary btn-sm w-100"
+                                                type="button">Info</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const track = document.querySelector('.carousel-track');
+                const firstCard = track.innerHTML;
+                for (let i = 2; i <= 10; i++) {
+                    let newCard = firstCard.replace('id/1/', `id/${i * 10}/`);
+                    newCard = newCard.replace('Product Name 1', `Product Name ${i}`);
+                    track.innerHTML += newCard;
+                }
+            </script>
+
+        </div>
+
+        <button
+            class="btn btn-dark position-absolute top-50 end-0 translate-middle-y me-2 carousel-nav-btn carousel-nav-next"
+            aria-label="Next product">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="carousel-pagination"></div>
+    </div>
+</div>
+
+<script>
+    // --- CONFIGURATION ---
+    // 'single': moves by exactly one card
+    // 'page': moves the full width but leaves the last card visible as the new first card
+    const scrollMode = 'page';
+
+    // Get references to key DOM elements
+    const carouselTrack = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.carousel-nav-prev');
+    const nextBtn = document.querySelector('.carousel-nav-next');
+    const paginationContainer = document.querySelector('.carousel-pagination');
+    const productCards = Array.from(carouselTrack.querySelectorAll('.card-item'));
+
+    let currentIndex = 0; // Tracks the logical index of the first visible item
+
+    /**
+     * Calculates the full width of a single carousel item, including margins.
+     * @returns {number} The total width of a single card item.
+     */
+    function getSingleItemWidth() {
+        if (productCards.length > 0) {
+            const item = productCards[0];
+            const style = getComputedStyle(item);
+            // offsetWidth includes content, padding, and border
+            const width = item.offsetWidth;
+            const marginLeft = parseFloat(style.marginLeft);
+            const marginRight = parseFloat(style.marginRight);
+            return width + marginLeft + marginRight;
+        }
+        return 0;
+    }
+
+    /**
+     * Creates and appends pagination dots for each product card.
+     */
+    function createPaginationDots() {
+        paginationContainer.innerHTML = '';
+        productCards.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('pagination-dot');
+            dot.setAttribute('role', 'button');
+            dot.setAttribute('aria-label', `Go to product ${index + 1}`);
+            dot.addEventListener('click', () => {
+                scrollToIndex(index);
+            });
+            paginationContainer.appendChild(dot);
+        });
+        updatePaginationDots();
+    }
+
+    /**
+     * Updates which dot is active based on the current scroll position.
+     */
+    function updatePaginationDots() {
+        const dots = paginationContainer.children;
+        const itemWidth = getSingleItemWidth();
+        if (itemWidth === 0) return;
+
+        // Calculate index by dividing scroll position by item width
+        const visibleIndex = Math.round(carouselTrack.scrollLeft / itemWidth);
+
+        Array.from(dots).forEach((dot, index) => {
+            dot.classList.remove('active');
+            dot.removeAttribute('aria-current');
+            if (index === visibleIndex) {
+                dot.classList.add('active');
+                dot.setAttribute('aria-current', 'true');
+            }
+        });
+        currentIndex = visibleIndex;
+        updateNavigationButtons();
+    }
+
+    /**
+     * Scrolls to a specific card index.
+     */
+    function scrollToIndex(index, smooth = true) {
+        const itemWidth = getSingleItemWidth();
+        const targetScrollLeft = itemWidth * index;
+
+        carouselTrack.scroll({
+            left: targetScrollLeft,
+            behavior: smooth ? 'smooth' : 'auto'
+        });
+
+        if (smooth) {
+            const onScrollEnd = () => {
+                focusVisibleCard();
+                carouselTrack.removeEventListener('scroll', onScrollEnd);
+            };
+            carouselTrack.addEventListener('scroll', onScrollEnd, { once: true });
+        } else {
+            focusVisibleCard();
+        }
+    }
+
+    /**
+     * Focuses the first visible card for keyboard accessibility.
+     */
+    function focusVisibleCard() {
+        const itemWidth = getSingleItemWidth();
+        const firstVisibleIndex = Math.round(carouselTrack.scrollLeft / itemWidth);
+
+        if (firstVisibleIndex >= 0 && firstVisibleIndex < productCards.length) {
+            const targetCard = productCards[firstVisibleIndex];
+
+            if (targetCard) {
+                const cardLink = targetCard.querySelector('.btn') || targetCard.querySelector('a');
+                if (cardLink) {
+                    cardLink.focus();
+                } else {
+                    targetCard.setAttribute('tabindex', '-1');
+                    targetCard.focus();
+                }
+            }
+        }
+    }
+
+    /**
+     * Disables nav buttons if the user reaches the start or end of the track.
+     */
+    function updateNavigationButtons() {
+        const maxScrollLeft = carouselTrack.scrollWidth - carouselTrack.offsetWidth;
+        prevBtn.disabled = carouselTrack.scrollLeft <= 5;
+        nextBtn.disabled = carouselTrack.scrollLeft >= maxScrollLeft - 5;
+    }
+
+    // --- Navigation Button Logic ---
+
+    prevBtn.addEventListener('click', () => {
+        const itemWidth = getSingleItemWidth();
+        let step;
+
+        if (scrollMode === 'single') {
+            step = itemWidth;
+        } else {
+            // "Overlap" logic: move by visible width minus one item width
+            // This makes the current leftmost item become the new rightmost item
+            step = carouselTrack.offsetWidth - itemWidth;
+        }
+
+        carouselTrack.scrollBy({ left: -step, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+        const itemWidth = getSingleItemWidth();
+        let step;
+
+        if (scrollMode === 'single') {
+            step = itemWidth;
+        } else {
+            // "Overlap" logic: move by visible width minus one item width
+            // This makes the current rightmost item become the new leftmost item
+            step = carouselTrack.offsetWidth - itemWidth;
+        }
+
+        carouselTrack.scrollBy({ left: step, behavior: 'smooth' });
+    });
+
+    // --- Global Event Listeners ---
+
+    carouselTrack.addEventListener('scroll', () => {
+        updatePaginationDots();
+        updateNavigationButtons();
+    });
+
+    window.addEventListener('resize', () => {
+        createPaginationDots();
+        updatePaginationDots();
+        updateNavigationButtons();
+        // Re-align to current index after resize to prevent "half-card" views
+        scrollToIndex(currentIndex, false);
+    });
+
+    window.addEventListener('load', () => {
+        createPaginationDots();
+        updatePaginationDots();
+        updateNavigationButtons();
+        focusVisibleCard();
+    });
+</script>
+
+<!--
+<script>
+    // --- CONFIGURATION ---
+    // 'single': moves by one card at a time
+    // 'page': moves by the full visible width of the carousel
+    const scrollMode = 'page';
+
+    // Get references to key DOM elements
+    const carouselTrack = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.carousel-nav-prev');
+    const nextBtn = document.querySelector('.carousel-nav-next');
+    const paginationContainer = document.querySelector('.carousel-pagination');
+    const productCards = Array.from(carouselTrack.querySelectorAll('.card-item'));
+
+    let currentIndex = 0; // Tracks the logical index of the first visible item
+
+    /**
+     * Calculates the full width of a single carousel item, including margins and padding.
+     * @returns {number} The total width of a single card item.
+     */
+    function getSingleItemWidth() {
+        if (productCards.length > 0) {
+            const item = productCards[0];
+            const style = getComputedStyle(item);
+            const width = item.offsetWidth;
+            const marginLeft = parseFloat(style.marginLeft);
+            const marginRight = parseFloat(style.marginRight);
+            const paddingLeft = parseFloat(style.paddingLeft);
+            const paddingRight = parseFloat(style.paddingRight);
+            return width + marginLeft + marginRight + paddingLeft + paddingRight;
+        }
+        return 0;
+    }
+
+    /**
+     * Creates and appends pagination dots to the pagination container.
+     */
+    function createPaginationDots() {
+        paginationContainer.innerHTML = '';
+        productCards.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('pagination-dot');
+            dot.setAttribute('role', 'button');
+            dot.setAttribute('aria-label', `Go to product ${index + 1}`);
+            dot.addEventListener('click', () => {
+                scrollToIndex(index);
+            });
+            paginationContainer.appendChild(dot);
+        });
+        updatePaginationDots();
+    }
+
+    /**
+     * Updates the active state of pagination dots based on scroll position.
+     */
+    function updatePaginationDots() {
+        const dots = paginationContainer.children;
+        const itemWidth = getSingleItemWidth();
+        const visibleIndex = Math.round(carouselTrack.scrollLeft / itemWidth);
+
+        Array.from(dots).forEach((dot, index) => {
+            dot.classList.remove('active');
+            dot.removeAttribute('aria-current');
+            if (index === visibleIndex) {
+                dot.classList.add('active');
+                dot.setAttribute('aria-current', 'true');
+            }
+        });
+        currentIndex = visibleIndex;
+        updateNavigationButtons();
+    }
+
+    /**
+     * Scrolls the carousel track to a specific product card index.
+     */
+    function scrollToIndex(index, smooth = true) {
+        const itemWidth = getSingleItemWidth();
+        const targetScrollLeft = itemWidth * index;
+
+        carouselTrack.scroll({
+            left: targetScrollLeft,
+            behavior: smooth ? 'smooth' : 'auto'
+        });
+
+        if (smooth) {
+            const onScrollEnd = () => {
+                focusVisibleCard();
+                carouselTrack.removeEventListener('scroll', onScrollEnd);
+            };
+            carouselTrack.addEventListener('scroll', onScrollEnd, { once: true });
+        } else {
+            focusVisibleCard();
+        }
+    }
+
+    /**
+     * Sets focus to the first fully visible product card for accessibility.
+     */
+    function focusVisibleCard() {
+        const itemWidth = getSingleItemWidth();
+        const firstVisibleIndex = Math.round(carouselTrack.scrollLeft / itemWidth);
+
+        if (firstVisibleIndex >= 0 && firstVisibleIndex < productCards.length) {
+            const currentCardsInView = carouselTrack.querySelectorAll('.card-item');
+            const targetCard = currentCardsInView[firstVisibleIndex];
+
+            if (targetCard) {
+                const cardLink = targetCard.querySelector('.btn') || targetCard.querySelector('a');
+                if (cardLink) {
+                    cardLink.focus();
+                } else {
+                    targetCard.setAttribute('tabindex', '-1');
+                    targetCard.focus();
+                }
+            }
+        }
+    }
+
+    /**
+     * Updates the disabled state of navigation buttons.
+     */
+    function updateNavigationButtons() {
+        const maxScrollLeft = carouselTrack.scrollWidth - carouselTrack.offsetWidth;
+        prevBtn.disabled = carouselTrack.scrollLeft <= 5;
+        nextBtn.disabled = carouselTrack.scrollLeft >= maxScrollLeft - 5;
+    }
+
+    // --- Event Listeners for Navigation Buttons ---
+    prevBtn.addEventListener('click', () => {
+        const itemWidth = getSingleItemWidth();
+        // Step depends on scrollMode setting
+        const step = (scrollMode === 'single') ? itemWidth : carouselTrack.offsetWidth;
+        carouselTrack.scrollBy({ left: -step, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+        const itemWidth = getSingleItemWidth();
+        // Step depends on scrollMode setting
+        const step = (scrollMode === 'single') ? itemWidth : carouselTrack.offsetWidth;
+        carouselTrack.scrollBy({ left: step, behavior: 'smooth' });
+    });
+
+    // --- Event Listener for Carousel Scroll ---
+    carouselTrack.addEventListener('scroll', () => {
+        updatePaginationDots();
+        updateNavigationButtons();
+    });
+
+    // --- Resize Listener ---
+    window.addEventListener('resize', () => {
+        createPaginationDots();
+        updatePaginationDots();
+        updateNavigationButtons();
+        scrollToIndex(currentIndex, false);
+    });
+
+    // --- Initial setup on page load ---
+    window.addEventListener('load', () => {
+        createPaginationDots();
+        updatePaginationDots();
+        updateNavigationButtons();
+        focusVisibleCard();
+    });
+</script>
+-->
+
+<!--
+<script>
+    // Get references to key DOM elements
+    const carouselTrack = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.carousel-nav-prev');
+    const nextBtn = document.querySelector('.carousel-nav-next');
+    const paginationContainer = document.querySelector('.carousel-pagination');
+    const productCards = Array.from(carouselTrack.querySelectorAll('.card-item')); // Convert NodeList to Array for easier manipulation
+
+    let currentIndex = 0; // Tracks the logical index of the first visible item
+
+    /**
+     * Calculates the full width of a single carousel item, including margins and padding.
+     * This is crucial for accurate scrolling.
+     * @returns {number} The total width of a single card item.
+     */
+    function getSingleItemWidth() {
+        if (productCards.length > 0) {
+            const item = productCards[0];
+            const style = getComputedStyle(item);
+            const width = item.offsetWidth;
+            const marginLeft = parseFloat(style.marginLeft);
+            const marginRight = parseFloat(style.marginRight);
+            const paddingLeft = parseFloat(style.paddingLeft);
+            const paddingRight = parseFloat(style.paddingRight);
+            return width + marginLeft + marginRight + paddingLeft + paddingRight;
+        }
+        return 0; // Fallback if no items are present
+    }
+
+    /**
+     * Creates and appends pagination dots to the pagination container.
+     * Each dot corresponds to a product card and allows direct navigation.
+     */
+    function createPaginationDots() {
+        paginationContainer.innerHTML = ''; // Clear any existing dots before re-creating
+        productCards.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('pagination-dot');
+            dot.setAttribute('role', 'button'); // Enhance accessibility
+            dot.setAttribute('aria-label', `Go to product ${index + 1}`);
+            dot.addEventListener('click', () => {
+                scrollToIndex(index); // Scroll to the corresponding card when clicked
+            });
+            paginationContainer.appendChild(dot);
+        });
+        updatePaginationDots(); // Set the initial active dot
+    }
+
+    /**
+     * Updates the active state of pagination dots based on the current scroll position
+     * of the carousel track.
+     */
+    function updatePaginationDots() {
+        const dots = paginationContainer.children;
+        const itemWidth = getSingleItemWidth();
+        // Calculate the current visible index based on scroll position.
+        // Rounding helps account for partial visibility and floating point inaccuracies.
+        const visibleIndex = Math.round(carouselTrack.scrollLeft / itemWidth);
+
+        Array.from(dots).forEach((dot, index) => {
+            dot.classList.remove('active');
+            dot.removeAttribute('aria-current'); // Remove aria-current from inactive dots for accessibility
+            if (index === visibleIndex) {
+                dot.classList.add('active');
+                dot.setAttribute('aria-current', 'true'); // Add aria-current to active dot for accessibility
+            }
+        });
+        currentIndex = visibleIndex; // Update the global current index
+        updateNavigationButtons(); // Update button states after pagination update
+    }
+
+    /**
+     * Scrolls the carousel track to a specific product card index.
+     * @param {number} index The target index to scroll to.
+     * @param {boolean} [smooth=true] Whether to use smooth scrolling or instant jump.
+     */
+    function scrollToIndex(index, smooth = true) {
+        const itemWidth = getSingleItemWidth();
+        const targetScrollLeft = itemWidth * index; // Calculate the exact scroll position
+
+        carouselTrack.scroll({
+            left: targetScrollLeft,
+            behavior: smooth ? 'smooth' : 'auto' // Apply smooth or instant scroll
+        });
+
+        // If smooth scrolling, wait for scroll to end before focusing.
+        // This prevents focus issues during animation.
+        if (smooth) {
+            const onScrollEnd = () => {
+                focusVisibleCard();
+                carouselTrack.removeEventListener('scroll', onScrollEnd); // Clean up listener
+            };
+            carouselTrack.addEventListener('scroll', onScrollEnd, { once: true });
+        } else {
+            focusVisibleCard(); // Focus immediately for instant scrolls
+        }
+    }
+
+    /**
+     * Sets focus to the first fully visible product card in the carousel.
+     * This improves keyboard navigation and accessibility.
+     */
+    function focusVisibleCard() {
+        const itemWidth = getSingleItemWidth();
+        const firstVisibleIndex = Math.round(carouselTrack.scrollLeft / itemWidth);
+
+        if (firstVisibleIndex >= 0 && firstVisibleIndex < productCards.length) {
+            const currentCardsInView = carouselTrack.querySelectorAll('.card-item');
+            const targetCard = currentCardsInView[firstVisibleIndex];
+
+            if (targetCard) {
+                // Try to focus a more interactive element within the card first (like a button or link)
+                const cardLink = targetCard.querySelector('.btn') || targetCard.querySelector('a');
+                if (cardLink) {
+                    cardLink.focus();
+                } else {
+                    // If no interactive elements, make the card itself focusable and focus it
+                    targetCard.setAttribute('tabindex', '-1');
+                    targetCard.focus();
+                }
+            }
+        }
+    }
+
+    /**
+     * Updates the disabled state of the navigation buttons based on the carousel's
+     * current scroll position (at the beginning or end).
+     */
+    function updateNavigationButtons() {
+        const maxScrollLeft = carouselTrack.scrollWidth - carouselTrack.offsetWidth;
+
+        // Disable previous button if at or near the beginning
+        prevBtn.disabled = carouselTrack.scrollLeft <= 5; // Small tolerance for precision
+        // Disable next button if at or near the end
+        nextBtn.disabled = carouselTrack.scrollLeft >= maxScrollLeft - 5; // Small tolerance
+    }
+
+    // --- Event Listeners for Navigation Buttons ---
+    prevBtn.addEventListener('click', () => {
+        const itemWidth = getSingleItemWidth();
+        carouselTrack.scrollBy({ left: -itemWidth, behavior: 'smooth' }); // Scroll left by one item
+    });
+
+    nextBtn.addEventListener('click', () => {
+        const itemWidth = getSingleItemWidth();
+        carouselTrack.scrollBy({ left: itemWidth, behavior: 'smooth' }); // Scroll right by one item
+    });
+
+    // --- Event Listener for Carousel Scroll ---
+    carouselTrack.addEventListener('scroll', () => {
+        updatePaginationDots(); // Update dots when scrolling
+        updateNavigationButtons(); // Update button states when scrolling
+    });
+
+    // --- Resize Listener: Recalculate widths and update UI on window resize ---
+    window.addEventListener('resize', () => {
+        createPaginationDots(); // Re-create dots to ensure correct count based on new layout
+        updatePaginationDots(); // Update active dot based on new layout
+        updateNavigationButtons(); // Update button state
+        scrollToIndex(currentIndex, false); // Jump to current logical index without smooth scroll to avoid visual glitches
+    });
+
+    // --- Initial setup on page load ---
+    window.addEventListener('load', () => {
+        createPaginationDots(); // Initialize pagination dots
+        updatePaginationDots(); // Set initial active dot
+        updateNavigationButtons(); // Set initial button states (e.g., prev button disabled at start)
+        focusVisibleCard(); // Set initial focus for accessibility
+    });
+</script>
+-->
+    <script src="../../../assets/js/jquery.min.js"></script>
+    <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../assets/js/bs-init.js"></script>
+    <script src="../../../assets/js/add-theme-changer-button.js"></script>
+    <script src="../../../assets/js/catalog-page.js"></script>
+    <script src="../../../assets/js/checkout.js"></script>
+    <script src="../../../assets/js/home-page-carusel.js"></script>
+    <script src="../../../assets/js/import/fotorama.js"></script>
+    <script src="../../../assets/js/main-header.js"></script>
+    <script src="../../../assets/js/product-page-sticky-nav-version.js"></script>
+    <script src="../../../assets/js/products-carousel.js"></script>
+    <script src="../../../assets/js/shopping-cart.js"></script>
+    <script src="../../../assets/js/slider-price.js"></script>
+</body>
+
+</html>

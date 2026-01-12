@@ -1,0 +1,89 @@
+/* Main container for the carousel to manage positioning */
+
+.carousel-track-container {
+  position: relative;
+  overflow: hidden;
+  padding: 25px 0;
+}
+
+/* The flex track that holds all card items */
+
+.carousel-track-container .carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 3rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide the browser scrollbar for a cleaner look */
+
+.carousel-track-container .carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track-container .carousel-track {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Navigation buttons styling */
+
+.carousel-track-container .carousel-nav-btn {
+  z-index: 999;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);*/
+}
+
+/* Pagination dots at the bottom */
+
+.carousel-track-container .carousel-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.carousel-track-container .pagination-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  /*background-color: #ccc;*/
+  background-color: var(--bs-gray-400);
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /*border: 1px solid #ccc;*/
+  border: 1px solid var(--bs-gray-400);
+}
+
+.carousel-track-container .pagination-dot.active {
+  /*background-color: #0d6efd;*/
+  background-color: var(--bs-info);
+  /*border-color: #0d6efd;*/
+  border-color: var(--bs-info);
+  transform: scale(1.2);
+}
+
+/* Card Item Wrapper - defines the width of cards in the carousel */
+
+.carousel-track-container .card-item {
+  /*flex: 0 0 auto;*/
+  /*width: 85%;*/
+}
+
+.carousel-track-container .carousel-nav-btn:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+

@@ -1,0 +1,33 @@
+.payment-box {
+}
+
+.payment-box .section-number {
+}
+
+.payment-box .section-title {
+}
+
+/* Payment Methods Styling */
+
+.payment-box .payment-option {
+  transition: 0.2s;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.payment-box .payment-option * {
+  pointer-events: none;
+}
+
+.payment-box .payment-option:hover {
+  background-color: color-mix(in srgb, var(--bs-info) 5%, transparent);
+}
+
+.payment-box .payment-option.active {
+  background-color: color-mix(in srgb, var(--bs-warning) 10%, transparent);
+}
+

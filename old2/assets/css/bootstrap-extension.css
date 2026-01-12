@@ -1,0 +1,152 @@
+/* === Hover Border Utilities for Bootstrap Colors === */
+
+/* Each class applies a border color on hover using Bootstrap's CSS variables */
+
+/* Primary */
+
+.hover-border-primary:hover {
+  border-color: var(--bs-primary) !important;
+}
+
+/* Secondary */
+
+.hover-border-secondary:hover {
+  border-color: var(--bs-secondary) !important;
+}
+
+/* Success */
+
+.hover-border-success:hover {
+  border-color: var(--bs-success) !important;
+}
+
+/* Danger */
+
+.hover-border-danger:hover {
+  border-color: var(--bs-danger) !important;
+}
+
+/* Warning */
+
+.hover-border-warning:hover {
+  border-color: var(--bs-warning) !important;
+}
+
+/* Info */
+
+.hover-border-info:hover {
+  border-color: var(--bs-info) !important;
+}
+
+/* Light */
+
+.hover-border-light:hover {
+  border-color: var(--bs-light) !important;
+}
+
+/* Dark */
+
+.hover-border-dark:hover {
+  border-color: var(--bs-dark) !important;
+}
+
+/* Body (default text color) */
+
+.hover-border-body:hover {
+  border-color: var(--bs-body-color) !important;
+}
+
+/* White */
+
+.hover-border-white:hover {
+  border-color: var(--bs-white) !important;
+}
+
+/* * This code manages `position: fixed` for different Bootstrap breakpoints.
+ * It ensures the element remains fixed only on larger screens (`lg` and above),
+ * while behaving normally on smaller devices. */
+
+/* xs - Extra small screens (phones) */
+
+/* Disable fixed positioning for extra small screens */
+
+@media (max-width: 575.98px) {
+  .fixed-xs-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}
+
+/* sm - Small screens (phones) */
+
+/* Disable fixed positioning for small screens */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .fixed-sm-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}
+
+/* md - Medium screens (tablets) */
+
+/* Disable fixed positioning for medium screens */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fixed-md-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}
+
+/* lg - Large screens (laptops/desktops) */
+
+/* Enable fixed positioning only for large screens */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .fixed-lg-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}
+
+/* xl - Extra large screens */
+
+/* Enable fixed positioning for extra-large screens */
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .fixed-xl-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}
+
+/* xxl - Extremely large screens (4K and beyond) */
+
+/* Enable fixed positioning for extremely large screens */
+
+@media (min-width: 1400px) {
+  .fixed-xxl-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}
+

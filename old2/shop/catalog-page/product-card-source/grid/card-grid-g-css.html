@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- -----------------------CSS----------------------- -->
+<!--  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Boostrap icons  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Fotorama Gallery -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Material UI icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Material Symbols Outlined -->
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=grid_view" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>boostrap-lux-shop-master</title>
+    <link rel="stylesheet" href="../../../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="../../../../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../../../assets/css/articles-badges-images.css">
+    <link rel="stylesheet" href="../../../../assets/css/basket.css">
+    <link rel="stylesheet" href="../../../../assets/css/body.css">
+    <link rel="stylesheet" href="../../../../assets/css/bootstrap-extension.css">
+    <link rel="stylesheet" href="../../../../assets/css/catalog-page.css">
+    <link rel="stylesheet" href="../../../../assets/css/checkout.css">
+    <link rel="stylesheet" href="../../../../assets/css/compare-page.css">
+    <link rel="stylesheet" href="../../../../assets/css/customer-account.css">
+    <link rel="stylesheet" href="../../../../assets/css/dialog.css">
+    <link rel="stylesheet" href="../../../../assets/css/featured-Itemn.css">
+    <link rel="stylesheet" href="../../../../assets/css/fotorama.css">
+    <link rel="stylesheet" href="../../../../assets/css/header-1.css">
+    <link rel="stylesheet" href="../../../../assets/css/header-navbar-black.css">
+    <link rel="stylesheet" href="../../../../assets/css/home-page.css">
+    <link rel="stylesheet" href="../../../../assets/css/img.css">
+    <link rel="stylesheet" href="../../../../assets/css/index-page.css">
+    <link rel="stylesheet" href="../../../../assets/css/main.css">
+    <link rel="stylesheet" href="../../../../assets/css/order-item.css">
+    <link rel="stylesheet" href="../../../../assets/css/popover-content.css">
+    <link rel="stylesheet" href="../../../../assets/css/product-card-grid.css">
+    <link rel="stylesheet" href="../../../../assets/css/product-card-list.css">
+    <link rel="stylesheet" href="../../../../assets/css/product-page.css">
+    <link rel="stylesheet" href="../../../../assets/css/products-carousel.css">
+    <link rel="stylesheet" href="../../../../assets/css/scroll-normalizer-master.css">
+    <link rel="stylesheet" href="../../../../assets/css/shadow-box.css">
+    <link rel="stylesheet" href="../../../../assets/css/shopping-cart.css">
+    <link rel="stylesheet" href="../../../../assets/css/slider-price.css">
+    <link rel="stylesheet" href="../../../../assets/css/stars-rating.css">
+    <link rel="stylesheet" href="../../../../assets/css/tech-shadow-box.css">
+    <link rel="stylesheet" href="../../../../assets/css/timeline.css">
+    <link rel="stylesheet" href="../../../../assets/css/ui-collapsible-panel.css">
+    <link rel="stylesheet" href="../../../../assets/css/ui-icons-circle.css">
+    <link rel="stylesheet" href="../../../../assets/css/wishlist.css">
+</head>
+
+<body><style>      
+body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        /* Карточка товара */
+        .product-card {
+            max-width: 280px;
+            border: 1px solid transparent;
+            transition: box-shadow 0.2s, border-color 0.2s;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            border-color: #e5e5e5;
+            z-index: 10;
+        }
+
+        .product-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Изображение товара */
+        .product-card__image-wrapper {
+            position: relative;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .product-card__image {
+            max-width: 100%;
+            height: auto;
+            max-height: 220px;
+        }
+
+        /* Контент поверх изображения */
+        .product-card__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1rem;
+        }
+
+        .product-card__badges {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        /* Иконки действий */
+        .product-card__actions {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .product-card:hover .product-card__actions {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .action-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border: 1px solid #dee2e6;
+            border-radius: 50%;
+            background-color: #fff;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        
+        .action-icon:hover {
+            background-color: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+        
+        .action-icon.active {
+            background-color: #dc3545;
+            color: #fff;
+            border-color: #dc3545;
+        }
+
+        /* Тело карточки */
+        .product-card__body {
+            padding: 1rem;
+        }
+        
+        .product-card__title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-card__description {
+            font-size: 0.875rem;
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+        
+        .product-card__price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Рейтинг */
+        .product-card__rating {
+            color: #ffc107;
+            margin-bottom: 1rem;
+        }
+
+        .product-card__buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+    </style>
+
+<div class="product-card shadow-sm rounded">
+        <div class="product-card__image-wrapper">
+            <a href="#">
+                <img class="product-card__image" src="https://b.428.ua/img/2994445/600/600/mobilnyy_telefon_apple_iphone_12_128gb_black_mgja3_mghc3~1783~2423.jpg" alt="Product Name">
+            </a>
+            <div class="product-card__overlay">
+                <div class="product-card__badges">
+                    <span class="badge rounded-pill bg-danger">-70%</span>
+                    <span class="badge rounded-pill bg-success">New</span>
+                </div>
+                <div class="product-card__actions">
+                    <a href="#" class="action-icon" title="Быстрый просмотр"><i class="fas fa-eye"></i></a>
+                    <a href="#" class="action-icon active" title="В избранное"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="action-icon" title="Сравнить"><i class="fas fa-balance-scale"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="product-card__body">
+            <h2 class="product-card__title"><a href="#">Название товара</a></h2>
+            <p class="product-card__description">Краткое описание товара для демонстрации в карточке.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                 <div class="product-card__price">$150</div>
+                 <div class="product-card__rating" title="Рейтинг 3.5 из 5">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="product-card__buttons">
+                <button type="button" class="btn btn-primary w-100">В корзину</button>
+                <button type="button" class="btn btn-outline-secondary flex-shrink-0">Детали</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../assets/js/jquery.min.js"></script>
+    <script src="../../../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../assets/js/bs-init.js"></script>
+    <script src="../../../../assets/js/add-theme-changer-button.js"></script>
+    <script src="../../../../assets/js/catalog-page.js"></script>
+    <script src="../../../../assets/js/checkout.js"></script>
+    <script src="../../../../assets/js/home-page-carusel.js"></script>
+    <script src="../../../../assets/js/import/fotorama.js"></script>
+    <script src="../../../../assets/js/main-header.js"></script>
+    <script src="../../../../assets/js/product-page-sticky-nav-version.js"></script>
+    <script src="../../../../assets/js/products-carousel.js"></script>
+    <script src="../../../../assets/js/shopping-cart.js"></script>
+    <script src="../../../../assets/js/slider-price.js"></script>
+</body>
+
+</html>

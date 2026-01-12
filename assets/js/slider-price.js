@@ -1,143 +1,172 @@
-// API simulation functions
-function getMaxPrice() {
-  return 1000;
-}
+/**
+ * PriceFilter Class
+ * Encapsulates price range slider logic.
+ * Safe to include on every page.
+ */
+class PriceFilter {
+  constructor(containerSelector, options = {}) {
+    // 1. Silent Check: If container doesn't exist, exit quietly
+    this.container = document.querySelector(containerSelector);
+    if (!this.container) return;
 
-function getMinPrice() {
-  return 0;
-}
-
-// Constants
-const minPrice = getMinPrice();
-const maxPrice = getMaxPrice();
-const priceRange = maxPrice - minPrice;
-
-// DOM Elements
-const sliderThumbLeft = document.getElementById("slider-thumb-left");
-const sliderThumbRight = document.getElementById("slider-thumb-right");
-const sliderTrack = document.getElementById("slider-track");
-const sliderRange = document.getElementById("slider-range");
-const inputLeft = document.getElementById("input-left");
-const inputRight = document.getElementById("input-right");
-
-// Update slider visuals and inputs
-function updateSlider() {
-  const leftValue = parseFloat(sliderThumbLeft.style.left) || 0;
-  const rightValue = parseFloat(sliderThumbRight.style.left) || 100;
-
-  const minValue = minPrice + Math.round((priceRange * leftValue) / 100);
-  const maxValue = minPrice + Math.round((priceRange * rightValue) / 100);
-
-  inputLeft.value = minValue;
-  inputRight.value = maxValue;
-
-  sliderRange.style.left = `${leftValue}%`;
-  sliderRange.style.width = `${rightValue - leftValue}%`;
-}
-
-// Handle movement for slider thumbs (mouse or touch)
-function moveHandler(event, thumb, direction) {
-  const clientX = event.touches ? event.touches[0].clientX : event.clientX;
-  const sliderTrackRect = sliderTrack.getBoundingClientRect();
-  let newPosition =
-    ((clientX - sliderTrackRect.left) / sliderTrackRect.width) * 100;
-
-  newPosition = Math.max(0, Math.min(100, newPosition));
-
-  if (
-    direction === "left" &&
-    newPosition >= parseFloat(sliderThumbRight.style.left)
-  )
-    return;
-  if (
-    direction === "right" &&
-    newPosition <= parseFloat(sliderThumbLeft.style.left)
-  )
-    return;
-
-  thumb.style.left = `${newPosition}%`;
-  updateSlider();
-}
-
-// Attach mouse and touch events to slider thumbs
-function attachHandlers(thumb, direction) {
-  // Mouse events
-  thumb.onmousedown = (event) => {
-    event.preventDefault();
-    document.onmousemove = (e) => moveHandler(e, thumb, direction);
-    document.onmouseup = () => {
-      document.onmousemove = null;
-      document.onmouseup = null;
+    // 2. Configuration & Defaults
+    this.settings = {
+      min: options.min || 0,
+      max: options.max || 1000,
+      ...options,
     };
-  };
 
-  // Touch events
-  thumb.ontouchstart = (event) => {
-    event.preventDefault();
-    document.ontouchmove = (e) => moveHandler(e, thumb, direction);
-    document.ontouchend = () => {
-      document.ontouchmove = null;
-      document.ontouchend = null;
+    this.selectors = {
+      track: ".slider-track",
+      range: ".slider-range",
+      thumbLeft: ".slider-thumb-left",
+      thumbRight: ".slider-thumb-right",
+      inputLeft: ".input-left",
+      inputRight: ".input-right",
+      btnApply: ".btn-apply",
+      ...options.selectors,
     };
-  };
+
+    // 3. Elements Discovery (Scoped to the container)
+    this.track = this.container.querySelector(this.selectors.track);
+    this.range = this.container.querySelector(this.selectors.range);
+    this.thumbLeft = this.container.querySelector(this.selectors.thumbLeft);
+    this.thumbRight = this.container.querySelector(this.selectors.thumbRight);
+    this.inputLeft = this.container.querySelector(this.selectors.inputLeft);
+    this.inputRight = this.container.querySelector(this.selectors.inputRight);
+    this.btnApply = this.container.querySelector(this.selectors.btnApply);
+
+    this.priceRange = this.settings.max - this.settings.min;
+
+    this.init();
+  }
+
+  init() {
+    // Guard against missing essential elements inside the container
+    if (!this.track || !this.thumbLeft || !this.thumbRight) return;
+
+    // Set initial visual CSS positions if missing
+    if (!this.thumbLeft.style.left) this.thumbLeft.style.left = "0%";
+    if (!this.thumbRight.style.left) this.thumbRight.style.left = "100%";
+
+    this.attachSliderEvents(this.thumbLeft, "left");
+    this.attachSliderEvents(this.thumbRight, "right");
+    this.attachInputEvents(this.inputLeft, this.thumbLeft, "min");
+    this.attachInputEvents(this.inputRight, this.thumbRight, "max");
+
+    if (this.btnApply) {
+      this.btnApply.addEventListener("click", () => this.handleApply());
+    }
+
+    this.updateSliderVisuals();
+  }
+
+  updateSliderVisuals() {
+    const leftPerc = parseFloat(this.thumbLeft.style.left) || 0;
+    const rightPerc = parseFloat(this.thumbRight.style.left) || 100;
+
+    const minValue =
+      this.settings.min + Math.round((this.priceRange * leftPerc) / 100);
+    const maxValue =
+      this.settings.min + Math.round((this.priceRange * rightPerc) / 100);
+
+    if (this.inputLeft) this.inputLeft.value = minValue;
+    if (this.inputRight) this.inputRight.value = maxValue;
+
+    if (this.range) {
+      this.range.style.left = `${leftPerc}%`;
+      this.range.style.width = `${rightPerc - leftPerc}%`;
+    }
+  }
+
+  moveHandler(event, thumb, direction) {
+    const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+    const rect = this.track.getBoundingClientRect();
+    let position = ((clientX - rect.left) / rect.width) * 100;
+
+    position = Math.max(0, Math.min(100, position));
+
+    const leftPos = parseFloat(this.thumbLeft.style.left);
+    const rightPos = parseFloat(this.thumbRight.style.left);
+
+    if (direction === "left" && position >= rightPos) return;
+    if (direction === "right" && position <= leftPos) return;
+
+    thumb.style.left = `${position}%`;
+    this.updateSliderVisuals();
+  }
+
+  attachSliderEvents(thumb, direction) {
+    const startMove = (e) => {
+      e.preventDefault();
+      const onMove = (event) => this.moveHandler(event, thumb, direction);
+      const onStop = () => {
+        document.removeEventListener("mousemove", onMove);
+        document.removeEventListener("touchmove", onMove);
+        document.removeEventListener("mouseup", onStop);
+        document.removeEventListener("touchend", onStop);
+      };
+      document.addEventListener("mousemove", onMove);
+      document.addEventListener("touchmove", onMove);
+      document.addEventListener("mouseup", onStop);
+      document.addEventListener("touchend", onStop);
+    };
+    thumb.addEventListener("mousedown", startMove);
+    thumb.addEventListener("touchstart", startMove);
+  }
+
+  attachInputEvents(input, thumb, type) {
+    if (!input) return;
+
+    input.addEventListener("input", (e) => {
+      const val = parseInt(e.target.value, 10);
+      const otherVal =
+        type === "min"
+          ? parseInt(this.inputRight.value, 10)
+          : parseInt(this.inputLeft.value, 10);
+
+      const isValid =
+        !isNaN(val) &&
+        val >= this.settings.min &&
+        val <= this.settings.max &&
+        (type === "min" ? val < otherVal : val > otherVal);
+
+      if (isValid) {
+        input.classList.remove("is-invalid");
+        const pos = ((val - this.settings.min) / this.priceRange) * 100;
+        thumb.style.left = `${pos}%`;
+        this.updateSliderVisuals();
+      } else {
+        input.classList.add("is-invalid");
+      }
+    });
+
+    input.addEventListener("blur", () => {
+      input.classList.remove("is-invalid");
+      this.updateSliderVisuals();
+    });
+  }
+
+  handleApply() {
+    const result = {
+      min: parseInt(this.inputLeft?.value || this.settings.min),
+      max: parseInt(this.inputRight?.value || this.settings.max),
+    };
+
+    // Dispatch custom event for external listeners
+    const event = new CustomEvent("priceFilterApply", {
+      detail: result,
+      bubbles: true,
+    });
+    this.container.dispatchEvent(event);
+  }
 }
 
-attachHandlers(sliderThumbLeft, "left");
-attachHandlers(sliderThumbRight, "right");
-
-// Validate input values
-function isValidRange(type, value, comparisonValue) {
-  if (isNaN(value) || value < minPrice || value > maxPrice) return false;
-
-  if (type === "min" && value >= comparisonValue) return false;
-  if (type === "max" && value <= comparisonValue) return false;
-
-  return true;
-}
-
-// Handle input events for manual value changes
-function handleInput(input, thumb, type) {
-  input.addEventListener("input", (event) => {
-    const value = parseInt(event.target.value, 10);
-    const comparisonValue =
-      type === "min"
-        ? parseInt(inputRight.value, 10)
-        : parseInt(inputLeft.value, 10);
-
-    // Allow independent input but show visual feedback for invalid input
-    if (!isValidRange(type, value, comparisonValue)) {
-      input.classList.add("error"); // Add error styling
-      return;
-    }
-    input.classList.remove("error"); // Remove error styling
-
-    const newPosition = ((value - minPrice) / priceRange) * 100;
-    const otherThumbPosition = parseFloat(
-      type === "min" ? sliderThumbRight.style.left : sliderThumbLeft.style.left
-    );
-
-    if (
-      (type === "min" && newPosition < otherThumbPosition) ||
-      (type === "max" && newPosition > otherThumbPosition)
-    ) {
-      thumb.style.left = `${newPosition}%`;
-      updateSlider();
-    }
+// Global initialization
+document.addEventListener("DOMContentLoaded", () => {
+  // This will run safely on all pages
+  const filter = new PriceFilter(".price-filter-widget", {
+    min: 0,
+    max: 1000,
   });
-
-  input.addEventListener("blur", () => {
-    if (input.classList.contains("error")) {
-      // Reset to current thumb value on invalid input
-      const thumbPosition =
-        parseFloat(thumb.style.left) || (type === "min" ? 0 : 100);
-      input.value = minPrice + Math.round((priceRange * thumbPosition) / 100);
-      input.classList.remove("error");
-    }
-  });
-}
-
-handleInput(inputLeft, sliderThumbLeft, "min");
-handleInput(inputRight, sliderThumbRight, "max");
-
-// Initialize slider
-updateSlider();
+});

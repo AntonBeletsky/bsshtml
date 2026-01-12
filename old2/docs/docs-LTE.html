@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- -----------------------CSS----------------------- -->
+<!--  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Boostrap icons  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Fotorama Gallery -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Material UI icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Material Symbols Outlined -->
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=grid_view" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>boostrap-lux-shop-master</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="../assets/css/articles-badges-images.css">
+    <link rel="stylesheet" href="../assets/css/basket.css">
+    <link rel="stylesheet" href="../assets/css/body.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-extension.css">
+    <link rel="stylesheet" href="../assets/css/catalog-page.css">
+    <link rel="stylesheet" href="../assets/css/checkout.css">
+    <link rel="stylesheet" href="../assets/css/compare-page.css">
+    <link rel="stylesheet" href="../assets/css/customer-account.css">
+    <link rel="stylesheet" href="../assets/css/dialog.css">
+    <link rel="stylesheet" href="../assets/css/featured-Itemn.css">
+    <link rel="stylesheet" href="../assets/css/fotorama.css">
+    <link rel="stylesheet" href="../assets/css/header-1.css">
+    <link rel="stylesheet" href="../assets/css/header-navbar-black.css">
+    <link rel="stylesheet" href="../assets/css/home-page.css">
+    <link rel="stylesheet" href="../assets/css/img.css">
+    <link rel="stylesheet" href="../assets/css/index-page.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/order-item.css">
+    <link rel="stylesheet" href="../assets/css/popover-content.css">
+    <link rel="stylesheet" href="../assets/css/product-card-grid.css">
+    <link rel="stylesheet" href="../assets/css/product-card-list.css">
+    <link rel="stylesheet" href="../assets/css/product-page.css">
+    <link rel="stylesheet" href="../assets/css/products-carousel.css">
+    <link rel="stylesheet" href="../assets/css/scroll-normalizer-master.css">
+    <link rel="stylesheet" href="../assets/css/shadow-box.css">
+    <link rel="stylesheet" href="../assets/css/shopping-cart.css">
+    <link rel="stylesheet" href="../assets/css/slider-price.css">
+    <link rel="stylesheet" href="../assets/css/stars-rating.css">
+    <link rel="stylesheet" href="../assets/css/tech-shadow-box.css">
+    <link rel="stylesheet" href="../assets/css/timeline.css">
+    <link rel="stylesheet" href="../assets/css/ui-collapsible-panel.css">
+    <link rel="stylesheet" href="../assets/css/ui-icons-circle.css">
+    <link rel="stylesheet" href="../assets/css/wishlist.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar Menu -->
+      <nav class="col-md-3 col-lg-2 sidebar bg-light p-3">
+        <h2 class="h4 mb-3">Bootstrap Documentation</h2>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <strong>Getting Started</strong>
+            <ul class="nav flex-column ps-3">
+              <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+              <li class="nav-item"><a class="nav-link" href="#accessibility">Accessibility</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mt-3">
+            <strong>Customize</strong>
+            <ul class="nav flex-column ps-3">
+              <li class="nav-item"><a class="nav-link" href="#sass">Sass</a></li>
+              <li class="nav-item"><a class="nav-link" href="#css-variables">CSS Variables</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mt-3">
+            <strong>Layout</strong>
+            <ul class="nav flex-column ps-3">
+              <li class="nav-item"><a class="nav-link" href="#layout">Layout</a></li>
+              <li class="nav-item"><a class="nav-link" href="#breakpoints">Breakpoints</a></li>
+              <li class="nav-item"><a class="nav-link" href="#containers">Containers</a></li>
+              <li class="nav-item"><a class="nav-link" href="#grid">Grid</a></li>
+              <li class="nav-item"><a class="nav-link" href="#columns">Columns</a></li>
+              <li class="nav-item"><a class="nav-link" href="#gutters">Gutters</a></li>
+              <li class="nav-item"><a class="nav-link" href="#z-index">Z-index</a></li>
+              <li class="nav-item"><a class="nav-link" href="#css-grid">CSS Grid</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mt-3">
+            <strong>Content</strong>
+            <ul class="nav flex-column ps-3">
+              <li class="nav-item"><a class="nav-link" href="#reboot">Reboot</a></li>
+              <li class="nav-item"><a class="nav-link" href="#typography">Typography</a></li>
+              <li class="nav-item"><a class="nav-link" href="#images">Images</a></li>
+              <li class="nav-item"><a class="nav-link" href="#tables">Tables</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mt-3">
+            <strong>Forms</strong>
+            <ul class="nav flex-column ps-3">
+              <li class="nav-item"><a class="nav-link" href="#forms">Forms</a></li>
+              <li class="nav-item"><a class="nav-link" href="#form-control">Form Control</a></li>
+              <li class="nav-item"><a class="nav-link" href="#floating-labels">Floating Labels</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mt-3">
+            <strong>Components</strong>
+            <ul class="nav flex-column ps-3">
+              <li class="nav-item"><a class="nav-link" href="#accordion">Accordion</a></li>
+              <li class="nav-item"><a class="nav-link" href="#alerts">Alerts</a></li>
+              <li class="nav-item"><a class="nav-link" href="#badges">Badges</a></li>
+              <li class="nav-item"><a class="nav-link" href="#breadcrumbs">Breadcrumbs</a></li>
+              <li class="nav-item"><a class="nav-link" href="#buttons">Buttons</a></li>
+              <li class="nav-item"><a class="nav-link" href="#cards">Cards</a></li>
+              <li class="nav-item"><a class="nav-link" href="#carousel">Carousel</a></li>
+              <li class="nav-item"><a class="nav-link" href="#dropdowns">Dropdowns</a></li>
+              <li class="nav-item"><a class="nav-link" href="#list-group">List Group</a></li>
+              <li class="nav-item"><a class="nav-link" href="#modals">Modals</a></li>
+              <li class="nav-item"><a class="nav-link" href="#navs">Navs &amp; Tabs</a></li>
+              <li class="nav-item"><a class="nav-link" href="#navbar">Navbar</a></li>
+              <li class="nav-item"><a class="nav-link" href="#offcanvas">Offcanvas</a></li>
+              <li class="nav-item"><a class="nav-link" href="#pagination">Pagination</a></li>
+              <li class="nav-item"><a class="nav-link" href="#placeholders">Placeholders</a></li>
+              <li class="nav-item"><a class="nav-link" href="#popovers">Popovers</a></li>
+              <li class="nav-item"><a class="nav-link" href="#progress">Progress</a></li>
+              <li class="nav-item"><a class="nav-link" href="#spinners">Spinners</a></li>
+              <li class="nav-item"><a class="nav-link" href="#toasts">Toasts</a></li>
+              <li class="nav-item"><a class="nav-link" href="#tooltips">Tooltips</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mt-3">
+            <strong>Helpers</strong>
+            <ul class="nav flex-column ps-3">
+              <li class="nav-item"><a class="nav-link" href="#clearfix">Clearfix</a></li>
+              <li class="nav-item"><a class="nav-link" href="#text-truncation">Text Truncation</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mt-3">
+            <strong>Utilities</strong>
+            <ul class="nav flex-column ps-3">
+              <li class="nav-item"><a class="nav-link" href="#background">Background</a></li>
+              <li class="nav-item"><a class="nav-link" href="#flex">Flex</a></li>
+              <li class="nav-item"><a class="nav-link" href="#utilities">Utilities</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="col-md-9 col-lg-10 px-4">
+        <h1 class="mt-4 mb-4">Bootstrap Lux Documentation</h1>
+        <p class="lead">A comprehensive guide to Bootstrap components styled with the Lux theme, featuring an AdminLTE-inspired layout.</p>
+        <p>Code released under the MIT License by Thomas Park. Based on Bootstrap with icons from Bootstrap Icons.</p>
+
+        <!-- Getting Started -->
+        <section id="introduction" class="content-section">
+          <h2>Introduction</h2>
+          <p>Welcome to Bootstrap with the Lux theme, a powerful front-end framework for building responsive, mobile-first websites.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <h1>Hello, world!</h1>
+              <p>Welcome to Bootstrap with the Lux theme.</p>
+              <button class="btn btn-primary">Get started</button>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;p&gt;Welcome to Bootstrap with the Lux theme.&lt;/p&gt;
+  &lt;button class="btn btn-primary"&gt;Get started&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Bootstrap is a powerful front-end framework with key features:</p>
+          <ul>
+            <li><strong>container</strong>: Centers content.</li>
+            <li><strong>btn btn-primary</strong>: Styles interactive buttons.</li>
+            <li>Responsive grid and components for mobile-first design.</li>
+          </ul>
+          <p>Use Bootstrap to quickly create modern, responsive layouts.</p>
+        </section>
+
+        <section id="accessibility" class="content-section">
+          <h2>Accessibility</h2>
+          <p>Bootstrap provides a foundation for accessible websites. Developers are responsible for full accessibility.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <button class="btn btn-primary" aria-label="Submit form">Submit</button>
+              <img src="https://via.placeholder.com/150" alt="Placeholder image" class="img-fluid rounded">
+              <button type="button" class="btn btn-primary">
+                <i class="bi bi-search"></i>
+                <span class="visually-hidden">Search</span>
+              </button>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;button class="btn btn-primary" aria-label="Submit form"&gt;Submit&lt;/button&gt;
+  &lt;img src="https://via.placeholder.com/150" alt="Placeholder image" class="img-fluid rounded"&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;
+    &lt;i class="bi bi-search"&gt;&lt;/i&gt;
+    &lt;span class="visually-hidden"&gt;Search&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Bootstrap includes accessibility features:</p>
+          <ul>
+            <li><strong>aria-label</strong>: Provides screen reader descriptions.</li>
+            <li><strong>alt</strong>: Describes images for screen readers.</li>
+            <li><strong>visually-hidden</strong>: Hides content visually but keeps it accessible.</li>
+            <li>High-contrast colors and keyboard navigation support.</li>
+          </ul>
+          <p>Ensure components use proper ARIA attributes and semantic HTML.</p>
+        </section>
+
+        <!-- Customize -->
+        <section id="sass" class="content-section">
+          <h2>Sass</h2>
+          <p>Bootstrap uses Sass for customizable styles.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <button class="btn btn-primary">Custom Primary</button>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>$primary: #007bff;
+@import "bootstrap";</code></pre>
+          <h3>Explanation</h3>
+          <p>Key features:</p>
+          <ul>
+            <li><strong>$primary</strong>: Customize theme colors.</li>
+            <li><strong>@import "bootstrap"</strong>: Compile Bootstrap’s Sass files.</li>
+            <li>Variables and mixins for flexible styling.</li>
+          </ul>
+          <p>Use Sass to tailor Bootstrap’s appearance to your project.</p>
+        </section>
+
+        <section id="css-variables" class="content-section">
+          <h2>CSS Variables</h2>
+          <p>Bootstrap leverages CSS variables for theme flexibility.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <button class="btn btn-primary">Custom Button</button>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>:root {
+  --bs-primary: #007bff;
+}
+&lt;button class="btn btn-primary"&gt;Custom Button&lt;/button&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key concepts:</p>
+          <ul>
+            <li><strong>:root variables</strong> (e.g., --bs-primary): Define theme colors.</li>
+            <li>Overwriting variables changes component styles site-wide.</li>
+            <li>Works alongside Sass for comprehensive customization.</li>
+          </ul>
+          <p>Modify CSS variables to adjust Bootstrap’s colors and behaviors at runtime.</p>
+        </section>
+
+        <!-- Layout -->
+        <section id="layout" class="content-section">
+          <h2>Layout</h2>
+          <p>The layout defines the structure of a webpage using semantic HTML and Bootstrap's grid system.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container my-3">
+              <header class="border-bottom mb-3"><h1>Header</h1></header>
+              <main>
+                <div class="row">
+                  <div class="col-md-8"><h2>Main Content</h2><p>Main content area.</p></div>
+                  <div class="col-md-4"><h3>Sidebar</h3><p>Sidebar content.</p></div>
+                </div>
+              </main>
+              <footer class="border-top mt-3 pt-3"><p>Footer content.</p></footer>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container my-3"&gt;
+  &lt;header class="border-bottom mb-3"&gt;&lt;h1&gt;Header&lt;/h1&gt;&lt;/header&gt;
+  &lt;main&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-md-8"&gt;&lt;h2&gt;Main Content&lt;/h2&gt;&lt;p&gt;Main content area.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class="col-md-4"&gt;&lt;h3&gt;Sidebar&lt;/h3&gt;&lt;p&gt;Sidebar content.&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+  &lt;footer class="border-top mt-3 pt-3"&gt;&lt;p&gt;Footer content.&lt;/p&gt;&lt;/footer&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key features:</p>
+          <ul>
+            <li><strong>container</strong>: Centers content with fixed widths.</li>
+            <li><strong>row and col-md-*</strong>: Create responsive columns.</li>
+            <li>Semantic tags (<strong>header, main, footer</strong>): Improve accessibility and SEO.</li>
+          </ul>
+        </section>
+
+        <section id="breakpoints" class="content-section">
+          <h2>Breakpoints</h2>
+          <p>Breakpoints are predefined screen sizes for responsive design.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-primary text-white p-2">Responsive</div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-1 bg-primary text-white p-2"&gt;Responsive&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>col-*</strong>: Applies at all sizes (≥0px).</li>
+            <li><strong>col-sm-*</strong>: Small screens (≥576px).</li>
+            <li><strong>col-md-*</strong>: Medium screens (≥768px).</li>
+            <li><strong>col-lg-*</strong>: Large screens (≥992px).</li>
+            <li><strong>col-xl-*</strong>: Extra large (≥1200px).</li>
+            <li><strong>col-xxl-*</strong>: Extra extra large (≥1400px).</li>
+          </ul>
+        </section>
+
+        <section id="containers" class="content-section">
+          <h2>Containers</h2>
+          <p>Containers provide a responsive fixed-width or full-width wrapper.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container border p-3 mb-2">.container</div>
+            <div class="container-sm border p-3 mb-2">.container-sm</div>
+            <div class="container-fluid border p-3">.container-fluid</div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container border p-3 mb-2"&gt;.container&lt;/div&gt;
+&lt;div class="container-sm border p-3 mb-2"&gt;.container-sm&lt;/div&gt;
+&lt;div class="container-fluid border p-3"&gt;.container-fluid&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>container</strong>: Fixed-width, responsive container.</li>
+            <li><strong>container-{breakpoint}</strong>: Fixed-width until specified breakpoint.</li>
+            <li><strong>container-fluid</strong>: Full-width container.</li>
+          </ul>
+        </section>
+
+        <section id="grid" class="content-section">
+          <h2>Grid</h2>
+          <p>The grid system uses rows and columns for responsive layouts.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="row">
+                <div class="col border p-2">1 of 3</div>
+                <div class="col border p-2">2 of 3</div>
+                <div class="col border p-2">3 of 3</div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col border p-2"&gt;1 of 3&lt;/div&gt;
+    &lt;div class="col border p-2"&gt;2 of 3&lt;/div&gt;
+    &lt;div class="col border p-2"&gt;3 of 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>row</strong>: Creates a horizontal group of columns.</li>
+            <li><strong>col</strong>: Auto-width column.</li>
+            <li><strong>col-{number}</strong>: Fixed-width column (1–12).</li>
+            <li><strong>col-{breakpoint}-{number}</strong>: Breakpoint-specific columns.</li>
+          </ul>
+        </section>
+
+        <section id="columns" class="content-section">
+          <h2>Columns</h2>
+          <p>Columns divide row space into 12 units.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="row">
+                <div class="col-4 border p-2">.col-4</div>
+                <div class="col-8 border p-2">.col-8</div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-4 border p-2"&gt;.col-4&lt;/div&gt;
+    &lt;div class="col-8 border p-2"&gt;.col-8&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>col-{number}</strong>: Sets column width (1–12).</li>
+            <li><strong>col-auto</strong>: Width based on content.</li>
+            <li><strong>col-{breakpoint}-{number}</strong>: Breakpoint-specific widths.</li>
+          </ul>
+        </section>
+
+        <section id="gutters" class="content-section">
+          <h2>Gutters</h2>
+          <p>Gutters add spacing between columns.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="row g-5">
+                <div class="col-6 border p-2">.col-6</div>
+                <div class="col-6 border p-2">.col-6</div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;div class="row g-5"&gt;
+    &lt;div class="col-6 border p-2"&gt;.col-6&lt;/div&gt;
+    &lt;div class="col-6 border p-2"&gt;.col-6&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>g-{size}</strong>: Sets gutter size (0–5).</li>
+            <li><strong>gx-{size}</strong>: Horizontal gutters only.</li>
+            <li><strong>gy-{size}</strong>: Vertical gutters only.</li>
+            <li><strong>g-{breakpoint}-{size}</strong>: Breakpoint-specific gutters.</li>
+          </ul>
+        </section>
+
+        <section id="z-index" class="content-section">
+          <h2>Z-index</h2>
+          <p>Z-index controls element stacking order.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="position-relative">
+                <div class="position-absolute bg-primary text-white p-2" style="z-index: 10;">z-index: 10</div>
+                <div class="position-absolute bg-secondary text-white p-2" style="z-index: 5; left: 20px; top: 20px;">z-index: 5</div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;div class="position-relative"&gt;
+    &lt;div class="position-absolute bg-primary text-white p-2" style="z-index: 10;"&gt;z-index: 10&lt;/div&gt;
+    &lt;div class="position-absolute bg-secondary text-white p-2" style="z-index: 5; left: 20px; top: 20px;"&gt;z-index: 5&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes and properties:</p>
+          <ul>
+            <li><strong>z-index</strong>: Sets stacking level (e.g., 5, 10).</li>
+            <li><strong>position-*</strong>: Required for z-index (e.g., position-absolute).</li>
+            <li>Utility classes: <strong>z-0, z-1</strong>, etc., for predefined levels.</li>
+          </ul>
+        </section>
+
+        <section id="css-grid" class="content-section">
+          <h2>CSS Grid</h2>
+          <p>CSS Grid provides a two-dimensional layout system.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="d-grid gap-3" style="grid-template-columns: 1fr 2fr;">
+                <div class="bg-primary text-white p-2">1fr</div>
+                <div class="bg-secondary text-white p-2">2fr</div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;div class="d-grid gap-3" style="grid-template-columns: 1fr 2fr;"&gt;
+    &lt;div class="bg-primary text-white p-2"&gt;1fr&lt;/div&gt;
+    &lt;div class="bg-secondary text-white p-2"&gt;2fr&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes and properties:</p>
+          <ul>
+            <li><strong>d-grid</strong>: Enables CSS Grid.</li>
+            <li><strong>gap-*</strong>: Sets spacing between grid items.</li>
+            <li><strong>grid-template-columns</strong>: Defines column sizes (e.g., 1fr 2fr).</li>
+          </ul>
+        </section>
+
+        <!-- Content -->
+        <section id="reboot" class="content-section">
+          <h2>Reboot</h2>
+          <p>Reboot normalizes HTML elements for consistency.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <h1>Heading</h1>
+              <p>Paragraph with <a href="#">link</a>.</p>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Paragraph with &lt;a href="#"&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key features:</p>
+          <ul>
+            <li>Resets margins, paddings, and box-sizing.</li>
+            <li>Styles <strong>a</strong> tags for consistent links.</li>
+            <li>Applies font-family and line-height defaults.</li>
+          </ul>
+        </section>
+
+        <section id="typography" class="content-section">
+          <h2>Typography</h2>
+          <p>Typography includes headings and text styles for content hierarchy.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+&lt;p class="lead"&gt;Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.&lt;/p&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>h1–h6</strong>: Define heading levels.</li>
+            <li><strong>lead</strong>: Emphasizes introductory text with larger font size.</li>
+          </ul>
+        </section>
+
+        <section id="images" class="content-section">
+          <h2>Images</h2>
+          <p>Images are styled for responsiveness and appearance.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Responsive image">
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Responsive image"&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>img-fluid</strong>: Makes images responsive.</li>
+            <li><strong>rounded</strong>: Adds rounded corners.</li>
+            <li><strong>alt</strong>: Ensures accessibility.</li>
+          </ul>
+        </section>
+
+        <section id="tables" class="content-section">
+          <h2>Tables</h2>
+          <p>Tables are styled tabular data.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="table-responsive"&gt;
+  &lt;table class="table table-striped"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;#&lt;/th&gt;
+        &lt;th&gt;First&lt;/th&gt;
+        &lt;th&gt;Last&lt;/th&gt;
+        &lt;th&gt;Handle&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;Mark&lt;/td&gt;
+        &lt;td&gt;Otto&lt;/td&gt;
+        &lt;td&gt;@mdo&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;Jacob&lt;/td&gt;
+        &lt;td&gt;Thornton&lt;/td&gt;
+        &lt;td&gt;@fat&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;Larry&lt;/td&gt;
+        &lt;td&gt;Bird&lt;/td&gt;
+        &lt;td&gt;@twitter&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>table</strong>: Base table styling.</li>
+            <li><strong>table-striped</strong>: Adds striped rows.</li>
+            <li><strong>table-responsive</strong>: Horizontal scrolling on small screens.</li>
+          </ul>
+        </section>
+
+        <!-- Forms -->
+        <section id="forms" class="content-section">
+          <h2>Forms</h2>
+          <p>Forms collect user input.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;form&gt;
+    &lt;div class="mb-3"&gt;
+      &lt;label for="exampleInputEmail" class="form-label"&gt;Email address&lt;/label&gt;
+      &lt;input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email"&gt;
+    &lt;/div&gt;
+    &lt;div class="mb-3"&gt;
+      &lt;label for="exampleInputPassword" class="form-label"&gt;Password&lt;/label&gt;
+      &lt;input type="password" class="form-control" id="exampleInputPassword" placeholder="Password"&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>form-label</strong>: Styles labels.</li>
+            <li><strong>form-control</strong>: Styles inputs.</li>
+            <li><strong>mb-3</strong>: Adds bottom margin between form groups.</li>
+          </ul>
+        </section>
+
+        <section id="form-control" class="content-section">
+          <h2>Form Control</h2>
+          <p>Form controls style input elements.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <input type="text" class="form-control" placeholder="Text input">
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;input type="text" class="form-control" placeholder="Text input"&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>form-control</strong>: Styles text inputs, textareas, etc.</li>
+            <li><strong>placeholder</strong>: Provides hint text.</li>
+            <li>Supports disabled and readonly states.</li>
+          </ul>
+        </section>
+
+        <section id="floating-labels" class="content-section">
+          <h2>Floating Labels</h2>
+          <p>Floating labels animate labels above inputs.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;div class="form-floating"&gt;
+    &lt;input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"&gt;
+    &lt;label for="floatingInput"&gt;Email address&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>form-floating</strong>: Enables floating label behavior.</li>
+            <li><strong>form-control</strong>: Styles the input.</li>
+            <li><strong>label</strong>: Positions the label.</li>
+          </ul>
+        </section>
+
+        <!-- Components -->
+        <section id="accordion" class="content-section">
+          <h2>Accordion</h2>
+          <p>Accordions collapse and expand content.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Accordion Item #1
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">Content for item #1.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;div class="accordion" id="accordionExample"&gt;
+    &lt;div class="accordion-item"&gt;
+      &lt;h2 class="accordion-header"&gt;
+        &lt;button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
+          Accordion Item #1
+        &lt;/button&gt;
+      &lt;/h2&gt;
+      &lt;div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample"&gt;
+        &lt;div class="accordion-body"&gt;Content for item #1.&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>accordion</strong>: Container for items.</li>
+            <li><strong>accordion-item</strong>: Individual collapsible item.</li>
+            <li><strong>accordion-button</strong>: Toggles collapse.</li>
+            <li><strong>accordion-collapse</strong>: Collapsible content.</li>
+          </ul>
+        </section>
+
+        <section id="alerts" class="content-section">
+          <h2>Alerts</h2>
+          <p>Alerts provide contextual feedback.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="alert alert-primary" role="alert">A simple primary alert—check it out!</div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;div class="alert alert-primary" role="alert"&gt;A simple primary alert—check it out!&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>alert</strong>: Base alert styling.</li>
+            <li><strong>alert-primary</strong>: Primary color variant.</li>
+            <li><strong>role="alert"</strong>: Enhances accessibility.</li>
+          </ul>
+        </section>
+
+        <section id="badges" class="content-section">
+          <h2>Badges</h2>
+          <p>Badges are small count and labeling components.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <h1>Example heading <span class="badge bg-primary">New</span></h1>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;h1&gt;Example heading &lt;span class="badge bg-primary"&gt;New&lt;/span&gt;&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>badge</strong>: Base badge styling.</li>
+            <li><strong>bg-primary</strong>: Contextual background color.</li>
+            <li><strong>rounded-pill</strong>: Optional pill shape.</li>
+          </ul>
+        </section>
+
+        <section id="breadcrumbs" class="content-section">
+          <h2>Breadcrumbs</h2>
+          <p>Breadcrumbs indicate the current page’s location within a navigational hierarchy.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">Library</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;nav aria-label="breadcrumb"&gt;
+    &lt;ol class="breadcrumb"&gt;
+      &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="breadcrumb-item active" aria-current="page"&gt;Data&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/nav&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>breadcrumb</strong>: Styles the breadcrumb list.</li>
+            <li><strong>breadcrumb-item</strong>: Styles each item.</li>
+            <li><strong>active</strong>: Indicates the current page.</li>
+          </ul>
+        </section>
+
+        <section id="buttons" class="content-section">
+          <h2>Buttons</h2>
+          <p>Buttons are styled with the btn class and various contextual classes.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+            <button type="button" class="btn btn-link">Link</button>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-light"&gt;Light&lt;/button&gt;
+&lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>btn-primary</strong>: Main action button.</li>
+            <li><strong>btn-secondary</strong>: Secondary or less prominent action.</li>
+            <li><strong>btn-success, btn-danger</strong>, etc.: Indicate specific outcomes or states.</li>
+            <li><strong>btn-link</strong>: Styles a button as a link.</li>
+          </ul>
+        </section>
+
+        <section id="cards" class="content-section">
+          <h2>Cards</h2>
+          <p>Cards are flexible content containers.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                  <h4 class="card-title">Primary card title</h4>
+                  <p class="card-text">Some quick example text.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;div class="card text-white bg-primary mb-3" style="max-width: 20rem;"&gt;
+    &lt;div class="card-header"&gt;Header&lt;/div&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h4 class="card-title"&gt;Primary card title&lt;/h4&gt;
+      &lt;p class="card-text"&gt;Some quick example text.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>card</strong>: Base card styling.</li>
+            <li><strong>card-header</strong>: Header section.</li>
+            <li><strong>card-body</strong>: Main content area.</li>
+            <li><strong>bg-primary</strong>: Contextual background color.</li>
+          </ul>
+        </section>
+
+        <section id="carousel" class="content-section">
+          <h2>Carousel</h2>
+          <p>Carousels display rotating content, typically images or cards.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Second slide">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;div id="carouselExample" class="carousel slide"&gt;
+    &lt;div class="carousel-inner"&gt;
+      &lt;div class="carousel-item active"&gt;
+        &lt;img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="First slide"&gt;
+      &lt;/div&gt;
+      &lt;div class="carousel-item"&gt;
+        &lt;img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Second slide"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"&gt;
+      &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"&gt;
+      &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>carousel slide</strong>: Base carousel styling.</li>
+            <li><strong>carousel-inner</strong>: Contains carousel items.</li>
+            <li><strong>carousel-item</strong>: Individual slide.</li>
+            <li><strong>carousel-control-prev/next</strong>: Navigation controls.</li>
+          </ul>
+        </section>
+
+        <section id="dropdowns" class="content-section">
+          <h2>Dropdowns</h2>
+          <p>Dropdowns toggle menus with options.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;div class="dropdown"&gt;
+    &lt;button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+      Dropdown
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>dropdown</strong>: Container for dropdown.</li>
+            <li><strong>dropdown-toggle</strong>: Toggles the menu.</li>
+            <li><strong>dropdown-menu</strong>: Styles the menu.</li>
+            <li><strong>dropdown-item</strong>: Styles menu items.</li>
+          </ul>
+        </section>
+
+        <section id="list-group" class="content-section">
+          <h2>List Group</h2>
+          <p>List groups are flexible components for displaying lists of items.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <ul class="list-group">
+                <li class="list-group-item active" aria-current="true">An active item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+              </ul>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;ul class="list-group"&gt;
+    &lt;li class="list-group-item active" aria-current="true"&gt;An active item&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>list-group</strong>: Base styling for lists.</li>
+            <li><strong>list-group-item</strong>: Styles individual items.</li>
+            <li><strong>active</strong>: Highlights the active item.</li>
+          </ul>
+        </section>
+
+        <section id="modals" class="content-section">
+          <h2>Modals</h2>
+          <p>Modals are dialog boxes for user interaction.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+              </button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">Modal body text goes here.</div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"&gt;
+    Launch demo modal
+  &lt;/button&gt;
+  &lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+    &lt;div class="modal-dialog"&gt;
+      &lt;div class="modal-content"&gt;
+        &lt;div class="modal-header"&gt;
+          &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Modal title&lt;/h5&gt;
+          &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-body"&gt;Modal body text goes here.&lt;/div&gt;
+        &lt;div class="modal-footer"&gt;
+          &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+          &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>modal</strong>: Base modal styling.</li>
+            <li><strong>modal-dialog</strong>: Centers the modal.</li>
+            <li><strong>modal-content</strong>: Contains modal sections.</li>
+            <li><strong>modal-header, modal-body, modal-footer</strong>: Structure the modal.</li>
+          </ul>
+        </section>
+
+        <section id="navs" class="content-section">
+          <h2>Navs &amp; Tabs</h2>
+          <p>Navs create navigation links.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <ul class="nav nav-pills">
+              <li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+              <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+            </ul>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="nav-item"&gt;&lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="nav-item"&gt;&lt;a class="nav-link disabled" href="#"&gt;Disabled&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>nav</strong>: Container for navigation links.</li>
+            <li><strong>nav-pills</strong>: Styles nav items as pills.</li>
+            <li><strong>active</strong>: Indicates the active item.</li>
+            <li><strong>disabled</strong>: Styles a link as disabled.</li>
+          </ul>
+        </section>
+
+        <section id="navbar" class="content-section">
+          <h2>Navbar</h2>
+          <p>The navbar is a responsive navigation header.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                  <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Home <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="d-flex">
+                    <input class="form-control me-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark"&gt;
+  &lt;div class="container-fluid"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+    &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation"&gt;
+      &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="collapse navbar-collapse" id="navbarColor01"&gt;
+      &lt;ul class="navbar-nav me-auto"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link active" href="#"&gt;Home &lt;span class="visually-hidden"&gt;(current)&lt;/span&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Features&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item dropdown"&gt;
+          &lt;a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"&gt;Dropdown&lt;/a&gt;
+          &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;form class="d-flex"&gt;
+        &lt;input class="form-control me-sm-2" type="search" placeholder="Search"&gt;
+        &lt;button class="btn btn-secondary my-2 my-sm-0" type="submit"&gt;Search&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>navbar-expand-lg</strong>: Expands the navbar on large screens.</li>
+            <li><strong>bg-primary</strong>: Applies the primary background color.</li>
+            <li><strong>data-bs-theme="dark"</strong>: Sets a dark theme for text and icons.</li>
+            <li><strong>navbar-nav</strong>: Styles the navigation links.</li>
+            <li><strong>dropdown</strong>: Enables dropdown menus within the navbar.</li>
+          </ul>
+        </section>
+
+        <section id="offcanvas" class="content-section">
+          <h2>Offcanvas</h2>
+          <p>Offcanvas creates off-screen content that slides in and out.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Open Offcanvas
+              </button>
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <p>Content for the offcanvas goes here.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"&gt;
+    Open Offcanvas
+  &lt;/button&gt;
+  &lt;div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"&gt;
+    &lt;div class="offcanvas-header"&gt;
+      &lt;h5 class="offcanvas-title" id="offcanvasExampleLabel"&gt;Offcanvas&lt;/h5&gt;
+      &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="offcanvas-body"&gt;
+      &lt;p&gt;Content for the offcanvas goes here.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>offcanvas</strong>: Base offcanvas styling.</li>
+            <li><strong>offcanvas-start</strong>: Positions offcanvas on the left.</li>
+            <li><strong>offcanvas-header/body</strong>: Structures the content.</li>
+          </ul>
+        </section>
+
+        <section id="pagination" class="content-section">
+          <h2>Pagination</h2>
+          <p>Pagination provides navigation for paged content.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <nav aria-label="Page navigation">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code>&lt;div class="container"&gt;
+  &lt;nav aria-label="Page navigation"&gt;
+    &lt;ul class="pagination"&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Previous&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item active" aria-current="page"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/div&gt;</code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>pagination</strong>: Styles the pagination list.</li>
+            <li><strong>page-item</strong>: Styles each item.</li>
+            <li><strong>page-link</strong>: Styles the links.</li>
+            <li><strong>active</strong>: Highlights the current page.</li>
+          </ul>
+        </section>
+
+        <section id="placeholders" class="content-section">
+          <h2>Placeholders</h2>
+          <p>Placeholders display loading states for content.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-6"></span>
+                  </h5>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-4"></span>
+                  </p>
+                  <a href="#" class="btn btn-primary disabled placeholder col-6"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code><div class="container">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title placeholder-glow">
+        <span class="placeholder col-6"></span>
+      </h5>
+      <p class="card-text placeholder-glow">
+        <span class="placeholder col-7"></span>
+        <span class="placeholder col-4"></span>
+      </p>
+      <a href="#" class="btn btn-primary disabled placeholder col-6"></a>
+    </div>
+  </div>
+</div></code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>placeholder</strong>: Applies placeholder styling.</li>
+            <li><strong>placeholder-glow</strong>: Adds a glowing animation.</li>
+            <li><strong>col-*</strong>: Controls the width of placeholders.</li>
+            <li><strong>disabled</strong>: Ensures interactive elements appear inactive.</li>
+          </ul>
+          <p>Use placeholders to indicate loading states for content like cards or forms.</p>
+        </section>
+
+        <section id="popovers" class="content-section">
+          <h2>Popovers</h2>
+          <p>Popovers add small overlays of content, triggered by user interaction.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-content="This is a popover example." data-bs-original-title="Popover title">Click for Popover</button>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code><div class="container">
+  <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-content="This is a popover example." data-bs-original-title="Popover title" aria-describedby="popover641549">Click for Popover</button>
+</div>
+<script>
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+  })
+</script></code></pre>
+          <h3>Explanation</h3>
+          <p>Key attributes and classes:</p>
+          <ul>
+            <li><strong>data-bs-toggle="popover"</strong>: Initializes the popover.</li>
+            <li><strong>title</strong>: Sets the popover title.</li>
+            <li><strong>data-bs-content</strong>: Defines the popover content.</li>
+            <li>JavaScript initialization is required for functionality.</li>
+          </ul>
+          <p>Use popovers for additional information on hover or click.</p>
+        </section>
+
+        <section id="progress" class="content-section">
+          <h2>Progress</h2>
+          <p>Progress bars show task completion.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code><div class="container">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+  </div>
+</div></code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes and attributes:</p>
+          <ul>
+            <li><strong>progress</strong>: Container for the bar.</li>
+            <li><strong>progress-bar</strong>: The filled portion of the bar.</li>
+            <li><strong>aria-valuenow</strong>: Accessibility attribute for current value.</li>
+            <li><strong>style="width: X%"</strong>: Sets the progress percentage.</li>
+          </ul>
+          <p>Use progress bars for loading or task progress indicators.</p>
+        </section>
+
+        <section id="spinners" class="content-section">
+          <h2>Spinners</h2>
+          <p>Spinners indicate loading states.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <div class="spinner-grow text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code><div class="container">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-grow text-success" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div></code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>spinner-border</strong>: Border-style spinner.</li>
+            <li><strong>spinner-grow</strong>: Growing animation spinner.</li>
+            <li><strong>text-*</strong>: Contextual color classes.</li>
+            <li><strong>visually-hidden</strong>: Accessibility for screen readers.</li>
+          </ul>
+          <p>Use spinners for loading indicators in buttons or content areas.</p>
+        </section>
+
+        <section id="toasts" class="content-section">
+          <h2>Toasts</h2>
+          <p>Toasts are lightweight notifications that appear temporarily.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  <strong class="me-auto">Bootstrap</strong>
+                  <small>Just now</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                  Hello, world! This is a toast message.
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code><div class="container">
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>Just now</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+<script>
+  var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+  var toastList = toastElList.map(function(toastEl) {
+    return new bootstrap.Toast(toastEl)
+  })
+</script></code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes and attributes:</p>
+          <ul>
+            <li><strong>toast</strong>: Base toast styling.</li>
+            <li><strong>toast-header</strong>: Header section with title and close button.</li>
+            <li><strong>toast-body</strong>: Main content area.</li>
+            <li><strong>data-bs-dismiss="toast"</strong>: Closes the toast.</li>
+            <li>JavaScript initialization is required for functionality.</li>
+          </ul>
+          <p>Use toasts for non-intrusive notifications.</p>
+        </section>
+
+        <section id="tooltips" class="content-section">
+          <h2>Tooltips</h2>
+          <p>Tooltips display brief information on hover or focus.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Tooltip on top">
+                Hover for Tooltip
+              </button>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code><div class="container">
+  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Tooltip on top">
+    Hover for Tooltip
+  </button>
+</div>
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script></code></pre>
+          <h3>Explanation</h3>
+          <p>Key attributes:</p>
+          <ul>
+            <li><strong>data-bs-toggle="tooltip"</strong>: Initializes the tooltip.</li>
+            <li><strong>title</strong>: Sets the tooltip content.</li>
+            <li><strong>data-bs-placement</strong>: Defines tooltip position (top, bottom, left, right).</li>
+            <li>JavaScript initialization is required for functionality.</li>
+          </ul>
+          <p>Use tooltips for brief, contextual information.</p>
+        </section>
+
+        <!-- Helpers -->
+        <section id="clearfix" class="content-section">
+          <h2>Clearfix</h2>
+          <p>Clearfix clears floated elements.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="bg-light clearfix">
+                <button class="btn btn-primary float-start">Float start</button>
+                <button class="btn btn-secondary float-end">Float end</button>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code><div class="container">
+  <div class="bg-light clearfix">
+    <button class="btn btn-primary float-start">Float start</button>
+    <button class="btn btn-secondary float-end">Float end</button>
+  </div>
+</div></code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>clearfix</strong>: Clears floats within a container.</li>
+            <li><strong>float-start, float-end</strong>: Float elements left or right.</li>
+          </ul>
+          <p>Use clearfix to manage layout with floated content.</p>
+        </section>
+
+        <section id="text-truncation" class="content-section">
+          <h2>Text Truncation</h2>
+          <p>Text truncation limits text to a single line.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <p class="text-truncate" style="max-width: 150px;">This is a long text that will be truncated.</p>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code><div class="container">
+  <p class="text-truncate" style="max-width: 150px;">This is a long text that will be truncated.</p>
+</div></code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>text-truncate</strong>: Truncates text with ellipsis.</li>
+            <li>Requires <strong>max-width</strong> or block-level parent.</li>
+          </ul>
+          <p>Use text truncation for compact text displays.</p>
+        </section>
+
+        <!-- Utilities -->
+        <section id="background" class="content-section">
+          <h2>Background</h2>
+          <p>Background utilities set element backgrounds.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="bg-primary text-white p-3">Primary background</div>
+              <div class="bg-success text-white p-3 mt-2">Success background</div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code><div class="container">
+  <div class="bg-primary text-white p-3">Primary background</div>
+  <div class="bg-success text-white p-3 mt-2">Success background</div>
+</div></code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>bg-primary, bg-success</strong>: Contextual colors.</li>
+            <li><strong>text-white</strong>: Contrasting text color.</li>
+            <li><strong>bg-opacity-*</strong>: Adjusts background opacity.</li>
+          </ul>
+          <p>Use background utilities for quick color applications.</p>
+        </section>
+
+        <section id="flex" class="content-section">
+          <h2>Flex</h2>
+          <p>Flex utilities create flexible layouts.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="d-flex justify-content-between bg-light p-3">
+                <div>Item 1</div>
+                <div>Item 2</div>
+              </div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code><div class="container">
+  <div class="d-flex justify-content-between bg-light p-3">
+    <div>Item 1</div>
+    <div>Item 2</div>
+  </div>
+</div></code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>d-flex</strong>: Enables flexbox.</li>
+            <li><strong>justify-content-between</strong>: Spaces items evenly.</li>
+            <li><strong>align-items-*</strong>: Aligns items vertically.</li>
+          </ul>
+          <p>Use flex utilities for modern, responsive designs.</p>
+        </section>
+
+        <section id="utilities" class="content-section">
+          <h2>Utilities</h2>
+          <p>Utilities are single-purpose classes for styling.</p>
+          <h3>Example</h3>
+          <div class="code-example">
+            <div class="container">
+              <div class="bg-primary text-white p-3 mb-2 rounded">Background and text utility</div>
+              <div class="d-flex justify-content-between align-items-center border p-3">Flex utilities</div>
+            </div>
+          </div>
+          <h3>Code</h3>
+          <pre class="code-example"><code><div class="container">
+  <div class="bg-primary text-white p-3 mb-2 rounded">Background and text utility</div>
+  <div class="d-flex justify-content-between align-items-center border p-3">Flex utilities</div>
+</div></code></pre>
+          <h3>Explanation</h3>
+          <p>Key classes:</p>
+          <ul>
+            <li><strong>bg-*</strong>: Background colors.</li>
+            <li><strong>text-*</strong>: Text colors.</li>
+            <li><strong>p-*, m-*</strong>: Padding and margin.</li>
+            <li><strong>d-flex, justify-content-*, align-items-*</strong>: Flexbox utilities.</li>
+            <li><strong>rounded</strong>: Rounded corners.</li>
+          </ul>
+          <p>Use utilities for rapid styling without custom CSS.</p>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- JavaScript for Copy Button Functionality -->
+  <script>
+    document.querySelectorAll('.copy-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const code = button.previousElementSibling.querySelector('code').textContent;
+        navigator.clipboard.writeText(code).then(() => {
+          button.textContent = 'Copied!';
+          setTimeout(() => button.textContent = 'Copy', 2000);
+        });
+      });
+    });
+  </script>
+
+
+<div class="popover bs-popover-auto fade show" role="tooltip" id="popover641549" data-popper-placement="top" data-popper-reference-hidden="" data-popper-escaped="" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(59px, 25490px);"><div class="popover-arrow" style="position: absolute; transform: translate(90px, 0px); left: 0px;"></div><h3 class="popover-header">Popover title</h3><div class="popover-body">This is a popover example.</div></div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bs-init.js"></script>
+    <script src="../assets/js/add-theme-changer-button.js"></script>
+    <script src="../assets/js/catalog-page.js"></script>
+    <script src="../assets/js/checkout.js"></script>
+    <script src="../assets/js/home-page-carusel.js"></script>
+    <script src="../assets/js/import/fotorama.js"></script>
+    <script src="../assets/js/main-header.js"></script>
+    <script src="../assets/js/product-page-sticky-nav-version.js"></script>
+    <script src="../assets/js/products-carousel.js"></script>
+    <script src="../assets/js/shopping-cart.js"></script>
+</body>
+
+</html>

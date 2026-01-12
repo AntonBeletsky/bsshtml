@@ -1,0 +1,11 @@
+.stars-container-outer {
+}
+
+.stars-container-inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.star-item {
+}
+

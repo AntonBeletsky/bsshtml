@@ -1,0 +1,55 @@
+div {
+}
+
+img {
+  /*mix-blend-mode: multiply;*/
+}
+
+.carousel-item {
+  height: 450px;
+  background-color: #e0f2f7;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  filter: brightness(120%) contrast(110%);
+}
+
+.carousel-caption h2, .carousel-caption p {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.price-currency {
+  /*style: commented out as per request;*/
+}
+
+.category-circle {
+  transition: transform 0.3s ease;
+}
+
+.category-circle:hover {
+  transform: scale(1.05);
+}
+
+.brand-logo-img {
+  max-height: 50px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.brand-logo-img:hover {
+  filter: grayscale(50%);
+  opacity: 0.5);
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+a {
+  text-decoration: none;
+}
+

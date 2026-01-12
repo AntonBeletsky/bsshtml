@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- -----------------------CSS----------------------- -->
+<!--  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Boostrap icons  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Fotorama Gallery -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Material UI icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Material Symbols Outlined -->
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=grid_view" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>boostrap-lux-shop-master</title>
+    <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="../../../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../../assets/css/articles-badges-images.css">
+    <link rel="stylesheet" href="../../../assets/css/basket.css">
+    <link rel="stylesheet" href="../../../assets/css/body.css">
+    <link rel="stylesheet" href="../../../assets/css/bootstrap-extension.css">
+    <link rel="stylesheet" href="../../../assets/css/catalog-page.css">
+    <link rel="stylesheet" href="../../../assets/css/checkout.css">
+    <link rel="stylesheet" href="../../../assets/css/compare-page.css">
+    <link rel="stylesheet" href="../../../assets/css/customer-account.css">
+    <link rel="stylesheet" href="../../../assets/css/dialog.css">
+    <link rel="stylesheet" href="../../../assets/css/featured-Itemn.css">
+    <link rel="stylesheet" href="../../../assets/css/fotorama.css">
+    <link rel="stylesheet" href="../../../assets/css/header-1.css">
+    <link rel="stylesheet" href="../../../assets/css/header-navbar-black.css">
+    <link rel="stylesheet" href="../../../assets/css/home-page.css">
+    <link rel="stylesheet" href="../../../assets/css/img.css">
+    <link rel="stylesheet" href="../../../assets/css/index-page.css">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link rel="stylesheet" href="../../../assets/css/order-item.css">
+    <link rel="stylesheet" href="../../../assets/css/popover-content.css">
+    <link rel="stylesheet" href="../../../assets/css/product-card-grid.css">
+    <link rel="stylesheet" href="../../../assets/css/product-card-list.css">
+    <link rel="stylesheet" href="../../../assets/css/product-page.css">
+    <link rel="stylesheet" href="../../../assets/css/products-carousel.css">
+    <link rel="stylesheet" href="../../../assets/css/scroll-normalizer-master.css">
+    <link rel="stylesheet" href="../../../assets/css/shadow-box.css">
+    <link rel="stylesheet" href="../../../assets/css/shopping-cart.css">
+    <link rel="stylesheet" href="../../../assets/css/slider-price.css">
+    <link rel="stylesheet" href="../../../assets/css/stars-rating.css">
+    <link rel="stylesheet" href="../../../assets/css/tech-shadow-box.css">
+    <link rel="stylesheet" href="../../../assets/css/timeline.css">
+    <link rel="stylesheet" href="../../../assets/css/ui-collapsible-panel.css">
+    <link rel="stylesheet" href="../../../assets/css/ui-icons-circle.css">
+    <link rel="stylesheet" href="../../../assets/css/wishlist.css">
+</head>
+
+<body><style>        
+        /*
+         * CUSTOM STYLES
+         * Using Bootstrap CSS variables for better theming (light/dark mode).
+         */
+        body {
+            background-color: var(--bs-body-bg);
+        }
+
+        .comparison-table {
+            /* Ensures vertical alignment for all cell content */
+            vertical-align: middle;
+            /* Wider columns for better readability */
+            min-width: 900px;
+        }
+
+        /*
+         * STICKY HEADER & FIRST COLUMN
+         * This is the core of the layout. The first column (controls/spec names)
+         * and the header (product cards) are sticky.
+         */
+        .comparison-table th, .comparison-table td {
+            white-space: nowrap; /* Prevents text wrapping in cells */
+        }
+
+        .comparison-table thead th {
+            top: 0;
+            z-index: 2; /* Sits above the body cells */
+        }
+        
+        /* First cell in the header (top-left corner) */
+        .comparison-table thead th:first-child {
+            left: 0;
+            z-index: 3; /* Sits above everything else */
+        }
+        
+        /* First column of the table body (spec names) */
+        .comparison-table tbody th {
+            position: sticky;
+            left: 0;
+            z-index: 1; /* Sits above the scrolling content, but below the header */
+            background-color: var(--bs-body-bg); /* Essential for sticky to not be transparent */
+        }
+
+        /*
+         * COMPONENT STYLING
+         */
+        .controls-cell {
+            min-width: 250px;
+        }
+
+        /* Styling for the product card in the table header */
+        .product-card-compare {
+            border: none;
+            background-color: transparent;
+        }
+
+        .product-card-compare .card-img-top {
+            width: 150px;
+            height: 150px;
+            object-fit: contain; /* Ensures the image scales properly */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .product-card-compare .btn-close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: var(--bs-tertiary-bg);
+            border-radius: 50%;
+        }
+
+        /* Styling for spec group headers (e.g., "General", "Display") */
+        .spec-group-header {
+            background-color: var(--bs-tertiary-bg);
+        }
+
+        /*
+         * LOGIC-DRIVEN STYLES
+         * These classes are added/removed by JavaScript.
+         */
+         
+        /* Highlight for rows where values are different */
+        .row-has-diff {
+             background-color: rgba(var(--bs-success-rgb), 0.07); /* Subtle green highlight */
+        }
+
+        /* Highlight for specific cells that differ from the first product */
+        .cell-is-diff {
+            font-weight: bold;
+            color: var(--bs-emphasis-color);
+        }
+
+        .star-rating .fa-star {
+            color: #ffc107; /* Bootstrap's warning/yellow color */
+        }
+    </style>
+
+    <main class="container-fluid my-5 bg-body">
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold">Compare Products</h1>
+            <p class="text-muted">Analyze features side-by-side to make the best choice.</p>
+        </div>
+
+        <div class="table-responsive shadow-sm border rounded">
+            <table class="table table-bordered table-hover comparison-table mb-0">
+                <thead class="bg-body-tertiary">
+                    <tr>
+                        <th scope="col" class="controls-cell">
+                            <div class="d-flex flex-column p-3">
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="onlyDifferencesSwitch">
+                                    <label class="form-check-label fw-bold" for="onlyDifferencesSwitch">Show Only Differences</label>
+                                </div>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2"><a href="#" class="text-decoration-none"><i class="fa-solid fa-plus me-2"></i>Add a Product</a></li>
+                                    <li><a href="#" class="text-decoration-none text-danger"><i class="fa-solid fa-trash-can me-2"></i>Clear List</a></li>
+                                </ul>
+                            </div>
+                        </th>
+
+                        <th scope="col">
+                            <div class="card product-card-compare text-center p-2">
+                                <button type="button" class="btn-close" aria-label="Remove Product"></button>
+                                <img src="https://i.dummyjson.com/data/products/2/thumbnail.jpg" class="card-img-top" alt="iPhone X">
+                                <div class="card-body px-0 pb-0">
+                                    <a href="#" class="text-decoration-none"><h6 class="card-title">iPhone X</h6></a>
+                                    <p class="card-text fw-bold fs-5 mb-2">$899</p>
+                                    <button class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart me-2"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </th>
+
+                        <th scope="col">
+                            <div class="card product-card-compare text-center p-2">
+                                <button type="button" class="btn-close" aria-label="Remove Product"></button>
+                                <img src="https://i.dummyjson.com/data/products/5/thumbnail.jpg" class="card-img-top" alt="Huawei P30">
+                                <div class="card-body px-0 pb-0">
+                                     <a href="#" class="text-decoration-none"><h6 class="card-title">Huawei P30</h6></a>
+                                    <p class="card-text fw-bold fs-5 mb-2">$499</p>
+                                    <button class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart me-2"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </th>
+
+                        <th scope="col">
+                             <div class="card product-card-compare text-center p-2">
+                                <button type="button" class="btn-close" aria-label="Remove Product"></button>
+                                <img src="https://i.dummyjson.com/data/products/6/thumbnail.jpg" class="card-img-top" alt="MacBook Pro">
+                                <div class="card-body px-0 pb-0">
+                                     <a href="#" class="text-decoration-none"><h6 class="card-title">MacBook Pro</h6></a>
+                                    <p class="card-text fw-bold fs-5 mb-2">$1749</p>
+                                    <button class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart me-2"></i>Add to Cart</button>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody id="comparison-body">
+                    <tr>
+                        <th colspan="4" class="spec-group-header fw-bold">General</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Customer Rating</th>
+                        <td class="star-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span class="text-muted ms-2">(1,250)</span>
+                        </td>
+                        <td class="star-rating">
+                           <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                           <span class="text-muted ms-2">(890)</span>
+                        </td>
+                        <td class="star-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                           <span class="text-muted ms-2">(2,145)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Warranty</th>
+                        <td>12 Months</td>
+                        <td>24 Months</td>
+                        <td>12 Months</td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="4" class="spec-group-header fw-bold">Display</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Type</th>
+                        <td>Super Retina OLED</td>
+                        <td>OLED</td>
+                        <td>Liquid Retina XDR</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Screen Size</th>
+                        <td>6.1 inches</td>
+                        <td>6.1 inches</td>
+                        <td>14.2 inches</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Resolution</th>
+                        <td>2532 x 1170 pixels</td>
+                        <td>2340 x 1080 pixels</td>
+                        <td>3024 x 1964 pixels</td>
+                    </tr>
+                    
+                     <tr>
+                        <th colspan="4" class="spec-group-header fw-bold">Performance</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Chipset</th>
+                        <td>Apple A15 Bionic</td>
+                        <td>Kirin 980</td>
+                        <td>Apple M2 Pro</td>
+                    </tr>
+                     <tr>
+                        <th scope="row">RAM</th>
+                        <td>4 GB</td>
+                        <td>8 GB</td>
+                        <td>16 GB</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Internal Storage</th>
+                        <td>128 GB</td>
+                        <td>128 GB</td>
+                        <td>512 GB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+
+    <script>
+    /**
+     * This script handles the client-side logic for the product comparison page.
+     * 1. It highlights rows and cells that have different values across products.
+     * 2. It provides functionality for the "Show Only Differences" switch.
+     */
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const comparisonBody = document.getElementById('comparison-body');
+        const differenceSwitch = document.getElementById('onlyDifferencesSwitch');
+
+        /**
+         * Analyzes all data rows to find and highlight differences.
+         * A row is considered to have differences if not all cell values are identical.
+         */
+        function highlightDifferences() {
+            // Select all rows in the tbody, but exclude group headers.
+            const rows = comparisonBody.querySelectorAll('tr:not(:has(.spec-group-header))');
+
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                if (cells.length > 1) {
+                    const firstCellValue = cells[0].innerHTML.trim();
+                    let hasDifference = false;
+                    
+                    // Start from the second cell to compare against the first
+                    for (let i = 1; i < cells.length; i++) {
+                        if (cells[i].innerHTML.trim() !== firstCellValue) {
+                            hasDifference = true;
+                            cells[i].classList.add('cell-is-diff'); // Highlight individual different cell
+                        } else {
+                            cells[i].classList.remove('cell-is-diff');
+                        }
+                    }
+                    // The first cell can also be marked if there's any difference in the row
+                    if (hasDifference) {
+                       cells[0].classList.add('cell-is-diff');
+                       row.classList.add('row-has-diff');
+                    } else {
+                       cells[0].classList.remove('cell-is-diff');
+                       row.classList.remove('row-has-diff');
+                    }
+                }
+            });
+        }
+
+        /**
+         * Toggles the visibility of rows based on whether they have differences.
+         * Hides rows that do NOT have the 'row-has-diff' class when the switch is checked.
+         */
+        function filterDifferenceView() {
+            const rows = comparisonBody.querySelectorAll('tr:not(:has(.spec-group-header))');
+            const isChecked = differenceSwitch.checked;
+
+            rows.forEach(row => {
+                if (isChecked && !row.classList.contains('row-has-diff')) {
+                    row.style.display = 'none';
+                } else {
+                    row.style.display = ''; // Revert to default display (table-row)
+                }
+            });
+        }
+
+        // --- EVENT LISTENERS ---
+
+        // Listen for changes on the switch
+        differenceSwitch.addEventListener('change', filterDifferenceView);
+        
+        // Initial run on page load to set the default state
+        highlightDifferences();
+    });
+
+    </script>
+
+
+
+
+    <script src="../../../assets/js/jquery.min.js"></script>
+    <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../assets/js/bs-init.js"></script>
+    <script src="../../../assets/js/add-theme-changer-button.js"></script>
+    <script src="../../../assets/js/catalog-page.js"></script>
+    <script src="../../../assets/js/checkout.js"></script>
+    <script src="../../../assets/js/home-page-carusel.js"></script>
+    <script src="../../../assets/js/import/fotorama.js"></script>
+    <script src="../../../assets/js/main-header.js"></script>
+    <script src="../../../assets/js/product-page-sticky-nav-version.js"></script>
+    <script src="../../../assets/js/products-carousel.js"></script>
+    <script src="../../../assets/js/shopping-cart.js"></script>
+</body>
+
+</html>
