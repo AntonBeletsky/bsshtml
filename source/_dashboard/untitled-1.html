@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- -----------------------CSS----------------------- -->
+<!--  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Boostrap icons  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Fotorama Gallery -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Material UI icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Material Symbols Outlined -->
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=grid_view" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>boostrap-lux-shop-master</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/articles-badges-images.css">
+    <link rel="stylesheet" href="../../assets/css/basket.css">
+    <link rel="stylesheet" href="../../assets/css/body.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap-extension.css">
+    <link rel="stylesheet" href="../../assets/css/catalog-page.css">
+    <link rel="stylesheet" href="../../assets/css/checkout.css">
+    <link rel="stylesheet" href="../../assets/css/compare-page.css">
+    <link rel="stylesheet" href="../../assets/css/customer-account.css">
+    <link rel="stylesheet" href="../../assets/css/dialog.css">
+    <link rel="stylesheet" href="../../assets/css/featured-Itemn.css">
+    <link rel="stylesheet" href="../../assets/css/fotorama.css">
+    <link rel="stylesheet" href="../../assets/css/header-navbar-black.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/home-page.css">
+    <link rel="stylesheet" href="../../assets/css/img.css">
+    <link rel="stylesheet" href="../../assets/css/index-page.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/order-item.css">
+    <link rel="stylesheet" href="../../assets/css/popover-content.css">
+    <link rel="stylesheet" href="../../assets/css/product-card-grid.css">
+    <link rel="stylesheet" href="../../assets/css/product-card-list.css">
+    <link rel="stylesheet" href="../../assets/css/product-page.css">
+    <link rel="stylesheet" href="../../assets/css/products-carousel.css">
+    <link rel="stylesheet" href="../../assets/css/scroll-normalizer-master.css">
+    <link rel="stylesheet" href="../../assets/css/shadow-box.css">
+    <link rel="stylesheet" href="../../assets/css/shopping-cart.css">
+    <link rel="stylesheet" href="../../assets/css/slider-price.css">
+    <link rel="stylesheet" href="../../assets/css/stars-rating.css">
+    <link rel="stylesheet" href="../../assets/css/tech-shadow-box.css">
+    <link rel="stylesheet" href="../../assets/css/timeline.css">
+    <link rel="stylesheet" href="../../assets/css/ui-collapsible-panel.css">
+    <link rel="stylesheet" href="../../assets/css/ui-icons-circle.css">
+    <link rel="stylesheet" href="../../assets/css/wishlist.css">
+</head>
+
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Library Docs</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        /* --- Layout & Typography --- */
+        body {
+            background-color: #f4f6f8;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .sidebar {
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            overflow-y: auto;
+            border-right: 1px solid #e0e0e0;
+            background-color: #fff;
+            padding-top: 2rem;
+        }
+
+        .main-content {
+            padding: 2rem 3rem;
+        }
+
+        /* --- Documentation Component Styles --- */
+        .doc-section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 2rem; /* Smooth scroll offset */
+        }
+
+        /* 1. Preview Area */
+        .bd-preview {
+            padding: 2.5rem;
+            margin-bottom: 0;
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-bottom: none;
+            border-radius: 0.5rem 0.5rem 0 0;
+            position: relative;
+        }
+        
+        /* Background pattern to visualize transparency if needed */
+        .bd-preview::before {
+            content: "Preview";
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #6c757d;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            border-right: 1px solid #dee2e6;
+            border-radius: 0.5rem 0 0.5rem 0;
+        }
+
+        /* 2. Code Area */
+        .bd-code-header {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 0.5rem 1rem 0;
+        }
+
+        .bd-code-body {
+            position: relative;
+            background: #2d2d2d; /* Match Prism Tomorrow theme */
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+
+        .bd-code-body pre {
+            margin: 0;
+            padding: 1.5rem;
+            max-height: 400px;
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+
+        /* Tabs Styling */
+        .nav-tabs .nav-link {
+            border: none;
+            color: #6c757d;
+            font-weight: 500;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #2d2d2d;
+            color: #fff;
+            border-radius: 0.375rem 0.375rem 0 0;
+        }
+        .nav-tabs .nav-link:hover:not(.active) {
+            border-color: transparent;
+            color: #000;
+        }
+
+        /* Copy Button */
+        .btn-copy {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 10;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: #fff;
+        }
+        .btn-copy:hover {
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+        }
+
+        /* --- Custom Component Styles (For Example 3) --- */
+        .custom-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            transition: transform 0.2s;
+        }
+        .custom-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+            <h5 class="px-3 mb-4 text-uppercase text-muted fw-bold ls-1">Components</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-dark" href="#buttons">1. Buttons</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#modals">2. Interactive Modal</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#cards">3. Profile Card</a></li>
+            </ul>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 main-content">
+            
+            <header class="pb-3 mb-5 border-bottom">
+                <h1 class="display-6 fw-bold">Design System Docs</h1>
+                <p class="lead text-secondary">A library of modular components with live previews and source code.</p>
+            </header>
+
+            <section id="buttons" class="doc-section">
+                <h2 class="h4">1. Buttons</h2>
+                <p class="text-muted">Standard Bootstrap buttons for actions in forms, dialogs, and more.</p>
+
+                <div class="bd-preview d-flex gap-2 flex-wrap">
+                    <button type="button" class="btn btn-primary">Primary Action</button>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                    <button type="button" class="btn btn-success"><i class="bi bi-check-circle me-1"></i> Save</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+
+                <div class="bd-code-header">
+                    <ul class="nav nav-tabs" id="tab-btns" role="tablist">
+                        <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#btn-html">HTML</button></li>
+                        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#btn-css">CSS</button></li>
+                        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#btn-js">JS</button></li>
+                    </ul>
+                </div>
+
+                <div class="bd-code-body tab-content">
+                    <div class="tab-pane fade show active" id="btn-html">
+                        <button class="btn btn-sm btn-copy" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;!-- Primary Button --&gt;
+&lt;button type="button" class="btn btn-primary"&gt;Primary Action&lt;/button&gt;
+
+&lt;!-- Outline Button --&gt;
+&lt;button type="button" class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;
+
+&lt;!-- Button with Icon --&gt;
+&lt;button type="button" class="btn btn-success"&gt;
+    &lt;i class="bi bi-check-circle me-1"&gt;&lt;/i&gt; Save
+&lt;/button&gt;
+
+&lt;!-- Danger Button --&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Delete&lt;/button&gt;</code></pre>
+                    </div>
+                    <div class="tab-pane fade" id="btn-css">
+                        <button class="btn btn-sm btn-copy" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-css">/* No custom CSS needed. 
+   Styles are provided by Bootstrap framework. */</code></pre>
+                    </div>
+                    <div class="tab-pane fade" id="btn-js">
+                        <button class="btn btn-sm btn-copy" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-javascript">// No JavaScript interaction required for basic buttons.</code></pre>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="modals" class="doc-section">
+                <h2 class="h4">2. Interactive Modal</h2>
+                <p class="text-muted">Modals add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+
+                <div class="bd-preview">
+                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Launch Demo Modal
+                    </button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5">Modal Title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Woohoo, you're reading this text in a modal!
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bd-code-header">
+                    <ul class="nav nav-tabs" id="tab-modals" role="tablist">
+                        <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#mod-html">HTML</button></li>
+                        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#mod-css">CSS</button></li>
+                        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#mod-js">JS</button></li>
+                    </ul>
+                </div>
+
+                <div class="bd-code-body tab-content">
+                    <div class="tab-pane fade show active" id="mod-html">
+                        <button class="btn btn-sm btn-copy" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;!-- Button Trigger --&gt;
+&lt;button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"&gt;
+  Launch Demo Modal
+&lt;/button&gt;
+
+&lt;!-- Modal Markup --&gt;
+&lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h1 class="modal-title fs-5"&gt;Modal Title&lt;/h1&gt;
+        &lt;button type="button" class="btn-close" data-bs-dismiss="modal"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        Woohoo, you're reading this text in a modal!
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="tab-pane fade" id="mod-css">
+                        <button class="btn btn-sm btn-copy" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-css">/* Standard Bootstrap Modal Styles used. */</code></pre>
+                    </div>
+                    <div class="tab-pane fade" id="mod-js">
+                        <button class="btn btn-sm btn-copy" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-javascript">// Initialize the modal if you need to control it via JS
+const myModal = document.getElementById('exampleModal')
+const myInput = document.getElementById('myInput')
+
+// Example: Focus input when modal opens
+if (myModal) {
+    myModal.addEventListener('shown.bs.modal', () => {
+        myInput.focus()
+    })
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="cards" class="doc-section">
+                <h2 class="h4">3. Profile Card (Custom)</h2>
+                <p class="text-muted">An example of extending Bootstrap with custom CSS classes for a unique look.</p>
+
+                <div class="bd-preview">
+                    <div class="card custom-card" style="width: 18rem;">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="bi bi-person-circle fs-1"></i>
+                            </div>
+                            <h5 class="card-title">John Doe</h5>
+                            <p class="card-text opacity-75">Senior Developer</p>
+                            <hr class="border-light opacity-25">
+                            <a href="#" class="btn btn-light btn-sm text-primary fw-bold">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bd-code-header">
+                    <ul class="nav nav-tabs" id="tab-cards" role="tablist">
+                        <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#card-html">HTML</button></li>
+                        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#card-css">CSS</button></li>
+                        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#card-js">JS</button></li>
+                    </ul>
+                </div>
+
+                <div class="bd-code-body tab-content">
+                    <div class="tab-pane fade show active" id="card-html">
+                        <button class="btn btn-sm btn-copy" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="card custom-card" style="width: 18rem;"&gt;
+    &lt;div class="card-body text-center"&gt;
+        &lt;div class="mb-3"&gt;
+            &lt;i class="bi bi-person-circle fs-1"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;h5 class="card-title"&gt;John Doe&lt;/h5&gt;
+        &lt;p class="card-text opacity-75"&gt;Senior Developer&lt;/p&gt;
+        &lt;hr class="border-light opacity-25"&gt;
+        &lt;a href="#" class="btn btn-light btn-sm text-primary fw-bold"&gt;View Profile&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                    <div class="tab-pane fade" id="card-css">
+                        <button class="btn btn-sm btn-copy" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-css">/* Custom Gradient Style */
+.custom-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    transition: transform 0.2s;
+}
+
+/* Hover Effect */
+.custom-card:hover {
+    transform: translateY(-5px);
+}</code></pre>
+                    </div>
+                    <div class="tab-pane fade" id="card-js">
+                        <button class="btn btn-sm btn-copy" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-javascript">// No JavaScript required for this component.</code></pre>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+<script>
+    function copyCode(btn) {
+        // Look for the <pre><code> block in the same container
+        const codeBlock = btn.nextElementSibling.querySelector('code');
+        const textToCopy = codeBlock.innerText;
+
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const originalText = btn.innerText;
+            btn.innerText = 'Copied!';
+            btn.classList.add('text-success', 'fw-bold');
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.remove('text-success', 'fw-bold');
+            }, 2000);
+        });
+    }
+</script>
+
+</body>
+</html>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bs-init.js"></script>
+    <script src="../../assets/js/add-theme-changer-button.js"></script>
+    <script src="../../assets/js/catalog-page.js"></script>
+    <script src="../../assets/js/checkout.js"></script>
+    <script src="../../assets/js/home-page-carusel.js"></script>
+    <script src="../../assets/js/import/fotorama.js"></script>
+    <script src="../../assets/js/main-header.js"></script>
+    <script src="../../assets/js/product-page-sticky-nav-version.js"></script>
+    <script src="../../assets/js/products-carousel.js"></script>
+    <script src="../../assets/js/shopping-cart.js"></script>
+    <script src="../../assets/js/slider-price.js"></script>
+    <script src="../../assets/js/theme-changer-navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.field-12ch {
+  display: inline-block;
+  min-width: 12ch;
+  font-family: monospace;
+  text-align: right;
+}
+
+.field-15ch {
+  display: inline-block;
+  min-width: 15ch;
+  font-family: monospace;
+  text-align: right;
+}
+
+.field-18ch {
+  display: inline-block;
+  min-width: 18ch;
+  font-family: monospace;
+  text-align: right;
+}
+

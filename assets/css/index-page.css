@@ -1,0 +1,66 @@
+/* Custom styles - only those styles that cannot be replaced 
+  or are inefficient to replace with standard Bootstrap classes. */
+
+/* Specific height and background for carousel slides */
+
+.carousel-item {
+  height: 450px;
+  background-color: #e0f2f7;
+}
+
+/* Ensures proper image fit without distorting proportions. 
+  Bootstrap's .w-100/.h-100 classes don't address this.
+  Added brightness and contrast to make images lighter. */
+
+.carousel-item img {
+  object-fit: cover;
+  filter: brightness(120%) contrast(110%);
+}
+
+/* Bootstrap doesn't offer utilities for text shadow. 
+  Kept for better readability on the resulting light images. */
+
+.carousel-caption h2, .carousel-caption p {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Specific alignment for currency symbol, removed as per request */
+
+.price-currency {
+  /*style: commented out as per request;*/
+}
+
+/* Zoom effect for images in circles on hover. 
+  Bootstrap doesn't have utilities for transform. */
+
+.category-circle {
+  transition: transform 0.3s ease;
+}
+
+.category-circle:hover {
+  transform: scale(1.05);
+}
+
+/* Grayscale effect for brand logos with color reveal on hover. 
+  This is custom styling that we retain. */
+
+.brand-logo-img {
+  max-height: 50px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.brand-logo-img:hover {
+  filter: grayscale(50%);
+  opacity: 0.5);
+}
+
+/* Ensure carousel captions are fully visible on lighter images */
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+

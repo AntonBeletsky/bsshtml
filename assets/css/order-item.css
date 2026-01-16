@@ -1,0 +1,29 @@
+.order-item-container-outer a {
+  cursor: pointer;
+}
+
+/* border-bottom */
+
+.order-item-product-card-container {
+  /*border-bottom: 1px solid var(--bs-gray-500);*/
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.order-item-product-card-img-outer {
+}
+
+.order-item-product-card-img-inner {
+}
+
+.order-item-product-card-img-item {
+  height: 70px;
+  aspect-ratio: 1;
+  resize: both;
+}
+
+.order-item-product-body-outer {
+}
+
+.order-item-product-body-inner {
+}
+

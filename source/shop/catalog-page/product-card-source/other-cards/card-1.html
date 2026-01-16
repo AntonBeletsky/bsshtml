@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- -----------------------CSS----------------------- -->
+<!--  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Boostrap icons  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Fotorama Gallery -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Material UI icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Material Symbols Outlined -->
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=grid_view" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>boostrap-lux-shop-master</title>
+    <link rel="stylesheet" href="../../../../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="../../../../../assets/css/articles-badges-images.css">
+    <link rel="stylesheet" href="../../../../../assets/css/basket.css">
+    <link rel="stylesheet" href="../../../../../assets/css/body.css">
+    <link rel="stylesheet" href="../../../../../assets/css/bootstrap-extension.css">
+    <link rel="stylesheet" href="../../../../../assets/css/catalog-page.css">
+    <link rel="stylesheet" href="../../../../../assets/css/checkout.css">
+    <link rel="stylesheet" href="../../../../../assets/css/compare-page.css">
+    <link rel="stylesheet" href="../../../../../assets/css/customer-account.css">
+    <link rel="stylesheet" href="../../../../../assets/css/dialog.css">
+    <link rel="stylesheet" href="../../../../../assets/css/featured-Itemn.css">
+    <link rel="stylesheet" href="../../../../../assets/css/fotorama.css">
+    <link rel="stylesheet" href="../../../../../assets/css/header-navbar-black.css">
+    <link rel="stylesheet" href="../../../../../assets/css/header.css">
+    <link rel="stylesheet" href="../../../../../assets/css/home-page.css">
+    <link rel="stylesheet" href="../../../../../assets/css/img.css">
+    <link rel="stylesheet" href="../../../../../assets/css/index-page.css">
+    <link rel="stylesheet" href="../../../../../assets/css/main.css">
+    <link rel="stylesheet" href="../../../../../assets/css/order-item.css">
+    <link rel="stylesheet" href="../../../../../assets/css/popover-content.css">
+    <link rel="stylesheet" href="../../../../../assets/css/product-card-grid.css">
+    <link rel="stylesheet" href="../../../../../assets/css/product-card-list.css">
+    <link rel="stylesheet" href="../../../../../assets/css/product-page.css">
+    <link rel="stylesheet" href="../../../../../assets/css/products-carousel.css">
+    <link rel="stylesheet" href="../../../../../assets/css/scroll-normalizer-master.css">
+    <link rel="stylesheet" href="../../../../../assets/css/shadow-box.css">
+    <link rel="stylesheet" href="../../../../../assets/css/shopping-cart.css">
+    <link rel="stylesheet" href="../../../../../assets/css/slider-price.css">
+    <link rel="stylesheet" href="../../../../../assets/css/stars-rating.css">
+    <link rel="stylesheet" href="../../../../../assets/css/tech-shadow-box.css">
+    <link rel="stylesheet" href="../../../../../assets/css/timeline.css">
+    <link rel="stylesheet" href="../../../../../assets/css/ui-collapsible-panel.css">
+    <link rel="stylesheet" href="../../../../../assets/css/ui-icons-circle.css">
+    <link rel="stylesheet" href="../../../../../assets/css/wishlist.css">
+</head>
+
+<body><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Grid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        /* Легкий ховер-эффект для интерактивности, как в дорогих магазинах */
+        .card-hoverable {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .card-hoverable:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+        }
+        /* Градиент для читаемости текста на фото */
+        .overlay-gradient {
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-end mb-4 border-bottom border-dark pb-2">
+            <h2 class="h1 fw-bold text-uppercase m-0 text-dark">Новые поступления</h2>
+            <a href="#" class="text-dark text-decoration-none fw-bold small text-uppercase">Смотреть все <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm rounded-0 card-hoverable bg-white">
+                    <div class="position-relative bg-light" style="height: 350px;">
+                        <span class="badge bg-danger rounded-0 position-absolute top-0 start-0 m-3 px-3 py-2">-30% SALE</span>
+                        <button class="btn btn-light rounded-0 position-absolute top-0 end-0 m-3 shadow-sm p-2 lh-1">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" 
+                             class="w-100 h-100 object-fit-cover rounded-0" alt="Product">
+                    </div>
+                    
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="mb-2">
+                            <small class="text-muted text-uppercase fw-bold">Nike</small>
+                            <h5 class="card-title fw-bold mb-1">Air Max Red Edition</h5>
+                        </div>
+                        
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="h4 mb-0 fw-bold text-danger">$110</span>
+                            <span class="text-muted text-decoration-line-through small">$160</span>
+                        </div>
+
+                        <div class="mt-auto">
+                            <button class="btn btn-dark w-100 rounded-0 py-3 fw-bold text-uppercase">
+                                В корзину <i class="bi bi-bag ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm rounded-0 card-hoverable text-white overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" 
+                         class="card-img h-100 object-fit-cover rounded-0" alt="Travel">
+                    
+                    <div class="card-img-overlay d-flex flex-column justify-content-end p-0 rounded-0">
+                        <div class="overlay-gradient p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-light text-dark rounded-0 text-uppercase fw-bold">Горящий тур</span>
+                                <div class="text-warning small">
+                                    <i class="bi bi-star-fill"></i> 4.9
+                                </div>
+                            </div>
+                            
+                            <h3 class="fw-bold mb-1">Expedition: Iceland</h3>
+                            <p class="small opacity-75 mb-3">7 дней незабываемого путешествия по вулканам и ледникам.</p>
+                            
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-light flex-grow-1 rounded-0 fw-bold backdrop-blur">Подробнее</button>
+                                <button class="btn btn-light rounded-0 px-3 text-dark"><i class="bi bi-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm rounded-0 card-hoverable">
+                    <div class="bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center position-relative rounded-0" style="height: 250px;">
+                        <span class="badge bg-success rounded-0 position-absolute top-0 start-0 m-3">В наличии</span>
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" 
+                             style="max-height: 180px; width: auto;" alt="Headphones">
+                    </div>
+
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <small class="text-muted">AudioPro</small>
+                            <small class="text-warning fw-bold">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <span class="text-muted ms-1">(124)</span>
+                            </small>
+                        </div>
+
+                        <h5 class="fw-bold mb-2">Wireless Noise Cancelling</h5>
+                        
+                        <ul class="list-unstyled small text-muted mb-3">
+                            <li class="mb-1"><i class="bi bi-battery-full me-2"></i>30ч работы</li>
+                            <li class="mb-1"><i class="bi bi-bluetooth me-2"></i>Bluetooth 5.2</li>
+                            <li><i class="bi bi-mic me-2"></i>Встроенный микрофон</li>
+                        </ul>
+
+                        <div class="d-flex gap-2 mb-4">
+                            <div class="ratio ratio-1x1 border border-2 border-dark bg-dark" style="width: 24px;"></div>
+                            <div class="ratio ratio-1x1 border bg-secondary" style="width: 24px; cursor: pointer;"></div>
+                            <div class="ratio ratio-1x1 border bg-white" style="width: 24px; cursor: pointer;"></div>
+                        </div>
+
+                        <div class="row g-2 align-items-center">
+                            <div class="col-5">
+                                <h4 class="fw-bold mb-0">$299</h4>
+                            </div>
+                            <div class="col-7">
+                                <button class="btn btn-outline-dark w-100 rounded-0 fw-bold">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+    <script src="../../../../../assets/js/jquery.min.js"></script>
+    <script src="../../../../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../../assets/js/bs-init.js"></script>
+    <script src="../../../../../assets/js/add-theme-changer-button.js"></script>
+    <script src="../../../../../assets/js/catalog-page.js"></script>
+    <script src="../../../../../assets/js/checkout.js"></script>
+    <script src="../../../../../assets/js/home-page-carusel.js"></script>
+    <script src="../../../../../assets/js/import/fotorama.js"></script>
+    <script src="../../../../../assets/js/main-header.js"></script>
+    <script src="../../../../../assets/js/product-page-sticky-nav-version.js"></script>
+    <script src="../../../../../assets/js/products-carousel.js"></script>
+    <script src="../../../../../assets/js/shopping-cart.js"></script>
+    <script src="../../../../../assets/js/slider-price.js"></script>
+    <script src="../../../../../assets/js/theme-changer-navbar.js"></script>
+</body>
+
+</html>

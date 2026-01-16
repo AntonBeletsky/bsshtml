@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- -----------------------CSS----------------------- -->
+<!--  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Boostrap icons  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Fotorama Gallery -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Material UI icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Material Symbols Outlined -->
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=grid_view" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>boostrap-lux-shop-master</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/articles-badges-images.css">
+    <link rel="stylesheet" href="assets/css/basket.css">
+    <link rel="stylesheet" href="assets/css/body.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-extension.css">
+    <link rel="stylesheet" href="assets/css/catalog-page.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <link rel="stylesheet" href="assets/css/compare-page.css">
+    <link rel="stylesheet" href="assets/css/customer-account.css">
+    <link rel="stylesheet" href="assets/css/dialog.css">
+    <link rel="stylesheet" href="assets/css/featured-Itemn.css">
+    <link rel="stylesheet" href="assets/css/fotorama.css">
+    <link rel="stylesheet" href="assets/css/header-navbar-black.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/home-page.css">
+    <link rel="stylesheet" href="assets/css/img.css">
+    <link rel="stylesheet" href="assets/css/index-page.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/order-item.css">
+    <link rel="stylesheet" href="assets/css/popover-content.css">
+    <link rel="stylesheet" href="assets/css/product-card-grid.css">
+    <link rel="stylesheet" href="assets/css/product-card-list.css">
+    <link rel="stylesheet" href="assets/css/product-page.css">
+    <link rel="stylesheet" href="assets/css/products-carousel.css">
+    <link rel="stylesheet" href="assets/css/scroll-normalizer-master.css">
+    <link rel="stylesheet" href="assets/css/shadow-box.css">
+    <link rel="stylesheet" href="assets/css/shopping-cart.css">
+    <link rel="stylesheet" href="assets/css/slider-price.css">
+    <link rel="stylesheet" href="assets/css/stars-rating.css">
+    <link rel="stylesheet" href="assets/css/tech-shadow-box.css">
+    <link rel="stylesheet" href="assets/css/timeline.css">
+    <link rel="stylesheet" href="assets/css/ui-collapsible-panel.css">
+    <link rel="stylesheet" href="assets/css/ui-icons-circle.css">
+    <link rel="stylesheet" href="assets/css/wishlist.css">
+</head>
+
+<body><!-- Main Header -->
+<header class="main-header fixed-lg-top fixed-xl-top fixed-xxl-top shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary ">
+        <div class="container-fluid px-lg-4">
+
+            <a class="navbar-brand" href="../../../index.html">EComerce</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavCollapse"
+                aria-controls="mainNavCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavCollapse">
+                <!-- Navigation items -->
+                <ul class="navbar-nav me-auto mt-2 mb-lg-2 ">
+                    <!-- Products link for mobile and desktop -->
+                    <li class="nav-item d-flex d-md-none d-lg-flex">
+
+                        <!-- <a class="nav-link active" aria-current="page" href="products.html">Products</a> -->
+
+                        <a class="nav-link" aria-current="page" href="#" data-bs-toggle="offcanvas"
+                            data-bs-target="#userSidebar">
+                            Sidebar
+                        </a>
+
+                    </li>
+                    <!-- Products link for mobile and desktop -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <li><a class="dropdown-item" href="free-page.html">Free Page</a></li>
+                            <li><a class="dropdown-item" href="../../../index.html">Index</a></li>
+                            <li><a class="dropdown-item" href="catalog-list.html">Catalog (List + Filter)</a></li>
+                            <li><a class="dropdown-item" href="product-page.html">Product Page</a></li>
+                            <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+                            <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
+                            <li><a class="dropdown-item" href="signin.html">Sign In</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="orders.html">Order/s</a></li>
+                            <li><a class="dropdown-item" href="wishlist-page.html">Wishlist Page</a></li>
+                            <li><a class="dropdown-item" href="compare-page.html">Compare Products Page</a></li>
+                            <li><a class="dropdown-item" href="messages.html">Messages</a></li>
+                            <li><a class="dropdown-item" href="profile-page.html">Profile Page</a></li>
+                            <li><a class="dropdown-item" href="settings-page.html">Setting Page</a></li>
+                            <li><a class="dropdown-item" href="shipping.html">Shipping</a></li>
+                            <li><a class="dropdown-item" href="history.html">Browse History</a></li>
+                            <li><a class="dropdown-item" href="sell-history.html">Sell History</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="404.html">404</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                            <li><a class="dropdown-item" href="features.html">Features</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Open Modal</button></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown dropdown-mega position-static">
+                        <a class="nav-link dropdown-toggle" href="#" id="catalogMegaMenu" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                            <i class="fas fa-th-large me-1"></i> Catalog
+                        </a>
+
+                        <!-- dropdown menu -->
+                        <div class="dropdown-menu w-100 shadow-lg" aria-labelledby="catalogMegaMenu">
+                            <div class="container py-3">
+                                <div class="text-center mb-3">
+                                    <h5><i class="fas fa-th-large me-2"></i>Categories</h5>
+                                </div>
+                                <div class="row d-none d-md-flex">
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                            aria-orientation="vertical">
+                                            <button class="nav-link active text-start mb-1 px-5"
+                                                id="v-pills-computers-tab" data-bs-toggle="pill"
+                                                data-bs-target="#v-pills-computers" type="button" role="tab"
+                                                aria-controls="v-pills-computers"
+                                                aria-selected="true">Computers</button>
+                                            <button class="nav-link text-start mb-1 px-5" id="v-pills-smartphones-tab"
+                                                data-bs-toggle="pill" data-bs-target="#v-pills-smartphones"
+                                                type="button" role="tab" aria-controls="v-pills-smartphones"
+                                                aria-selected="false">Smartphones</button>
+                                            <button class="nav-link text-start mb-1 px-5" id="v-pills-appliances-tab"
+                                                data-bs-toggle="pill" data-bs-target="#v-pills-appliances" type="button"
+                                                role="tab" aria-controls="v-pills-appliances"
+                                                aria-selected="false">Appliances</button>
+                                            <button class="nav-link text-start mb-1 px-5" id="v-pills-tab4-tab"
+                                                data-bs-toggle="pill" data-bs-target="#v-pills-tab4" type="button"
+                                                role="tab" aria-controls="v-pills-tab4" aria-selected="false">Category
+                                                4</button>
+                                            <button class="nav-link text-start mb-1 px-5" id="v-pills-tab5-tab"
+                                                data-bs-toggle="pill" data-bs-target="#v-pills-tab5" type="button"
+                                                role="tab" aria-controls="v-pills-tab5" aria-selected="false">Category
+                                                5</button>
+                                            <button class="nav-link text-start mb-1 px-5" id="v-pills-all-tab"
+                                                data-bs-toggle="pill" data-bs-target="#v-pills-all" type="button"
+                                                role="tab" aria-controls="v-pills-all" aria-selected="false">All
+                                                Categories</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-8">
+                                        <div class="tab-content bg-body-tertiary border rounded p-3"
+                                            id="v-pills-tabContent">
+                                            <div class="tab-pane fade show active" id="v-pills-computers"
+                                                role="tabpanel" aria-labelledby="v-pills-computers-tab">
+                                                <h6>Computers</h6>
+                                                <p>Explore our range of computers!</p>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <strong>Laptops</strong>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="category/laptops/ultrabooks.html"
+                                                                    class="dropdown-item">Ultrabooks</a></li>
+                                                            <li><a href="category/laptops/gaming.html"
+                                                                    class="dropdown-item">Gaming Laptops</a></li>
+                                                            <li><a href="category/laptops/2-in-1.html"
+                                                                    class="dropdown-item">2-in-1 Laptops</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <strong>Desktops</strong>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="category/desktops/gaming.html"
+                                                                    class="dropdown-item">Gaming PCs</a></li>
+                                                            <li><a href="category/desktops/all-in-one.html"
+                                                                    class="dropdown-item">All-in-One PCs</a></li>
+                                                            <li><a href="category/desktops/workstations.html"
+                                                                    class="dropdown-item">Workstations</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <strong>Accessories</strong>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="category/accessories/monitors.html"
+                                                                    class="dropdown-item">Monitors</a></li>
+                                                            <li><a href="category/accessories/keyboards-mice.html"
+                                                                    class="dropdown-item">Keyboards & Mice</a></li>
+                                                            <li><a href="category/accessories/webcams.html"
+                                                                    class="dropdown-item">Webcams</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-smartphones" role="tabpanel"
+                                                aria-labelledby="v-pills-smartphones-tab">
+                                                <h6>Smartphones</h6>
+                                                <p>Latest smartphones from top brands.</p>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <strong>Brands</strong>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="category/smartphones/apple.html"
+                                                                    class="dropdown-item">Apple</a></li>
+                                                            <li><a href="category/smartphones/samsung.html"
+                                                                    class="dropdown-item">Samsung</a></li>
+                                                            <li><a href="category/smartphones/pixel.html"
+                                                                    class="dropdown-item">Google Pixel</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <strong>Accessories</strong>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="category/s-accessories/cases.html"
+                                                                    class="dropdown-item">Cases & Covers</a></li>
+                                                            <li><a href="category/s-accessories/chargers.html"
+                                                                    class="dropdown-item">Chargers</a></li>
+                                                            <li><a href="category/s-accessories/headphones.html"
+                                                                    class="dropdown-item">Headphones</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-appliances" role="tabpanel"
+                                                aria-labelledby="v-pills-appliances-tab">
+                                                <h6>Appliances</h6>
+                                                <p>Home and kitchen appliances.</p>
+                                                <div class="row">
+                                                    <div class="col-md-4"><strong>Kitchen</strong>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="category/kitchen/refrigerators.html"
+                                                                    class="dropdown-item">Refrigerators</a></li>
+                                                            <li><a href="category/kitchen/ovens.html"
+                                                                    class="dropdown-item">Ovens</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-4"><strong>Laundry</strong>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="category/laundry/washers.html"
+                                                                    class="dropdown-item">Washing Machines</a></li>
+                                                            <li><a href="category/laundry/dryers.html"
+                                                                    class="dropdown-item">Dryers</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-tab4" role="tabpanel"
+                                                aria-labelledby="v-pills-tab4-tab">
+                                                <h6>Category 4 Content</h6>
+                                                <p>Details about category 4.</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-tab5" role="tabpanel"
+                                                aria-labelledby="v-pills-tab5-tab">
+                                                <h6>Category 5 Content</h6>
+                                                <p>Details about category 5.</p>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-all" role="tabpanel"
+                                                aria-labelledby="v-pills-all-tab">
+                                                <h6>All Categories</h6>
+                                                <p>Browse all our product categories. <a href="catalog-all.html"
+                                                        class="btn btn-sm btn-primary mt-2">View All</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- accordion -->
+                                <div class="d-md-none">
+                                    <div class="accordion accordion-flush" id="mobCatalogAcc">
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#m-comp">
+                                                    Computers
+                                                </button>
+                                            </h2>
+                                            <div id="m-comp" class="accordion-collapse collapse"
+                                                data-bs-parent="#mobCatalogAcc">
+                                                <div class="accordion-body p-0">
+                                                    <div class="list-group list-group-flush">
+                                                        <div
+                                                            class="bg-body px-3 py-2 small fw-bold text-uppercase text-muted">
+                                                            Laptops</div>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Ultrabooks</a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Gaming
+                                                            Laptops</a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">2-in-1
+                                                            Laptops</a>
+
+                                                        <div
+                                                            class="bg-body px-3 py-2 small fw-bold text-uppercase text-muted border-top">
+                                                            Desktops</div>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Gaming
+                                                            PCs</a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">All-in-One
+                                                            PCs</a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Workstations</a>
+
+                                                        <div
+                                                            class="bg-body px-3 py-2 small fw-bold text-uppercase text-muted border-top">
+                                                            Accessories</div>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Monitors</a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Keyboards
+                                                            & Mice</a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Webcams</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#m-smart">
+                                                    Smartphones
+                                                </button>
+                                            </h2>
+                                            <div id="m-smart" class="accordion-collapse collapse"
+                                                data-bs-parent="#mobCatalogAcc">
+                                                <div class="accordion-body p-0">
+                                                    <div class="list-group list-group-flush">
+                                                        <div
+                                                            class="bg-body px-3 py-2 small fw-bold text-uppercase text-muted">
+                                                            Brands</div>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Apple</a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Samsung</a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Google
+                                                            Pixel</a>
+
+                                                        <div
+                                                            class="bg-body px-3 py-2 small fw-bold text-uppercase text-muted border-top">
+                                                            Accessories</div>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Cases &
+                                                            Covers</a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Chargers</a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Headphones</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#m-app">
+                                                    Appliances
+                                                </button>
+                                            </h2>
+                                            <div id="m-app" class="accordion-collapse collapse"
+                                                data-bs-parent="#mobCatalogAcc">
+                                                <div class="accordion-body p-0">
+                                                    <div class="list-group list-group-flush">
+                                                        <div
+                                                            class="bg-body px-3 py-2 small fw-bold text-uppercase text-muted">
+                                                            Kitchen</div>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Refrigerators</a>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Ovens</a>
+                                                        <div
+                                                            class="bg-body px-3 py-2 small fw-bold text-uppercase text-muted border-top">
+                                                            Laundry</div>
+                                                        <a href="#"
+                                                            class="list-group-item list-group-item-action ps-4">Washing
+                                                            Machines</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#m-cat4">
+                                                    Category 4
+                                                </button>
+                                            </h2>
+                                            <div id="m-cat4" class="accordion-collapse collapse"
+                                                data-bs-parent="#mobCatalogAcc">
+                                                <div class="accordion-body p-3 text-muted small">
+                                                    Details about category 4 content.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#m-cat5">
+                                                    Category 5
+                                                </button>
+                                            </h2>
+                                            <div id="m-cat5" class="accordion-collapse collapse"
+                                                data-bs-parent="#mobCatalogAcc">
+                                                <div class="accordion-body p-3 text-muted small">
+                                                    Details about category 5 content.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="p-3">
+                                            <a href="#" class="btn btn-black w-100 text-uppercase fw-bold py-2">View All
+                                                Categories</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- accordion end -->
+                            </div>
+                        </div>
+
+                        <!-- dropdown menu end  -->
+
+
+
+                    </li>
+                </ul>
+
+                <form class="searchform d-flex mx-auto my-2 my-lg-0 px-lg-4
+                             
+                             " role="search" action="search-results.html">
+
+                    <div class="input-group">
+                        <button class="btn btn-outline-secondary dropdown-toggle
+                        d-xs-block d-md-none d-xl-block
+                        " type="button" id="searchCategoryButton" data-bs-toggle="dropdown"
+                            aria-expanded="false">All</button>
+                        <ul class="dropdown-menu search-category-dropdown" aria-labelledby="searchCategoryButton">
+                            <li><a class="dropdown-item" href="javascript:void(0);" data-value="0">All</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);" data-value="1">PC</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);" data-value="2">Phones</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);" data-value="3">Cars</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);" data-value="4">Option 4</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0);" data-value="5">Option 5</a></li>
+                        </ul>
+                        <input type="hidden" name="search_category_id" id="searchCategoryInput" value="0">
+                        <input id="searchInputBS" class="form-control" type="search"
+                            placeholder="What are you searching for..." name="search_query" aria-label="Search"
+                            list="search-datalist-bs" required>
+                        <datalist id="search-datalist-bs">
+                            <option value="Apple"></option>
+                            <option value="PC"></option>
+                            <option value="iPhone"></option>
+                            <option value="Macbook"></option>
+                            <option value="Shoes"></option>
+                            <option value="Ford Mustang"></option>
+                        </datalist>
+                        <button class="btn btn-warning" type="submit" aria-label="Search"><i
+                                class="fas fa-search"></i></button>
+                    </div>
+                </form>
+
+                <!-- Theme Toggle -->
+                <div class="navbar-nav ms-auto mt-2 mb-lg-2 align-items-center flex-row">
+                    <div class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle d-flex align-items-center" id="theme-menu" type="button"
+                            aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static"
+                            aria-label="Toggle theme">
+                            <i class="fas fa-adjust fa-fw"></i>
+                            <span class="d-none d-lg-none ms-2">Toggle theme</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="theme-menu">
+                            <li>
+                                <button type="button" class="dropdown-item d-flex align-items-center"
+                                    data-bs-theme-value="light">
+                                    <i class="fas fa-sun fa-fw me-2"></i>Light
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item d-flex align-items-center"
+                                    data-bs-theme-value="dark">
+                                    <i class="fas fa-moon fa-fw me-2"></i>Dark
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item d-flex align-items-center"
+                                    data-bs-theme-value="auto">
+                                    <i class="fas fa-circle-half-stroke fa-fw me-2"></i>Auto
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="navbar-nav ms-auto mt-2 mb-lg-2 align-items-center flex-row">
+
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user fa-fw me-1"></i> User
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="userDropdown"
+                            style="min-width: 280px;">
+                            <h6 class="dropdown-header">Account</h6>
+                            <a class="dropdown-item" href="profile.html"><i
+                                    class="fas fa-user-circle fa-fw me-2"></i>Profile</a>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center"
+                                href="notifications.html">
+                                <span><i class="fas fa-bell fa-fw me-2"></i>Notifications</span>
+                                <span class="badge bg-danger rounded-pill">3+</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="messages.html"><i
+                                    class="fas fa-envelope fa-fw me-2"></i>Messages <span
+                                    class="badge bg-primary rounded-pill ms-auto">3</span></a>
+                            <a class="dropdown-item" href="alerts.html"><i
+                                    class="fas fa-exclamation-triangle fa-fw me-2"></i>Alerts <span
+                                    class="badge bg-warning rounded-pill ms-auto">2</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="settings.html"><i
+                                    class="fas fa-cog fa-fw me-2"></i>Settings</a>
+                            <a class="dropdown-item" href="wishlist.html"><i
+                                    class="fas fa-heart fa-fw me-2"></i>Wishlist</a>
+                            <a class="dropdown-item" href="my-orders.html"><i
+                                    class="fas fa-box fa-fw me-2"></i>Orders</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="logout.html"><i
+                                    class="fas fa-sign-out-alt fa-fw me-2"></i>Log Out</a>
+                            <a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt fa-fw me-2"></i>Sign
+                                In</a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="navbar-nav ms-auto mt-2 mb-lg-2 align-items-center flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link position-relative mx-1" href="wishlist.html" title="Wishlist"
+                            aria-label="View Wishlist">
+                            <i class="fas fa-heart fs-5"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                15 <span class="visually-hidden">items in wishlist</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative mx-1" href="compare.html" title="Compare Products"
+                            aria-label="View Compare List">
+                            <i class="fas fa-balance-scale fs-5"></i> <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info">
+                                3 <span class="visually-hidden">items to compare</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative mx-1" href="cart.html" title="Shopping Cart"
+                            aria-label="View Shopping Cart">
+                            <i class="fas fa-shopping-cart fs-5"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                                7 <span class="visually-hidden">items in cart</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End Main Header -->
+
+
+<!-- SDIEBAR -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="userSidebar" aria-labelledby="userSidebarLabel">
+    <div class="offcanvas-header bg-body">
+        <h5 class="offcanvas-title" id="userSidebarLabel">Account Settings</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+        <div class="p-4 text-center border-bottom bg-body">
+            <img src="https://picsum.photos/100?random=1" class="rounded-circle mb-2" alt="User Avatar">
+            <h6>John Doe</h6>
+            <p class="text-muted small">john.doe@example.com</p>
+        </div>
+
+        <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action py-3">
+                <i class="bi bi-bag-check me-2"></i> My Orders
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3">
+                <i class="bi bi-heart me-2"></i> Wishlist
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3">
+                <i class="bi bi-wallet2 me-2"></i> Payments
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3">
+                <i class="bi bi-gear me-2"></i> Settings
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-3 text-danger">
+                <i class="bi bi-box-arrow-right me-2"></i> Logout
+            </a>
+        </div>
+    </div>
+</div>
+<!-- SIDEBAR END -->
+    <main class="py-2 py-lg-4 px-0 px-lg-1">
+    <style>
+        body { background-color: #f4f7f9; font-family: 'Inter', sans-serif; color: #2d3436; }
+        .main-card { border: none; border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.08); overflow: hidden; }
+        .success-header { background: #ffffff; padding: 40px 20px; border-bottom: 1px solid #edf2f7; }
+        .check-icon { width: 70px; height: 70px; background: #27ae60; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 20px; font-size: 32px; box-shadow: 0 10px 20px rgba(39, 174, 96, 0.2); }
+        
+        /* Order Items Styling */
+        .item-row { display: flex; align-items: center; padding: 15px 0; border-bottom: 1px solid #f1f1f1; }
+        .item-row:last-child { border-bottom: none; }
+        .product-img { width: 60px; height: 60px; object-fit: contain; background: #fff; border-radius: 8px; border: 1px solid #eee; margin-right: 15px; }
+        .product-info h6 { margin: 0; font-weight: 600; font-size: 0.95rem; }
+        .product-info span { font-size: 0.8rem; color: #888; }
+        
+        /* Summary Box */
+        .summary-box { background: #f8fafc; border-radius: 16px; padding: 25px; height: 100%; }
+        .summary-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9rem; }
+        .total-price { font-size: 1.25rem; font-weight: 700; color: #0d6efd; border-top: 2px solid #e2e8f0; pt-3; margin-top: 15px; padding-top: 15px; }
+        
+        /* Timeline */
+        .process-step { position: relative; padding-left: 30px; margin-bottom: 25px; }
+        .process-step::before { content: ''; position: absolute; left: 0; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #0d6efd; border: 3px solid #fff; box-shadow: 0 0 0 2px #0d6efd; z-index: 2; }
+        .process-step::after { content: ''; position: absolute; left: 5px; top: 15px; width: 2px; height: 100%; background: #e2e8f0; z-index: 1; }
+        .process-step:last-child::after { display: none; }
+        
+        .btn-custom { padding: 12px 25px; border-radius: 12px; font-weight: 600; transition: all 0.3s; }
+    </style>
+
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            
+            <div class="card main-card">
+                <div class="success-header text-center">
+                    <div class="check-icon">✓</div>
+                    <h2 class="fw-bold">Payment Successful!</h2>
+                    <p class="text-muted">Order ID: <strong>#ABC-99281-2026</strong> | An email receipt has been sent to your inbox.</p>
+                </div>
+
+                <div class="card-body p-4 p-md-5">
+                    <div class="row g-5">
+                        <div class="col-lg-7">
+                            <h5 class="fw-bold mb-4">Purchased Items</h5>
+                            <div class="purchased-list">
+                                <div class="item-row">
+                                    <img src="https://via.placeholder.com/60" alt="iPhone 12" class="product-img">
+                                    <div class="product-info flex-grow-1">
+                                        <h6>Apple iPhone 12+</h6>
+                                        <span>Color: Black | Storage: 128GB</span>
+                                    </div>
+                                    <div class="text-end">
+                                        <div class="fw-bold">$699.00</div>
+                                        <small class="text-muted">Qty: 5</small>
+                                    </div>
+                                </div>
+                                <div class="mt-4 summary-box">
+                                    <div class="summary-item">
+                                        <span>Subtotal (5 items)</span>
+                                        <span>$3,495.00</span>
+                                    </div>
+                                    <div class="summary-item text-success">
+                                        <span>Promo Discount (10%)</span>
+                                        <span>-$349.50</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span>Standard Shipping</span>
+                                        <span>$15.00</span>
+                                    </div>
+                                    <div class="total-price">
+                                        <span>Grand Total Paid</span>
+                                        <span>$3,160.50</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <div class="p-2">
+                                <h5 class="fw-bold mb-4">Next Steps</h5>
+                                
+                                <div class="process-step">
+                                    <h6 class="mb-1 fw-bold">Order Confirmed</h6>
+                                    <p class="small text-muted">Your order is registered in our system and items are reserved.</p>
+                                </div>
+                                
+                                <div class="process-step">
+                                    <h6 class="mb-1 fw-bold">Quality Control</h6>
+                                    <p class="small text-muted">Our technicians will verify the 128GB units for defects before packing.</p>
+                                </div>
+                                
+                                <div class="process-step">
+                                    <h6 class="mb-1 fw-bold">Dispatching</h6>
+                                    <p class="small text-muted">Estimated dispatch date: <strong>January 16, 2026</strong>.</p>
+                                </div>
+
+                                <div class="bg-light p-3 rounded-3 mt-4">
+                                    <p class="small mb-0"><strong>Shipping Address:</strong><br>
+                                    John Doe, 123 Tech Avenue, Suite 400<br>
+                                    New York, NY 10001, USA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-5">
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                        <div class="mb-3 mb-md-0">
+                            <button class="btn btn-outline-dark btn-custom me-2">Download Invoice (PDF)</button>
+                            <button class="btn btn-outline-primary btn-custom">Contact Support</button>
+                        </div>
+                        <a href="/" class="btn btn-primary btn-custom px-5">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4 text-muted small">
+                Secure transaction processed by Stripe & PayPal. <br>
+                &copy; 2026 Apple Store Partner Inc. All rights reserved.
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+</main><footer class="bg-primary text-white pt-5 pb-4">
+  <div class="container text-center text-md-start">
+    <div class="row text-center text-md-start">
+
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 fw-bold text-warning">Company Name</h5>
+        <p>
+          This is a brief description of your store. For example, we offer the best products at unbeatable prices. Quality and customer service are our top priorities.
+        </p>
+      </div>
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 fw-bold text-warning">Shop</h5>
+        <p>
+          <a href="#" class="text-white text-decoration-none">Product Catalog</a>
+        </p>
+        <p>
+          <a href="#" class="text-white text-decoration-none">Deals & Promotions</a>
+        </p>
+        <p>
+          <a href="#" class="text-white text-decoration-none">New Arrivals</a>
+        </p>
+        <p>
+          <a href="#" class="text-white text-decoration-none">Blog</a>
+        </p>
+      </div>
+
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 fw-bold text-warning">Support</h5>
+        <p>
+          <a href="#" class="text-white text-decoration-none">Payment & Shipping</a>
+        </p>
+        <p>
+          <a href="#" class="text-white text-decoration-none">Returns</a>
+        </p>
+        <p>
+          <a href="#" class="text-white text-decoration-none">Frequently Asked Questions (FAQ)</a>
+        </p>
+        <p>
+          <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+        </p>
+      </div>
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 fw-bold text-warning">Contact Us</h5>
+        <p>
+          <i class="fas fa-home me-3"></i> 123 Example St, Your City, State, ZIP
+        </p>
+        <p>
+          <i class="fas fa-envelope me-3"></i> info@example.com
+        </p>
+        <p>
+          <i class="fas fa-phone me-3"></i> +1 (555) 123-4567
+        </p>
+        <p>
+          <i class="fab fa-whatsapp me-3"></i> +1 (555) 987-6543 (WhatsApp)
+        </p>
+      </div>
+    </div>
+
+    <hr class="mb-4">
+
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p> © 2025 Copyright:
+          <a href="#" class="text-decoration-none">
+            <strong class="text-warning">yoursitename.com</strong>
+          </a>
+        </p>
+      </div>
+
+      <div class="col-md-5 col-lg-4">
+        <div class="text-center text-md-end">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white fs-4"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white fs-4"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white fs-4"><i class="fab fa-google-plus-g"></i></a> </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white fs-4"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white fs-4"><i class="fab fa-youtube"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white fs-4"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/add-theme-changer-button.js"></script>
+    <script src="assets/js/catalog-page.js"></script>
+    <script src="assets/js/checkout.js"></script>
+    <script src="assets/js/home-page-carusel.js"></script>
+    <script src="assets/js/import/fotorama.js"></script>
+    <script src="assets/js/main-header.js"></script>
+    <script src="assets/js/product-page-sticky-nav-version.js"></script>
+    <script src="assets/js/products-carousel.js"></script>
+    <script src="assets/js/shopping-cart.js"></script>
+    <script src="assets/js/slider-price.js"></script>
+    <script src="assets/js/theme-changer-navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+.tech-shadow-class {
+  display: none;
+}
+
+.tech-shadow-class:hover {
+  display: block;
+}
+

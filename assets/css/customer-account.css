@@ -1,0 +1,550 @@
+/* * Global styles for customer account tabs.
+ * Ensures that tab content doesn't overflow and maintains a minimum height for better user experience. */
+
+.customer-account-tabs .tab-pane {
+  overflow: hidden;
+  /*min-height: 100vh !important;*/
+}
+
+/* --- Overview tab --- */
+
+/* * Styles for account card items within the "Overview" tab.
+ * Sets fixed dimensions for the cards, makes them interactive (cursor: pointer),
+ * and uses Bootstrap variables for border color to ensure theme compatibility. */
+
+/* Custom styles, adapted from the better sample for consistency and responsiveness */
+
+.account-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.account-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--bs-box-shadow-sm) !important;
+}
+
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background-color: var(--bs-body-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.icon-wrapper i {
+  font-size: 1.5rem;
+}
+
+/* Specific icon colors - kept from the old code and applied to the new structure */
+
+.account-card[href="#tab-content-overview"] i {
+  color: #0d6efd;
+}
+
+.account-card[href="#tab-content-account"] i {
+  color: #198754;
+}
+
+.account-card[href="#tab-content-myorders"] i {
+  color: #ffc107;
+}
+
+.account-card[href="#tab-content-wishlist"] i {
+  color: #dc3545;
+}
+
+.account-card[href="#tab-content-viewed-items"] i {
+  color: #6f42c1;
+}
+
+.account-card[href="#tab-content-subscriptions"] i {
+  color: #fd7e14;
+}
+
+.account-card[href="#tab-content-wallet"] i {
+  color: #20c997;
+}
+
+.account-card[href="#tab-content-bonus-account"] i {
+  color: #6610f2;
+}
+
+.account-card[href="#tab-content-reviews"] i {
+  color: #d63384;
+}
+
+.account-card[href="#tab-content-correspondence"] i {
+  color: #0dcaf0;
+}
+
+.account-card[href="#tab-content-promotions"] i {
+  color: #e83e8c;
+}
+
+.account-card[href="#tab-content-sizes"] i {
+  color: #40c057;
+}
+
+.account-card[href="#tab-content-payments"] i {
+  color: #f03e3e;
+}
+
+.account-card[href="#tab-content-item"] i {
+  color: #228be6;
+}
+
+/* for old code */
+
+.account-card-item {
+  min-width: 300px;
+  min-height: 90px;
+  max-width: 300px;
+  max-height: 90px;
+  cursor: pointer;
+  border: solid 1px var(--bs-border-color);
+}
+
+/* * Styles for account card items on hover.
+
+ * Changes the border color to provide visual feedback for interactivity. */
+
+.account-card-item:hover {
+  border: solid 1px var(--bs-border-color-translucent);
+}
+
+/* * Styles for the overview logo image container.
+ * Add additional styling here if needed. */
+
+.img-overview-logo {
+}
+
+/* * Styles for images within the overview logo container.
+ * Sets fixed dimensions and aspect ratio for the logos. */
+
+.img-overview-logo img {
+  width: 65px;
+  height: 65px;
+  aspect-ratio: 1;
+}
+
+/* --- Overview tab end --- */
+
+/* --- Account tab --- */
+
+/* * Styles for accordion items.
+ * Can be extended to add padding, shadows, etc. */
+
+.accordion-item {
+}
+
+/* * Styles for address cards.
+ * Adds a smooth transition for hover effects and relative positioning. */
+
+.address-card {
+  transition: all 0.3s ease;
+  position: relative;
+  margin: 15px;
+}
+
+/* * Shadow effect on hover for address cards,
+ * enhancing visual feedback. */
+
+.address-card:hover {
+  box-shadow: var(--bs-box-shadow-sm);
+}
+
+/* * Styles for readonly form controls.
+ * Uses a Bootstrap variable for the background color, ensuring theme compatibility. */
+
+.form-control[readonly] {
+  background-color: var(--bs-secondary-bg);
+}
+
+/* --- Account tab end --- */
+
+/* --- Wishlist tab --- */
+
+/* --- Wishlist tab end --- */
+
+/* --- Viewed items --- */
+
+/* * Styles for individual viewed product items.
+ * Sets maximum and minimum widths for responsiveness. */
+
+.product-view-item {
+  max-width: 255px;
+  min-width: 240px;
+}
+
+/* * Styles for the viewed product image container.
+ * Can be used for centering or adding padding around the image. */
+
+.product-view-container-img {
+}
+
+/* * Styles for images within viewed product items.
+ * Limits maximum width and maintains aspect ratio. */
+
+.product-view-item img {
+  max-width: 130px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* --- Viewed items end --- */
+
+/* --- My Orders --- */
+
+/* --- My Orders end --- */
+
+/* --- My Wallet start --- */
+
+/* * General styles for the "My Wallet" container.
+ * Serves as a wrapper for all elements within the wallet section. */
+
+.my-wallet-container {
+}
+
+/* * Styles for the outer container of payment cards.
+ * Used for positioning and layout of individual cards. */
+
+.my-wallet-container .pay-card-container-outer {
+}
+
+/* * Base styles for the payment card container.
+ * Defines dimensions, border-radius, and flexbox display. */
+
+.my-wallet-container .card-base-container {
+  display: flex;
+  width: 350px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+/* * Styles for the inner payment card container.
+ * Applies a gradient background, padding, and content distribution.
+ * The gradient is now using a CSS variable defined in `:root`. */
+
+.my-wallet-container .pay-card-container-outer .card-container {
+  background: var(--gradient-blue-purple);
+  padding: 20px;
+  color: var(--bs-white);
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* * Styles for the "chip" element on the payment card.
+ * Defines dimensions, background, and content centering. */
+
+.my-wallet-container .pay-card-container-outer .chip {
+  width: 50px;
+  height: 35px;
+  background-color: var(--bs-warning);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* * Styles for the SVG icon inside the "chip".
+ * Scales and fills the icon. */
+
+.my-wallet-container .pay-card-container-outer .chip svg {
+  transform: scale(1.6);
+  width: 40px;
+  height: 30px;
+  fill: var(--bs-body-color);
+}
+
+/* * Styles for the card number.
+ * Increases font size and adds letter spacing. */
+
+.my-wallet-container .pay-card-container-outer .card-number {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+/* --- Media queries for responsive design of "My Wallet" section --- */
+
+/* * Removes padding for the "My Wallet" container on small screens. */
+
+@media screen and (max-width: 400px) {
+  .my-wallet-container {
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+}
+
+/* * Scales the outer payment card container on small screens. */
+
+@media screen and (max-width: 400px) {
+  .pay-card-container-outer {
+    transform: scale(0.65);
+    margin-left: -20px;
+  }
+}
+
+/* * Responsive styles for the card column.
+ * Adjusts flexbox properties and max-height on small screens. */
+
+@media screen and (max-width: 400px) {
+  .card-col {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 0px;
+    margin-left: 0px;
+    max-height: 240px;
+    max-height: 180px;
+    max-height: 150px;
+  }
+}
+
+/* --- Add card --- */
+
+/* * Styles for the "Add Card" container.
+ * Uses Bootstrap variables for background and border, which change with the theme.
+ * Makes the container interactive. */
+
+.my-wallet-container .add-card-container {
+  background: var(--bs-tertiary-bg);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px dashed var(--bs-primary);
+}
+
+/* * Styles for the SVG icon inside the "Add Card" container.
+ * Changes the fill color according to the theme. */
+
+.my-wallet-container .add-card-container svg {
+  width: 50px;
+  height: 50px;
+  fill: var(--bs-primary);
+}
+
+/* * Styles for the remove card button.
+ * Positions the button in the top-right corner of the card. */
+
+.my-wallet-container .pay-card-container-outer .remove-card-btn {
+  top: 74px;
+  right: 23px;
+}
+
+/* --- Add card end --- */
+
+/* --- Card gradients start --- */
+
+/* * Definition of custom CSS variables for gradients in the root element (:root).
+ * These variables can be used to dynamically apply different gradients to cards.
+ * They don't change directly with the Bootstrap theme unless you specifically
+ * redefine their values inside `[data-bs-theme=dark]` and `[data-bs-theme=light]`
+ * selectors (which is an advanced scenario). */
+
+/* card gradients start */
+
+:root {
+  --gradient-blue-purple: linear-gradient(135deg, #0056b3, #4b0082);
+  --gradient-red-orange: linear-gradient(135deg, #cc0000, #cc6600);
+  --gradient-orange-yellow: linear-gradient(135deg, #cc6600, #cca300);
+  --gradient-yellow-green: linear-gradient(135deg, #cca300, #009900);
+  --gradient-green-cyan: linear-gradient(135deg, #009900, #009999);
+  --gradient-cyan-blue: linear-gradient(135deg, #009999, #0044cc);
+  --gradient-purple-pink: linear-gradient(135deg, #4b0082, #cc00cc);
+  --gradient-black-white: linear-gradient(135deg, #111111, #bbbbbb);
+  --gradient-gray-white: linear-gradient(135deg, #222222, #999999);
+}
+
+/* * Applying specific gradients to card containers based on their class.
+ * Each class corresponds to a specific gradient variable. */
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-blue-purple {
+  background: var(--gradient-blue-purple);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-red-orange {
+  background: var(--gradient-red-orange);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-orange-yellow {
+  background: var(--gradient-orange-yellow);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-yellow-green {
+  background: var(--gradient-yellow-green);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-green-cyan {
+  background: var(--gradient-green-cyan);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-cyan-blue {
+  background: var(--gradient-cyan-blue);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-purple-pink {
+  background: var(--gradient-purple-pink);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-black-white {
+  background: var(--gradient-black-white);
+}
+
+.my-wallet-container .pay-card-container-outer .card-container.gradient-gray-white {
+  background: var(--gradient-gray-white);
+}
+
+/* --- Card gradients end --- */
+
+/* --- My Wallet end --- */
+
+/* --- My bonus account start --- */
+
+/* * Styles for bonus cards.
+ * Defines border-radius and inner padding. */
+
+.bonus-card {
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* * Styles for saved bonus cards.
+ * Uses Bootstrap variables for border and background, which change with the theme. */
+
+.bonus-saved {
+  border: 1px solid var(--bs-border-color);
+  background-color: var(--bs-light);
+}
+
+/* * Styles for displaying the bonus number.
+ * Increases font size and makes it bold. */
+
+.bonus-number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* * Styles for the bonus account label.
+ * Reduces font size and uses a Bootstrap text color. */
+
+.bonus-label {
+  font-size: 0.9rem;
+  color: var(--bs-secondary-color);
+}
+
+/* --- My bonus account end --- */
+
+/* --- Seller Correspondence start --- */
+
+/* * Main container for the chat interface.
+ * Sets height and hides overflow content. */
+
+.chat-container {
+  height: calc(100vh - 120px);
+  overflow: hidden;
+}
+
+/* * Contact list in the chat interface.
+ * Sets 100% height and makes the list scrollable.
+ * Uses a Bootstrap variable for the background color. */
+
+.contacts-list {
+  height: 100%;
+  overflow-y: auto;
+  background-color: var(--bs-tertiary-bg);
+}
+
+/* * Chat area.
+ * Uses flexbox for arranging chat elements (messages, input field). */
+
+.chat-area {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* * Container for chat messages.
+ * Makes it scrollable and adds inner padding. */
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+/* * Message input field.
+ * Adds a top border and inner padding.
+ * Uses a Bootstrap variable for the border color. */
+
+.message-input {
+  border-top: 1px solid var(--bs-border-color);
+  padding: 10px;
+}
+
+/* * Contact item in the list.
+ * Adds inner padding and makes it interactive. */
+
+.contact-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* * Styles for contact items on hover.
+ * Changes the background color using a Bootstrap variable. */
+
+.contact-item:hover {
+  background-color: var(--bs-secondary-bg);
+}
+
+/* * General styles for individual messages.
+ * Adds margins, rounded corners, and limits maximum width. */
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  max-width: 70%;
+}
+
+/* * Styles for sent messages.
+ * Uses Bootstrap variables for background and text color.
+ * Aligns messages to the right. */
+
+.message.sent {
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+  margin-left: auto;
+}
+
+/* * Styles for received messages.
+ * Uses a Bootstrap variable for the background color. */
+
+.message.received {
+  background-color: var(--bs-secondary-bg);
+}
+
+/* --- Seller Correspondence end --- */
+
+/* --- Promotions tab --- */
+
+/* Simple CSS to make it look professional */
+
+.promotions-container .hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.promotions-container .transition {
+  transition: all 0.3s ease;
+}
+
+.promotions-container .card-img-top {
+  object-fit: contain;
+  height: 140px;
+}
+
+/* --- Promotions tab end --- */
+

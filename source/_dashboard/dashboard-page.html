@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- -----------------------CSS----------------------- -->
+<!--  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Boostrap icons  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Fotorama Gallery -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Material UI icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Material Symbols Outlined -->
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=grid_view" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>boostrap-lux-shop-master</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/articles-badges-images.css">
+    <link rel="stylesheet" href="../../assets/css/basket.css">
+    <link rel="stylesheet" href="../../assets/css/body.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap-extension.css">
+    <link rel="stylesheet" href="../../assets/css/catalog-page.css">
+    <link rel="stylesheet" href="../../assets/css/checkout.css">
+    <link rel="stylesheet" href="../../assets/css/compare-page.css">
+    <link rel="stylesheet" href="../../assets/css/customer-account.css">
+    <link rel="stylesheet" href="../../assets/css/dialog.css">
+    <link rel="stylesheet" href="../../assets/css/featured-Itemn.css">
+    <link rel="stylesheet" href="../../assets/css/fotorama.css">
+    <link rel="stylesheet" href="../../assets/css/header-navbar-black.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/home-page.css">
+    <link rel="stylesheet" href="../../assets/css/img.css">
+    <link rel="stylesheet" href="../../assets/css/index-page.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/order-item.css">
+    <link rel="stylesheet" href="../../assets/css/popover-content.css">
+    <link rel="stylesheet" href="../../assets/css/product-card-grid.css">
+    <link rel="stylesheet" href="../../assets/css/product-card-list.css">
+    <link rel="stylesheet" href="../../assets/css/product-page.css">
+    <link rel="stylesheet" href="../../assets/css/products-carousel.css">
+    <link rel="stylesheet" href="../../assets/css/scroll-normalizer-master.css">
+    <link rel="stylesheet" href="../../assets/css/shadow-box.css">
+    <link rel="stylesheet" href="../../assets/css/shopping-cart.css">
+    <link rel="stylesheet" href="../../assets/css/slider-price.css">
+    <link rel="stylesheet" href="../../assets/css/stars-rating.css">
+    <link rel="stylesheet" href="../../assets/css/tech-shadow-box.css">
+    <link rel="stylesheet" href="../../assets/css/timeline.css">
+    <link rel="stylesheet" href="../../assets/css/ui-collapsible-panel.css">
+    <link rel="stylesheet" href="../../assets/css/ui-icons-circle.css">
+    <link rel="stylesheet" href="../../assets/css/wishlist.css">
+</head>
+
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus CRM - Professional Admin Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --sidebar-width: 260px;
+            --navbar-height: 70px;
+            --sidebar-bg: #1a1c1e;
+            --primary-accent: #377dff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9;
+            margin: 0;
+            display: flex;
+        }
+
+        /* --- Fixed Sidebar --- */
+        #sidebar-wrapper {
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--sidebar-bg);
+            position: fixed;
+            left: 0;
+            top: 0;
+            transition: all 0.3s ease;
+            z-index: 1030;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        /* Hide sidebar on small screens by default */
+        @media (max-width: 992px) {
+            #sidebar-wrapper { margin-left: calc(-1 * var(--sidebar-width)); }
+            body.sb-sidenav-toggled #sidebar-wrapper { margin-left: 0; }
+        }
+
+        /* --- Navbar Fixes --- */
+        .navbar-custom {
+            height: var(--navbar-height);
+            background: #ffffff;
+            border-bottom: 1px solid #e3e6f0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: var(--sidebar-width); /* Push navbar to the right of sidebar */
+            z-index: 1020;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 992px) {
+            .navbar-custom { left: 0; }
+        }
+
+        /* Content Area Offset */
+        #main-content {
+            margin-top: var(--navbar-height);
+            margin-left: var(--sidebar-width);
+            width: 100%;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 992px) {
+            #main-content { margin-left: 0; }
+        }
+
+        /* Adjustments when Sidebar is Toggled (Desktop) */
+        body.sb-sidenav-toggled #sidebar-wrapper { margin-left: calc(-1 * var(--sidebar-width)); }
+        body.sb-sidenav-toggled .navbar-custom { left: 0; }
+        body.sb-sidenav-toggled #main-content { margin-left: 0; }
+
+        /* Sidebar Elements */
+        .sidebar-brand {
+            padding: 1.5rem;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .sidebar-divider {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #6c757d;
+            padding: 1.5rem 1.5rem 0.5rem;
+        }
+
+        .nav-link-custom {
+            color: #adb5bd;
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .nav-link-custom:hover, .nav-link-custom.active {
+            color: #fff;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .nav-link-custom i { margin-right: 12px; font-size: 1.1rem; }
+        .nav-link-custom .ms-auto { transition: 0.3s; }
+        .nav-link-custom:not(.collapsed) .ms-auto { transform: rotate(180deg); }
+
+        .submenu-list {
+            list-style: none;
+            padding-left: 3rem;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .submenu-link {
+            color: #8898aa;
+            padding: 0.5rem 0;
+            display: block;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .submenu-link:hover { color: #fff; }
+
+        /* Dashboard UI Cards */
+        .stat-card {
+            border: none;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+        .stat-card:hover { transform: translateY(-5px); }
+
+        .search-input {
+            background: #f8f9fc;
+            border: 1px solid #d1d3e2;
+            border-radius: 20px 0 0 20px;
+        }
+        .search-btn {
+            border-radius: 0 20px 20px 0;
+        }
+    </style>
+</head>
+<body class="">
+
+    <nav id="sidebar-wrapper">
+        <a href="#" class="sidebar-brand">
+            <i class="bi bi-grid-1x2-fill text-primary me-2"></i> Nexus<span class="text-primary">CRM</span>
+        </a>
+
+        <div class="sidebar-divider">Core</div>
+        <a href="dashboard.html" class="nav-link-custom active ajax-link">
+            <i class="bi bi-speedometer2"></i> Dashboard
+        </a>
+
+        <a href="#catSub" class="nav-link-custom collapsed" data-bs-toggle="collapse">
+            <i class="bi bi-shop"></i> Catalog <i class="bi bi-chevron-down ms-auto small"></i>
+        </a>
+        <div class="collapse" id="catSub">
+            <ul class="submenu-list">
+                <li><a href="products.html" class="submenu-link ajax-link">Products</a></li>
+                <li><a href="categories.html" class="submenu-link ajax-link">Categories</a></li>
+                <li><a href="inventory.html" class="submenu-link ajax-link">Inventory</a></li>
+            </ul>
+        </div>
+
+        <a href="#salesSub" class="nav-link-custom collapsed" data-bs-toggle="collapse">
+            <i class="bi bi-cart-check"></i> Sales <i class="bi bi-chevron-down ms-auto small"></i>
+        </a>
+        <div class="collapse" id="salesSub">
+            <ul class="submenu-list">
+                <li><a href="orders.html" class="submenu-link ajax-link">Orders</a></li>
+                <li><a href="invoices.html" class="submenu-link ajax-link">Invoices</a></li>
+                <li><a href="refunds.html" class="submenu-link ajax-link">Refunds</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-divider">Management</div>
+        <a href="customers.html" class="nav-link-custom ajax-link">
+            <i class="bi bi-people"></i> Customers
+        </a>
+        <a href="marketing.html" class="nav-link-custom ajax-link">
+            <i class="bi bi-megaphone"></i> Marketing
+        </a>
+
+        <div class="sidebar-divider">System</div>
+        <a href="#configSub" class="nav-link-custom collapsed" data-bs-toggle="collapse">
+            <i class="bi bi-gear"></i> Settings <i class="bi bi-chevron-down ms-auto small"></i>
+        </a>
+        <div class="collapse" id="configSub">
+            <ul class="submenu-list">
+                <li><a href="general.html" class="submenu-link ajax-link">General</a></li>
+                <li><a href="api.html" class="submenu-link ajax-link">API & Integrations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand navbar-light navbar-custom px-4">
+        <button class="btn btn-light rounded-circle me-3" id="sidebarToggle">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <form class="d-none d-md-flex w-50">
+            <div class="input-group">
+                <input type="text" class="form-control search-input" placeholder="Quick search products or SKU...">
+                <button class="btn btn-primary search-btn" type="button">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </form>
+
+        <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item dropdown px-2">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                    <i class="bi bi-globe me-1"></i> EN
+                </a>
+                <div class="dropdown-menu dropdown-menu-end shadow border-0">
+                    <a class="dropdown-item" href="#">English</a>
+                    <a class="dropdown-item" href="#">Spanish</a>
+                    <a class="dropdown-item" href="#">German</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown px-2">
+                <a class="nav-link position-relative" href="#" data-bs-toggle="dropdown">
+                    <i class="bi bi-bell fs-5 text-secondary"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3+</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end shadow border-0 p-3" style="width: 300px;">
+                    <h6 class="dropdown-header">Latest Alerts</h6>
+                    <div class="small text-muted mb-2">Order #5521 was paid.</div>
+                    <div class="small text-muted">Stock warning: iPhone 14.</div>
+                    <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item text-center text-primary small">View All Alerts</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown px-2">
+                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" data-bs-toggle="dropdown">
+                    <div class="text-end me-2 d-none d-lg-block">
+                        <div class="fw-bold small">Douglas McGee</div>
+                        <div class="text-muted small" style="font-size: 0.7rem;">Administrator</div>
+                    </div>
+                    <img src="https://i.pravatar.cc/150?u=douglas" class="rounded-circle border" width="35" height="35">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end shadow border-0">
+                    <a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i> My Profile</a>
+                    <a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i> Account Settings</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right me-2"></i> Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <div id="ajax-container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="fw-bold">Dashboard Overview</h3>
+                <div>
+                    <button class="btn btn-white border shadow-sm btn-sm me-2"><i class="bi bi-download"></i> Export Report</button>
+                    <button class="btn btn-primary btn-sm"><i class="bi bi-plus"></i> New Order</button>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <div class="card stat-card shadow-sm border-start border-primary border-4">
+                        <div class="card-body">
+                            <div class="text-muted small fw-bold">TOTAL EARNINGS</div>
+                            <div class="h4 fw-bold mb-0">$128,430</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card stat-card shadow-sm border-start border-success border-4">
+                        <div class="card-body">
+                            <div class="text-muted small fw-bold">PENDING ORDERS</div>
+                            <div class="h4 fw-bold mb-0">43</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card stat-card shadow-sm border-start border-info border-4">
+                        <div class="card-body">
+                            <div class="text-muted small fw-bold">NEW CUSTOMERS</div>
+                            <div class="h4 fw-bold mb-0">1,204</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card stat-card shadow-sm border-start border-warning border-4">
+                        <div class="card-body">
+                            <div class="text-muted small fw-bold">SUPPORT TICKETS</div>
+                            <div class="h4 fw-bold mb-0">12</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white py-3 border-0">
+                    <h6 class="m-0 fw-bold text-dark">Recent Transactions</h6>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table align-middle table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th class="px-4">Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                    <th class="text-end px-4">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="px-4 fw-bold">#99201</td>
+                                    <td>John Wick</td>
+                                    <td><span class="badge bg-success-subtle text-success">Shipped</span></td>
+                                    <td>$450.00</td>
+                                    <td class="text-end px-4"><button class="btn btn-sm btn-outline-secondary">Manage</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 fw-bold">#99202</td>
+                                    <td>Sarah Connor</td>
+                                    <td><span class="badge bg-warning-subtle text-warning text-dark">Processing</span></td>
+                                    <td>$1,200.00</td>
+                                    <td class="text-end px-4"><button class="btn btn-sm btn-outline-secondary">Manage</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sidebar Toggle
+        const toggleBtn = document.getElementById('sidebarToggle');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('sb-sidenav-toggled');
+        });
+
+        // AJAX Page Loading Simulation
+        // This simulates what happens when a user clicks a menu item
+        document.querySelectorAll('.ajax-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Set active class
+                document.querySelectorAll('.nav-link-custom').forEach(n => n.classList.remove('active'));
+                this.classList.add('active');
+
+                const targetPage = this.getAttribute('href');
+                const container = document.getElementById('ajax-container');
+
+                // Simulation: In a real app, you would use fetch(targetPage)
+                container.style.opacity = '0.5';
+                setTimeout(() => {
+                    container.innerHTML = `
+                        <div class="text-center py-5">
+                            <h2 class="fw-bold">Loading: ${targetPage}</h2>
+                            <p class="text-muted">This content is dynamically loaded based on your template.</p>
+                            <div class="spinner-border text-primary" role="status"></div>
+                        </div>
+                    `;
+                    container.style.opacity = '1';
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/bs-init.js"></script>
+    <script src="../../assets/js/add-theme-changer-button.js"></script>
+    <script src="../../assets/js/catalog-page.js"></script>
+    <script src="../../assets/js/checkout.js"></script>
+    <script src="../../assets/js/home-page-carusel.js"></script>
+    <script src="../../assets/js/import/fotorama.js"></script>
+    <script src="../../assets/js/main-header.js"></script>
+    <script src="../../assets/js/product-page-sticky-nav-version.js"></script>
+    <script src="../../assets/js/products-carousel.js"></script>
+    <script src="../../assets/js/shopping-cart.js"></script>
+    <script src="../../assets/js/slider-price.js"></script>
+    <script src="../../assets/js/theme-changer-navbar.js"></script>
+</body>
+
+</html>
