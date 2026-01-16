@@ -1,8 +1,0 @@
-/* lg, xl, xxl */
-
-@media (min-width: 992px) {
-  body {
-    padding-top: var(--header-height);
-  }
-}
-
