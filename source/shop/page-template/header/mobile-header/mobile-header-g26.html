@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<!-- -----------------------CSS----------------------- -->
+<!--  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Boostrap icons  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Fotorama Gallery -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Material UI icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Material Symbols Outlined -->
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=grid_view" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>boostrap-lux-shop-master</title>
+    <link rel="stylesheet" href="../../../../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="../../../../../assets/css/articles-badges-images.css">
+    <link rel="stylesheet" href="../../../../../assets/css/basket.css">
+    <link rel="stylesheet" href="../../../../../assets/css/body.css">
+    <link rel="stylesheet" href="../../../../../assets/css/bootstrap-extension.css">
+    <link rel="stylesheet" href="../../../../../assets/css/catalog-page.css">
+    <link rel="stylesheet" href="../../../../../assets/css/checkout.css">
+    <link rel="stylesheet" href="../../../../../assets/css/compare-page.css">
+    <link rel="stylesheet" href="../../../../../assets/css/customer-account.css">
+    <link rel="stylesheet" href="../../../../../assets/css/dialog.css">
+    <link rel="stylesheet" href="../../../../../assets/css/featured-Itemn.css">
+    <link rel="stylesheet" href="../../../../../assets/css/fotorama.css">
+    <link rel="stylesheet" href="../../../../../assets/css/header-navbar-black.css">
+    <link rel="stylesheet" href="../../../../../assets/css/header.css">
+    <link rel="stylesheet" href="../../../../../assets/css/home-page.css">
+    <link rel="stylesheet" href="../../../../../assets/css/img.css">
+    <link rel="stylesheet" href="../../../../../assets/css/index-page.css">
+    <link rel="stylesheet" href="../../../../../assets/css/main.css">
+    <link rel="stylesheet" href="../../../../../assets/css/order-item.css">
+    <link rel="stylesheet" href="../../../../../assets/css/popover-content.css">
+    <link rel="stylesheet" href="../../../../../assets/css/product-card-grid.css">
+    <link rel="stylesheet" href="../../../../../assets/css/product-card-list.css">
+    <link rel="stylesheet" href="../../../../../assets/css/product-page.css">
+    <link rel="stylesheet" href="../../../../../assets/css/products-carousel.css">
+    <link rel="stylesheet" href="../../../../../assets/css/scroll-normalizer-master.css">
+    <link rel="stylesheet" href="../../../../../assets/css/shadow-box.css">
+    <link rel="stylesheet" href="../../../../../assets/css/shopping-cart.css">
+    <link rel="stylesheet" href="../../../../../assets/css/slider-price.css">
+    <link rel="stylesheet" href="../../../../../assets/css/stars-rating.css">
+    <link rel="stylesheet" href="../../../../../assets/css/tech-shadow-box.css">
+    <link rel="stylesheet" href="../../../../../assets/css/timeline.css">
+    <link rel="stylesheet" href="../../../../../assets/css/ui-collapsible-panel.css">
+    <link rel="stylesheet" href="../../../../../assets/css/ui-icons-circle.css">
+    <link rel="stylesheet" href="../../../../../assets/css/wishlist.css">
+</head>
+
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuminaStore - Mobile Premium UX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+/* Переменные и базовые настройки */
+body {
+    padding-bottom: 80px; /* Отступ под нижнее меню */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.small-text { font-size: 0.7rem; }
+
+/* Кастомизация Header */
+.navbar {
+    backdrop-filter: blur(8px);
+    background-color: rgba(255,255,255,0.9) !important;
+}
+
+/* Эффект нажатия (Mobile Tap) */
+.nav-link, .btn {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Стили поиска */
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f8f9fa;
+    text-decoration: none;
+    color: inherit;
+}
+
+.search-result-item img {
+    width: 45px; height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 12px;
+    background: #f0f0f0;
+}
+
+.search-result-item .title { font-size: 0.9rem; font-weight: 500; margin-bottom: 0; }
+.search-result-item .price { font-size: 0.8rem; color: #dc3545; }
+
+/* Нижняя навигация */
+.bottom-nav {
+    height: 70px;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+}
+
+/* Анимация Offcanvas (плавность) */
+.offcanvas { transition: transform 0.3s ease-in-out; width: 80% !important; }
+</style>
+<body class="bg-body">
+
+    <header class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-2">
+        <div class="container-fluid">
+            <button class="border-0 bg-transparent ps-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                <i class="ph ph-list fs-2"></i>
+            </button>
+
+            <a class="navbar-brand fw-bold fs-4 mx-auto text-dark text-decoration-none" href="#">
+                LUMINA<span class="text-danger">STORE</span>
+            </a>
+
+            <div class="d-flex align-items-center">
+                <button class="btn btn-link text-dark p-2" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="ph ph-magnifying-glass fs-3"></i>
+                </button>
+                <a href="#" class="btn btn-link text-dark p-2 position-relative">
+                    <i class="ph ph-shopping-cart fs-3"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">3</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold">SHOP CATEGORIES</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item border-0 py-3"><a href="#" class="text-decoration-none text-dark fw-semibold">New Arrivals</a></li>
+                <li class="list-group-item border-0 py-3"><a href="#" class="text-decoration-none text-dark fw-semibold">Best Sellers</a></li>
+                <li class="list-group-item bg-light py-2 small text-muted text-uppercase fw-bold">Department</li>
+                <li class="list-group-item border-0 py-3 d-flex justify-content-between align-items-center">
+                    Electronics <i class="ph ph-caret-right text-muted"></i>
+                </li>
+                <li class="list-group-item border-0 py-3 d-flex justify-content-between align-items-center">
+                    Fashion <i class="ph ph-caret-right text-muted"></i>
+                </li>
+                <li class="list-group-item border-0 py-3"><a href="#" class="text-decoration-none text-danger fw-bold">Sale %</a></li>
+            </ul>
+        </div>
+        <div class="offcanvas-footer p-3 border-top mt-auto">
+            <a href="#" class="btn btn-dark w-100 py-2">Login / Register</a>
+        </div>
+    </div>
+
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down">
+            <div class="modal-content border-0">
+                <div class="modal-header border-0 pb-0">
+                    <div class="input-group border rounded-pill px-3 py-1 mt-2">
+                        <span class="input-group-text bg-transparent border-0"><i class="ph ph-magnifying-glass"></i></span>
+                        <input type="text" id="searchInput" class="form-control border-0 shadow-none" placeholder="Search products..." autocomplete="off">
+                        <button class="btn-close align-self-center" data-bs-dismiss="modal"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="searchSuggestions">
+                        <h6 class="text-muted small fw-bold text-uppercase mb-3 mt-2">Trending Now</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge rounded-pill bg-light text-dark border px-3 py-2">iPhone 15</span>
+                            <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Sneakers</span>
+                            <span class="badge rounded-pill bg-light text-dark border px-3 py-2">Laptops</span>
+                        </div>
+                    </div>
+                    <div id="searchResults" class="d-none">
+                        <h6 class="text-muted small fw-bold text-uppercase mb-3">Products Found</h6>
+                        <div id="resultsContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav fixed-bottom bg-white border-top d-lg-none">
+        <div class="container-fluid d-flex justify-content-around py-2">
+            <a href="#" class="nav-link text-center text-danger">
+                <i class="ph ph-house fs-3"></i>
+                <div class="small-text">Home</div>
+            </a>
+            <a href="#" class="nav-link text-center text-muted">
+                <i class="ph ph-heart fs-3"></i>
+                <div class="small-text">Wishlist</div>
+            </a>
+            <a href="#" class="nav-link text-center text-muted" data-bs-toggle="modal" data-bs-target="#searchModal">
+                <i class="ph ph-magnifying-glass fs-3"></i>
+                <div class="small-text">Search</div>
+            </a>
+            <a href="#" class="nav-link text-center text-muted">
+                <i class="ph ph-user fs-3"></i>
+                <div class="small-text">Profile</div>
+            </a>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="row g-3">
+            <div class="col-12">
+                <div class="p-5 bg-dark text-white rounded-4 text-center shadow-lg">
+                    <h2 class="fw-bold">New Season 2026</h2>
+                    <p class="text-secondary">Exclusive Mobile-First Deals</p>
+                    <button class="btn btn-danger btn-sm px-4">Shop Now</button>
+                </div>
+            </div>
+            <div class="col-6"><div class="bg-white p-5 rounded shadow-sm border"></div></div>
+            <div class="col-6"><div class="bg-white p-5 rounded shadow-sm border"></div></div>
+            <div class="col-6"><div class="bg-white p-5 rounded shadow-sm border"></div></div>
+            <div class="col-6"><div class="bg-white p-5 rounded shadow-sm border"></div></div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+<script>
+// Имитация базы данных товаров
+const productsDB = [
+    { id: 1, name: "Apple iPhone 15 Pro", price: "$999", category: "Phones" },
+    { id: 2, name: "Sony WH-1000XM5", price: "$349", category: "Audio" },
+    { id: 3, name: "Samsung Galaxy Watch 6", price: "$299", category: "Wearables" },
+    { id: 4, name: "Nike Air Max 270", price: "$150", category: "Shoes" },
+    { id: 5, name: "MacBook Air M3 13'", price: "$1099", category: "Laptops" }
+];
+
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+const searchSuggestions = document.getElementById('searchSuggestions');
+const resultsContainer = document.getElementById('resultsContainer');
+
+// Функция поиска
+function handleSearch(e) {
+    const query = e.target.value.trim().toLowerCase();
+
+    if (query.length < 2) {
+        searchResults.classList.add('d-none');
+        searchSuggestions.classList.remove('d-none');
+        return;
+    }
+
+    const filtered = productsDB.filter(item => 
+        item.name.toLowerCase().includes(query)
+    );
+
+    renderResults(filtered);
+}
+
+// Отрисовка результатов
+function renderResults(data) {
+    searchSuggestions.classList.add('d-none');
+    searchResults.classList.remove('d-none');
+
+    if (data.length === 0) {
+        resultsContainer.innerHTML = `<p class="text-center py-5 text-muted small">No items found for this query.</p>`;
+        return;
+    }
+
+    resultsContainer.innerHTML = data.map(item => `
+        <a href="#" class="search-result-item slide-in">
+            <img src="https://via.placeholder.com/50" alt="product">
+            <div>
+                <p class="title">${item.name}</p>
+                <span class="price">${item.price}</span>
+            </div>
+        </a>
+    `).join('');
+}
+
+// Оптимизация ввода (Debounce)
+function debounce(func, wait = 300) {
+    let timeout;
+    return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+// Привязка событий
+searchInput.addEventListener('input', debounce(handleSearch));
+
+// Автофокус при открытии модалки
+const searchModal = document.getElementById('searchModal');
+searchModal.addEventListener('shown.bs.modal', () => {
+    searchInput.focus();
+});
+</script>
+</body>
+</html>
+    <script src="../../../../../assets/js/jquery.min.js"></script>
+    <script src="../../../../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../../assets/js/bs-init.js"></script>
+    <script src="../../../../../assets/js/add-theme-changer-button.js"></script>
+    <script src="../../../../../assets/js/catalog-page.js"></script>
+    <script src="../../../../../assets/js/checkout.js"></script>
+    <script src="../../../../../assets/js/home-page-carusel.js"></script>
+    <script src="../../../../../assets/js/import/fotorama.js"></script>
+    <script src="../../../../../assets/js/main-header.js"></script>
+    <script src="../../../../../assets/js/product-page-sticky-nav-version.js"></script>
+    <script src="../../../../../assets/js/products-carousel.js"></script>
+    <script src="../../../../../assets/js/shopping-cart.js"></script>
+    <script src="../../../../../assets/js/slider-price.js"></script>
+    <script src="../../../../../assets/js/theme-changer-navbar.js"></script>
+</body>
+
+</html>
