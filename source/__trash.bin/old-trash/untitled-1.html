@@ -68,54 +68,16 @@
 </head>
 
 <body>
-    <style>
-        /* Minimal custom CSS strictly for luxury typography tweaks */
-        body {
-            /* Optional: Add a serif font here if your brand uses one, e.g., 'Playfair Display' */
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f8f9fa; /* Matches Bootstrap 'bg-light' */
-        }
-        
-        /* Adds a touch of letter spacing which is standard for luxury branding */
-        .premium-spacing {
-            letter-spacing: 2px;
-        }
-    </style>
-
-
-    <main class="d-flex align-items-center justify-content-center vh-100 bg-white">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-8 col-lg-6 text-center">
-                    
-                    <div class="mb-4 d-inline-block bg-dark" style="width: 60px; height: 1px;"></div>
-
-                    <h1 class="display-1 fw-light text-dark mb-0">404</h1>
-                    
-                    <h2 class="h5 text-uppercase fw-bold premium-spacing mb-3 mt-2">
-                        Exclusivity Not Found
-                    </h2>
-
-                    <p class="text-muted fw-light mb-5 mx-auto" style="max-width: 400px;">
-                        The page you are looking for has been moved or no longer exists in our collection. Please verify the URL or return to our boutique.
-                    </p>
-
-                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                        <a href="/" class="btn btn-dark btn-lg px-5 rounded-0 text-uppercase fs-6 fw-normal">
-                            Return Home
-                        </a>
-                        
-                        <a href="/contact" class="btn btn-outline-dark btn-lg px-5 rounded-0 text-uppercase fs-6 fw-normal">
-                            Contact Us
-                        </a>
-                    </div>
-
+    <div class="bd-example">
+        <div class="accordion" role="tablist" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" role="tab" id="panelsStayOpen-headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne"> Accordion Item #1 </button></h2>
+                <div class="accordion-collapse collapse show item-1 show" role="tabpanel" data-bs-parent="#accordionPanelsStayOpenExample" aria-labelledby="panelsStayOpen-headingOne" id="panelsStayOpen-collapseOne">
+                    <div class="accordion-body"><strong>This is the first item's accordion body.</strong><span> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the </span><code>.accordion-body</code><span>, though the transition does limit overflow. </span></div>
                 </div>
             </div>
         </div>
-    </main>
-
-
+    </div>
     <script src="../../../assets/js/jquery.min.js"></script>
     <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../../assets/js/bs-init.js"></script>

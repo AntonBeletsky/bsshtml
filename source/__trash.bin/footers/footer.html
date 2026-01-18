@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="../../../assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="../../../assets/css/articles-badges-images.css">
     <link rel="stylesheet" href="../../../assets/css/basket.css">
     <link rel="stylesheet" href="../../../assets/css/body.css">
@@ -68,54 +69,40 @@
 </head>
 
 <body>
-    <style>
-        /* Minimal custom CSS strictly for luxury typography tweaks */
-        body {
-            /* Optional: Add a serif font here if your brand uses one, e.g., 'Playfair Display' */
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f8f9fa; /* Matches Bootstrap 'bg-light' */
-        }
-        
-        /* Adds a touch of letter spacing which is standard for luxury branding */
-        .premium-spacing {
-            letter-spacing: 2px;
-        }
-    </style>
-
-
-    <main class="d-flex align-items-center justify-content-center vh-100 bg-white">
+    <footer class="mt-auto footer py-3">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-8 col-lg-6 text-center">
-                    
-                    <div class="mb-4 d-inline-block bg-dark" style="width: 60px; height: 1px;"></div>
-
-                    <h1 class="display-1 fw-light text-dark mb-0">404</h1>
-                    
-                    <h2 class="h5 text-uppercase fw-bold premium-spacing mb-3 mt-2">
-                        Exclusivity Not Found
-                    </h2>
-
-                    <p class="text-muted fw-light mb-5 mx-auto" style="max-width: 400px;">
-                        The page you are looking for has been moved or no longer exists in our collection. Please verify the URL or return to our boutique.
-                    </p>
-
-                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                        <a href="/" class="btn btn-dark btn-lg px-5 rounded-0 text-uppercase fs-6 fw-normal">
-                            Return Home
-                        </a>
-                        
-                        <a href="/contact" class="btn btn-outline-dark btn-lg px-5 rounded-0 text-uppercase fs-6 fw-normal">
-                            Contact Us
-                        </a>
-                    </div>
-
+            <div class="row">
+                <div class="col-md-2">
+                    <h5>About Us</h5>
+                    <p>We are a premium brand dedicated to providing the best quality products.</p>
+                </div>
+                <div class="col-md-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of whats new and exciting from us.</p>
+                        <div class="d-flex w-100 gap-2"><label class="form-label visually-hidden form-label form-label form-label" for="newsletter1">Email address</label><input class="form-control form-control form-control form-control form-control" type="text" id="newsletter1" placeholder="Email address"><button class="btn btn-primary" type="button">Subscribe</button></div>
+                    </form>
+                </div>
+                <div class="col-md-2">
+                    <h5>Payment Methods</h5>
+                    <div class="payment-icons"><a href="#"><i class="fab fa-cc-visa fa-2x"></i></a><a href="#"><i class="fab fa-cc-mastercard fa-2x"></i></a><a href="#"><i class="fab fa-cc-paypal fa-2x"></i></a><a href="#"><i class="fab fa-cc-amex fa-2x"></i></a></div>
+                </div>
+                <div class="col-md-2">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons"><a href="#"><i class="fab fa-facebook fa-2x"></i></a><a href="#"><i class="fab fa-twitter fa-2x"></i></a><a href="#"><i class="fab fa-instagram fa-2x"></i></a></div>
                 </div>
             </div>
         </div>
-    </main>
-
-
+    </footer>
     <script src="../../../assets/js/jquery.min.js"></script>
     <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../../assets/js/bs-init.js"></script>

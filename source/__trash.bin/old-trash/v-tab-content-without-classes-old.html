@@ -68,54 +68,32 @@
 </head>
 
 <body>
-    <style>
-        /* Minimal custom CSS strictly for luxury typography tweaks */
-        body {
-            /* Optional: Add a serif font here if your brand uses one, e.g., 'Playfair Display' */
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f8f9fa; /* Matches Bootstrap 'bg-light' */
-        }
-        
-        /* Adds a touch of letter spacing which is standard for luxury branding */
-        .premium-spacing {
-            letter-spacing: 2px;
-        }
-    </style>
-
-
-    <main class="d-flex align-items-center justify-content-center vh-100 bg-white">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-8 col-lg-6 text-center">
-                    
-                    <div class="mb-4 d-inline-block bg-dark" style="width: 60px; height: 1px;"></div>
-
-                    <h1 class="display-1 fw-light text-dark mb-0">404</h1>
-                    
-                    <h2 class="h5 text-uppercase fw-bold premium-spacing mb-3 mt-2">
-                        Exclusivity Not Found
-                    </h2>
-
-                    <p class="text-muted fw-light mb-5 mx-auto" style="max-width: 400px;">
-                        The page you are looking for has been moved or no longer exists in our collection. Please verify the URL or return to our boutique.
-                    </p>
-
-                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                        <a href="/" class="btn btn-dark btn-lg px-5 rounded-0 text-uppercase fs-6 fw-normal">
-                            Return Home
-                        </a>
-                        
-                        <a href="/contact" class="btn btn-outline-dark btn-lg px-5 rounded-0 text-uppercase fs-6 fw-normal">
-                            Contact Us
-                        </a>
-                    </div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Vertical tabs content</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="list-group" id="list-tab" role="tablist"><a class="list-group-item list-group-item-action active" aria-controls="list" data-bs-toggle="list" href="#tab-content-1" id="tablink-item-1" role="tab"><span>Item 1</span></a><a class="list-group-item list-group-item-action" aria-controls="list" data-bs-toggle="list" href="#tab-content-2" id="tablint-item-2" role="tab"><span>Item 2</span></a><a class="list-group-item list-group-item-action" id="tablint-item-3" aria-controls="list" data-bs-toggle="list" href="#tab-content-3" role="tab"><span>Item 3</span></a><a class="list-group-item list-group-item-action" id="tablint-item-4" aria-controls="list" data-bs-toggle="list" href="#tab-content-4" role="tab"><span>Item 4</span></a><a class="list-group-item list-group-item-action" id="tablint-item-5" aria-controls="list" data-bs-toggle="list" href="#tab-content-5" role="tab"><span>Item 5</span></a><a class="list-group-item list-group-item-action" id="tablint-item-6" aria-controls="list" data-bs-toggle="list" href="#tab-content-6" role="tab"><span>Item 6</span></a><a class="list-group-item list-group-item-action" id="tablint-item-7" aria-controls="list" data-bs-toggle="list" href="#tab-content-7" role="tab"><span>Item 7</span></a><a class="list-group-item list-group-item-action" id="tablint-item-8" aria-controls="list" data-bs-toggle="list" href="#tab-content-8" role="tab"><span>Item 8</span></a><a class="list-group-item list-group-item-action" id="tablint-item-9" aria-controls="list" data-bs-toggle="list" href="#tab-content-9" role="tab"><span>Item 9</span></a><a class="list-group-item list-group-item-action" id="tablint-item-10" aria-controls="list" data-bs-toggle="list" href="#tab-content-10" role="tab"><span>Item 10</span></a></div>
+            </div>
+            <div class="col-8">
+                <div id="nav-tabContent" class="tab-content">
+                    <div id="tab-content-1" class="tab-pane fade show active" role="tabpanel" aria-labelledby="list"><span>Content 1</span></div>
+                    <div id="tab-content-2" class="tab-pane fade" role="tabpanel" aria-labelledby="list"><span>Content 2</span></div>
+                    <div id="tab-content-3" class="tab-pane fade" role="tabpanel" aria-labelledby="list"><span>Content 3</span></div>
+                    <div id="tab-content-4" class="tab-pane fade" role="tabpanel" aria-labelledby="list"><span>Content 4</span></div>
+                    <div id="tab-content-5" class="tab-pane fade" role="tabpanel" aria-labelledby="list"><span>Content 5</span></div>
+                    <div id="tab-content-6" class="tab-pane fade" role="tabpanel" aria-labelledby="list"><span>Content 6</span></div>
+                    <div id="tab-content-7" class="tab-pane fade" role="tabpanel" aria-labelledby="list"><span>Content 7</span></div>
+                    <div id="tab-content-8" class="tab-pane fade" role="tabpanel" aria-labelledby="list"><span>Content 8</span></div>
+                    <div id="tab-content-9" class="tab-pane fade" role="tabpanel" aria-labelledby="list"><span>Content 9</span></div>
+                    <div id="tab-content-10" class="tab-pane fade" role="tabpanel" aria-labelledby="list"><span>Content 10</span></div>
                 </div>
             </div>
         </div>
-    </main>
-
-
+    </div>
     <script src="../../../assets/js/jquery.min.js"></script>
     <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../../assets/js/bs-init.js"></script>

@@ -640,65 +640,54 @@
     </div>
 </div>
 <!-- SIDEBAR END -->
-    <main class="py-2 py-lg-4 px-0 px-lg-1"><style>
-    /* Ensure the error container is responsive and takes full width of its parent */
-    body{
-        /* for 100% h */
-        display: flex;
-    }
-    .error-container {
-        padding: 2rem;
-        max-width: 600px;
-        width: 100%;
-        min-height: 100%;
-        text-align: center; /* Center text within the container */
-        margin: 0 auto; /* Center the container itself */
-    }
-    .error-container h1:first-of-type {
-        font-size: 8rem; /* Large 404 */
-        font-weight: 900;
-        color: #dc3545; /* Red color for 404 */
-        line-height: 1;
-        margin-bottom: 0.5rem;
-    }
-    .error-container h1:last-of-type {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-    }
-    .btn-home {
-        padding: 0.75rem 2rem;
-        font-size: 1.25rem;
-        border-radius: 0.5rem; /* Slightly rounded button */
-    }
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .error-container h1:first-of-type {
-            font-size: 6rem;
+    <main class="py-2 py-lg-4 px-0 px-lg-1">
+    <style>
+        /* Minimal custom CSS strictly for luxury typography tweaks */
+        body {
+            /* Optional: Add a serif font here if your brand uses one, e.g., 'Playfair Display' */
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f9fa; /* Matches Bootstrap 'bg-light' */
         }
-        .error-container h1:last-of-type {
-            font-size: 1.5rem;
+        
+        /* Adds a touch of letter spacing which is standard for luxury branding */
+        .premium-spacing {
+            letter-spacing: 2px;
         }
-        .btn-home {
-            font-size: 1rem;
-            padding: 0.6rem 1.5rem;
-        }
-    }
-    @media (max-width: 576px) {
-        .error-container h1:first-of-type {
-            font-size: 4rem;
-        }
-        .error-container h1:last-of-type {
-            font-size: 1.2rem;
-        }
-    }
-</style>
+    </style>
 
 
-<div class="container-fluid error-container ">
-    <h1>404</h1>
-    <h1>Sorry, the page you requested was not found.</h1>
-    <a href="index.html" class="btn btn-primary btn-home mt-4">Back To Home</a>
-</div>
+    <main class="d-flex align-items-center justify-content-center vh-100 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 text-center">
+                    
+                    <div class="mb-4 d-inline-block bg-dark" style="width: 60px; height: 1px;"></div>
+
+                    <h1 class="display-1 fw-light text-dark mb-0">404</h1>
+                    
+                    <h2 class="h5 text-uppercase fw-bold premium-spacing mb-3 mt-2">
+                        Exclusivity Not Found
+                    </h2>
+
+                    <p class="text-muted fw-light mb-5 mx-auto" style="max-width: 400px;">
+                        The page you are looking for has been moved or no longer exists in our collection. Please verify the URL or return to our boutique.
+                    </p>
+
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        <a href="/" class="btn btn-dark btn-lg px-5 rounded-0 text-uppercase fs-6 fw-normal">
+                            Return Home
+                        </a>
+                        
+                        <a href="/contact" class="btn btn-outline-dark btn-lg px-5 rounded-0 text-uppercase fs-6 fw-normal">
+                            Contact Us
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
 </main><footer class="bg-primary text-white pt-5 pb-4">
   <div class="container text-center text-md-start">
     <div class="row text-center text-md-start">
